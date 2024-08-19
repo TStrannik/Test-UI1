@@ -46,3 +46,4 @@ int main(array<String^>^ args) {
 // FormResize
 // Form Win+left etc...
 // 
+// AUTHORISZTION form
