@@ -1,5 +1,7 @@
 #pragma once
 
+#include <vector>
+
 namespace UI1 {
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -10,8 +12,14 @@ namespace UI1 {
 
 
 
+	#pragma region COLORS
 	typedef enum COLOR_SCHEME {	ICEBOX, WAZGEN };
-	typedef enum COLORS	{ I1, I2, I3, I4, I5 };
+	struct sCOLOR { int A = 0; int R = 0; int G = 0; int B = 0; };
+	COLOR_SCHEME colorScheme = ICEBOX;
+
+	sCOLOR I1, I2, I3, I4, I5;
+
+	#pragma endregion COLORS
 
 
 
@@ -248,7 +256,7 @@ namespace UI1 {
 			this->pnlLogo->Name = L"pnlLogo";
 			this->pnlLogo->Size = System::Drawing::Size(210, 74);
 			this->pnlLogo->TabIndex = 0;
-			this->pnlLogo->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &frmMain::pnlLogo_Paint);
+			this->pnlLogo->Click += gcnew System::EventHandler(this, &frmMain::pnlLogo_Click);
 			// 
 			// pnlLine
 			// 
@@ -388,6 +396,8 @@ namespace UI1 {
 		FormWindowState fws;
 		String^ CurrentDir = System::IO::Directory::GetCurrentDirectory();
 
+		
+
 		#pragma endregion VARs
 
 		#pragma region ProgerVods
@@ -408,6 +418,32 @@ namespace UI1 {
 		}
 		void formDrugMU(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 			if (e->Button == Windows::Forms::MouseButtons::Left) { isMouseDown_ = false; }
+		}
+		void switchColorScheme() {
+			colorScheme = colorScheme ? ICEBOX : WAZGEN;
+
+			if (colorScheme == ICEBOX) {
+				I1.A = 255; I1.R = 13;  I1.G = 27;  I1.B = 42;
+				I2.A = 255; I2.R = 27;  I2.G = 38;  I2.B = 59;
+				I3.A = 255; I3.R = 65;  I3.G = 90;  I3.B = 119;
+				I4.A = 255; I4.R = 119; I4.G = 141; I4.B = 169;
+				I5.A = 255; I5.R = 224; I5.G = 225; I5.B = 221;
+			}
+			if (colorScheme == WAZGEN) {
+				I1.A = 255; I1.R = 120;  I1.G = 0;   I1.B = 0;
+				I2.A = 255; I2.R = 193;  I2.G = 18;  I2.B = 31;
+				I3.A = 255; I3.R = 253;  I3.G = 240; I3.B = 213;
+				I4.A = 255; I4.R = 0;    I4.G = 48;  I4.B = 73;
+				I5.A = 255; I5.R = 102;  I5.G = 155; I5.B = 188;
+			}
+
+			Color C1 = Color::FromArgb(I1.A, I1.R, I1.G, I1.B);
+			Color C2 = Color::FromArgb(I2.A, I2.R, I2.G, I2.B);
+			Color C3 = Color::FromArgb(I3.A, I3.R, I3.G, I3.B);
+			Color C4 = Color::FromArgb(I4.A, I4.R, I4.G, I4.B);
+			Color C5 = Color::FromArgb(I5.A, I5.R, I5.G, I5.B);
+
+			pnlHeader->BackColor = C2;
 		}
 		#pragma endregion ProgerVods
 		
@@ -502,14 +538,15 @@ namespace UI1 {
 			Close();
 		}
 
-		System::Void pnlLogo_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-
+		System::Void pnlLogo_Click(System::Object^ sender, System::EventArgs^ e) {
+			switchColorScheme();
 		}
 
 		#pragma endregion VOIDs
 
 	
 
+	
 	
 	};
 }
