@@ -9,31 +9,22 @@ namespace UI1 {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	/// <summary>
-	/// —водка дл€ frmMain
-	/// </summary>
-	public ref class frmMain : public System::Windows::Forms::Form
-	{
-	public:
-		frmMain(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
-		}
+	public ref class frmMain : public System::Windows::Forms::Form {
+		
 
-	protected:
-		/// <summary>
-		/// ќсвободить все используемые ресурсы.
-		/// </summary>
-		~frmMain()
-		{
-			if (components)
-			{
-				delete components;
-			}
-		}
+	#pragma region VARs/C/~
+	private:
+		Point mouseOffset_;
+
+		bool isMouseDown_ = false;
+		int xOffset_, yOffset_;
+
+	public: frmMain(void) { InitializeComponent();	}
+	protected: ~frmMain() {	if (components)	{ delete components; }}
+	#pragma endregion VARs/C/~
+
+
+	#pragma region POINERS
 	private: System::Windows::Forms::Panel^ pnlMenu;
 	protected:
 	private: System::Windows::Forms::Panel^ pnlLogo;
@@ -42,40 +33,21 @@ namespace UI1 {
 	private: System::Windows::Forms::Panel^ pnlFooter;
 	private: System::Windows::Forms::Button^ btnHome;
 	private: System::Windows::Forms::Button^ btnExamples;
-
-
 	private: System::Windows::Forms::Panel^ pnlGavkaSM;
-
-
 	private: System::Windows::Forms::Button^ btnSMServices;
-
-
 	private: System::Windows::Forms::Button^ btnSMHistory;
-
 	private: System::Windows::Forms::Button^ btnSMAbout;
-
 	private: System::Windows::Forms::Button^ btnExit;
 	private: System::Windows::Forms::Button^ btnLCls;
 	private: System::Windows::Forms::Button^ btnLMin;
 	private: System::Windows::Forms::Button^ btnLMax;
 	private: System::Windows::Forms::Button^ btnContact;
 
+	private: System::ComponentModel::Container^ components;
+	#pragma endregion POINERS
 
-
-
-
-
-	private:
-		/// <summary>
-		/// ќб€зательна€ переменна€ конструктора.
-		/// </summary>
-		System::ComponentModel::Container ^components;
-
-#pragma region Windows Form Designer generated code
-		/// <summary>
-		/// “ребуемый метод дл€ поддержки конструктора Ч не измен€йте 
-		/// содержимое этого метода с помощью редактора кода.
-		/// </summary>
+	#pragma region Windows Form Designer generated code
+		
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(frmMain::typeid));
@@ -387,6 +359,9 @@ namespace UI1 {
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Load += gcnew System::EventHandler(this, &frmMain::frmMain_Load);
 			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &frmMain::frmMain_Paint);
+			this->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::frmMain_MouseDown);
+			this->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::frmMain_MouseMove);
+			this->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::frmMain_MouseUp);
 			this->pnlMenu->ResumeLayout(false);
 			this->pnlGavkaSM->ResumeLayout(false);
 			this->pnlLine->ResumeLayout(false);
@@ -394,55 +369,21 @@ namespace UI1 {
 
 		}
 #pragma endregion
+
 	private:
 
 		#pragma region VARs
 
+		FormWindowState fws;
 		String^ CurrentDir = System::IO::Directory::GetCurrentDirectory();
 
 		#pragma endregion VARs
 
-
-
 		#pragma region VOIDs
-		System::Void frmMain_Load(System::Object^ sender, System::EventArgs^ e) {
+		System::Void frmMain_Load     (System::Object^ sender, System::EventArgs^ e) {
 			//
 		}
-
-		System::Void btnHome_Click(System::Object^ sender, System::EventArgs^ e) {
-			pnlGavkaSM->Visible = !pnlGavkaSM->Visible;
-		}
-
-		System::Void btnExit_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-			Graphics^ g = e->Graphics;
-			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::HighQuality;
-			g->DrawImage(Image::FromFile(CurrentDir + "\\Sources\\UI\\exit_berry.png"), 13, 13, 35, 35);			
-
-		}
-		System::Void btnHome_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-			Graphics^ g = e->Graphics;
-			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::HighQuality;
-			g->DrawImage(Image::FromFile(CurrentDir + "\\Sources\\UI\\dot_berry.png"), 5, 13, 35, 35);			
-		}
-		System::Void btnExit_Click(System::Object^ sender, System::EventArgs^ e) {
-			this->Close();
-		}
-
-
-		FormWindowState fws;
-		System::Void btnLMin_Click(System::Object^ sender, System::EventArgs^ e) {
-			if		(WindowState == FormWindowState::Normal)	{ fws = WindowState; WindowState = FormWindowState::Minimized; }
-			else if (WindowState == FormWindowState::Maximized) { fws = WindowState; WindowState = FormWindowState::Minimized; }
-			else if (WindowState == FormWindowState::Minimized) {					 WindowState = fws;						   }
-		}
-		System::Void btnLMax_Click(System::Object^ sender, System::EventArgs^ e) {
-			WindowState = (WindowState == FormWindowState::Maximized ? FormWindowState::Normal : FormWindowState::Maximized);
-		}		
-		System::Void btnLCls_Click(System::Object^ sender, System::EventArgs^ e) {
-			Close();
-		}
-
-		System::Void frmMain_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+		System::Void frmMain_Paint    (System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 			if (this->FormBorderStyle == System::Windows::Forms::FormBorderStyle::None) {
 				System::Drawing::Drawing2D::GraphicsPath^ path = gcnew System::Drawing::Drawing2D::GraphicsPath();
 				//path->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::HighQuality;
@@ -462,23 +403,95 @@ namespace UI1 {
 				*/
 
 				////// Bevel
-				path->AddLine(0,     r, r,   0); path->AddLine(r,   0,   w-r, 0	 );
-				path->AddLine(w-r,   0, w,   r); path->AddLine(w,   r,   w,   h-r);
-				path->AddLine(w,   h-r, w-r, h); path->AddLine(w-r, h,   r,   h	 );
-				path->AddLine(0,   h-r, r,   h); path->AddLine(0,   h-r, 0,	  r	 );
+				path->AddLine(0, r, r, 0); path->AddLine(r, 0, w - r, 0);
+				path->AddLine(w - r, 0, w, r); path->AddLine(w, r, w, h - r);
+				path->AddLine(w, h - r, w - r, h); path->AddLine(w - r, h, r, h);
+				path->AddLine(0, h - r, r, h); path->AddLine(0, h - r, 0, r);
 
 				this->Region = gcnew Drawing::Region(path);
-			}			
+			}
+		}
+		System::Void frmMain_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { formDrugMD(sender, e); }
+		System::Void frmMain_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+			#pragma region FormResize
+			bool cond1 = (e->X <= 2 && e->Y <= 2) || (e->X + 2 >= this->Width && e->Y + 2 >= this->Height);
+			bool cond2 = (e->X + 2 >= this->Width && e->Y <= 2) || (e->X <= 2 && e->Y + 2 >= this->Height);
+			bool cond3 = e->X <= 2 || e->X + 2 >= this->Width;
+			bool cond4 = e->Y <= 2 || e->Y + 2 >= this->Height;
+
+			if (cond1) this->Cursor = Cursors::SizeNWSE;
+			else if (cond2) this->Cursor = Cursors::SizeNESW;
+			else if (cond3) this->Cursor = Cursors::SizeWE;
+			else if (cond4) this->Cursor = Cursors::SizeNS;
+			else			this->Cursor = Cursors::Default;
+			#pragma endregion
+			formDrugMM(sender, e);
+		}
+		System::Void frmMain_MouseUp  (System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { formDrugMU(sender, e); }
+
+
+
+		void formDrugMD(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+			if (e->Button == Windows::Forms::MouseButtons::Left) {
+				xOffset_ = -e->X - SystemInformation::FrameBorderSize.Width;
+				yOffset_ = -e->Y - SystemInformation::FrameBorderSize.Height;
+				mouseOffset_ = System::Drawing::Point(xOffset_, yOffset_);
+				isMouseDown_ = true;
+			}
+		}
+		void formDrugMM(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+			if (isMouseDown_) {
+				Point mousePos = Control::MousePosition;
+				mousePos.Offset(mouseOffset_.X, mouseOffset_.Y);
+				Location = mousePos;
+			}
+		}
+		void formDrugMU(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+			if (e->Button == Windows::Forms::MouseButtons::Left) { isMouseDown_ = false; }
 		}
 
-		
+
+
+
+
+
+		System::Void btnHome_Click(System::Object^ sender, System::EventArgs^ e) {
+			pnlGavkaSM->Visible = !pnlGavkaSM->Visible;
+		}
+		System::Void btnHome_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+			Graphics^ g = e->Graphics;
+			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::HighQuality;
+			g->DrawImage(Image::FromFile(CurrentDir + "\\Sources\\UI\\dot_berry.png"), 5, 12, 35, 35);
+		}
+
+		System::Void btnExit_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+			Graphics^ g = e->Graphics;
+			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::HighQuality;
+			g->DrawImage(Image::FromFile(CurrentDir + "\\Sources\\UI\\exit_berry.png"), 13, 13, 35, 35);			
+
+		}
+		System::Void btnExit_Click(System::Object^ sender, System::EventArgs^ e) {
+			this->Close();
+		}
+
+
+
+		System::Void btnLMin_Click(System::Object^ sender, System::EventArgs^ e) {
+			if		(WindowState == FormWindowState::Normal)	{ fws = WindowState; WindowState = FormWindowState::Minimized; }
+			else if (WindowState == FormWindowState::Maximized) { fws = WindowState; WindowState = FormWindowState::Minimized; }
+			else if (WindowState == FormWindowState::Minimized) {					 WindowState = fws;						   }
+			Invalidate();
+		}
+		System::Void btnLMax_Click(System::Object^ sender, System::EventArgs^ e) {
+			WindowState = (WindowState == FormWindowState::Maximized ? FormWindowState::Normal : FormWindowState::Maximized);
+			Invalidate();
+		}		
+		System::Void btnLCls_Click(System::Object^ sender, System::EventArgs^ e) {
+			Close();
+		}
+
 
 		#pragma endregion VOIDs
 
-	
-
-
-
-
-};
+	};
 }
