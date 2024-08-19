@@ -40,17 +40,25 @@ namespace UI1 {
 	private: System::Windows::Forms::Panel^ pnlLine;
 	private: System::Windows::Forms::Panel^ pnlHeader;
 	private: System::Windows::Forms::Panel^ pnlFooter;
-	private: System::Windows::Forms::Button^ btnGavka;
-	private: System::Windows::Forms::Button^ button5;
+	private: System::Windows::Forms::Button^ btnHome;
+	private: System::Windows::Forms::Button^ btnExamples;
+
+
 	private: System::Windows::Forms::Panel^ pnlGavkaSM;
-	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button1;
+
+
+	private: System::Windows::Forms::Button^ btnSMServices;
+
+
+	private: System::Windows::Forms::Button^ btnSMHistory;
+
+	private: System::Windows::Forms::Button^ btnSMAbout;
+
 	private: System::Windows::Forms::Button^ btnExit;
 	private: System::Windows::Forms::Button^ btnLCls;
 	private: System::Windows::Forms::Button^ btnLMin;
 	private: System::Windows::Forms::Button^ btnLMax;
+	private: System::Windows::Forms::Button^ btnContact;
 
 
 
@@ -72,14 +80,14 @@ namespace UI1 {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(frmMain::typeid));
 			this->pnlMenu = (gcnew System::Windows::Forms::Panel());
+			this->btnContact = (gcnew System::Windows::Forms::Button());
 			this->btnExit = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->btnExamples = (gcnew System::Windows::Forms::Button());
 			this->pnlGavkaSM = (gcnew System::Windows::Forms::Panel());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->btnGavka = (gcnew System::Windows::Forms::Button());
+			this->btnSMServices = (gcnew System::Windows::Forms::Button());
+			this->btnSMHistory = (gcnew System::Windows::Forms::Button());
+			this->btnSMAbout = (gcnew System::Windows::Forms::Button());
+			this->btnHome = (gcnew System::Windows::Forms::Button());
 			this->pnlLogo = (gcnew System::Windows::Forms::Panel());
 			this->pnlLine = (gcnew System::Windows::Forms::Panel());
 			this->btnLMin = (gcnew System::Windows::Forms::Button());
@@ -96,10 +104,11 @@ namespace UI1 {
 			// 
 			this->pnlMenu->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(27)), static_cast<System::Int32>(static_cast<System::Byte>(38)),
 				static_cast<System::Int32>(static_cast<System::Byte>(59)));
+			this->pnlMenu->Controls->Add(this->btnContact);
 			this->pnlMenu->Controls->Add(this->btnExit);
-			this->pnlMenu->Controls->Add(this->button5);
+			this->pnlMenu->Controls->Add(this->btnExamples);
 			this->pnlMenu->Controls->Add(this->pnlGavkaSM);
-			this->pnlMenu->Controls->Add(this->btnGavka);
+			this->pnlMenu->Controls->Add(this->btnHome);
 			this->pnlMenu->Controls->Add(this->pnlLogo);
 			this->pnlMenu->Dock = System::Windows::Forms::DockStyle::Left;
 			this->pnlMenu->Location = System::Drawing::Point(0, 35);
@@ -108,6 +117,23 @@ namespace UI1 {
 			this->pnlMenu->Size = System::Drawing::Size(210, 617);
 			this->pnlMenu->TabIndex = 0;
 			// 
+			// btnContact
+			// 
+			this->btnContact->Dock = System::Windows::Forms::DockStyle::Top;
+			this->btnContact->FlatAppearance->BorderSize = 0;
+			this->btnContact->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnContact->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
+				static_cast<System::Int32>(static_cast<System::Byte>(221)));
+			this->btnContact->Location = System::Drawing::Point(0, 331);
+			this->btnContact->Margin = System::Windows::Forms::Padding(40, 0, 0, 0);
+			this->btnContact->Name = L"btnContact";
+			this->btnContact->Padding = System::Windows::Forms::Padding(13, 0, 0, 0);
+			this->btnContact->Size = System::Drawing::Size(210, 60);
+			this->btnContact->TabIndex = 5;
+			this->btnContact->Text = L"Contacts";
+			this->btnContact->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnContact->UseVisualStyleBackColor = true;
+			// 
 			// btnExit
 			// 
 			this->btnExit->Dock = System::Windows::Forms::DockStyle::Bottom;
@@ -115,11 +141,11 @@ namespace UI1 {
 			this->btnExit->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnExit->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->btnExit->Location = System::Drawing::Point(0, 555);
+			this->btnExit->Location = System::Drawing::Point(0, 557);
 			this->btnExit->Margin = System::Windows::Forms::Padding(40, 0, 0, 0);
 			this->btnExit->Name = L"btnExit";
 			this->btnExit->Padding = System::Windows::Forms::Padding(50, 0, 0, 0);
-			this->btnExit->Size = System::Drawing::Size(210, 62);
+			this->btnExit->Size = System::Drawing::Size(210, 60);
 			this->btnExit->TabIndex = 4;
 			this->btnExit->Text = L"Exit";
 			this->btnExit->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -127,130 +153,110 @@ namespace UI1 {
 			this->btnExit->Click += gcnew System::EventHandler(this, &frmMain::btnExit_Click);
 			this->btnExit->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &frmMain::btnExit_Paint);
 			// 
-			// button5
+			// btnExamples
 			// 
-			this->button5->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button5->FlatAppearance->BorderSize = 0;
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
+			this->btnExamples->Dock = System::Windows::Forms::DockStyle::Top;
+			this->btnExamples->FlatAppearance->BorderSize = 0;
+			this->btnExamples->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnExamples->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->button5->Location = System::Drawing::Point(0, 385);
-			this->button5->Margin = System::Windows::Forms::Padding(40, 0, 0, 0);
-			this->button5->Name = L"button5";
-			this->button5->Padding = System::Windows::Forms::Padding(13, 0, 0, 0);
-			this->button5->Size = System::Drawing::Size(210, 62);
-			this->button5->TabIndex = 3;
-			this->button5->Text = L"Gavka";
-			this->button5->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button5->UseVisualStyleBackColor = true;
+			this->btnExamples->Location = System::Drawing::Point(0, 271);
+			this->btnExamples->Margin = System::Windows::Forms::Padding(40, 0, 0, 0);
+			this->btnExamples->Name = L"btnExamples";
+			this->btnExamples->Padding = System::Windows::Forms::Padding(13, 0, 0, 0);
+			this->btnExamples->Size = System::Drawing::Size(210, 60);
+			this->btnExamples->TabIndex = 3;
+			this->btnExamples->Text = L"Examples";
+			this->btnExamples->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnExamples->UseVisualStyleBackColor = true;
 			// 
 			// pnlGavkaSM
 			// 
-			this->pnlGavkaSM->Controls->Add(this->button4);
-			this->pnlGavkaSM->Controls->Add(this->button3);
-			this->pnlGavkaSM->Controls->Add(this->button2);
-			this->pnlGavkaSM->Controls->Add(this->button1);
+			this->pnlGavkaSM->Controls->Add(this->btnSMServices);
+			this->pnlGavkaSM->Controls->Add(this->btnSMHistory);
+			this->pnlGavkaSM->Controls->Add(this->btnSMAbout);
 			this->pnlGavkaSM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnlGavkaSM->Location = System::Drawing::Point(0, 136);
+			this->pnlGavkaSM->Location = System::Drawing::Point(0, 134);
 			this->pnlGavkaSM->Margin = System::Windows::Forms::Padding(4);
 			this->pnlGavkaSM->Name = L"pnlGavkaSM";
-			this->pnlGavkaSM->Size = System::Drawing::Size(210, 249);
+			this->pnlGavkaSM->Size = System::Drawing::Size(210, 137);
 			this->pnlGavkaSM->TabIndex = 2;
 			// 
-			// button4
+			// btnSMServices
 			// 
-			this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+			this->btnSMServices->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
 				static_cast<System::Int32>(static_cast<System::Byte>(119)));
-			this->button4->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button4->FlatAppearance->BorderSize = 0;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
+			this->btnSMServices->Dock = System::Windows::Forms::DockStyle::Top;
+			this->btnSMServices->FlatAppearance->BorderSize = 0;
+			this->btnSMServices->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnSMServices->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->button4->Location = System::Drawing::Point(0, 186);
-			this->button4->Margin = System::Windows::Forms::Padding(40, 4, 4, 4);
-			this->button4->Name = L"button4";
-			this->button4->Padding = System::Windows::Forms::Padding(40, 0, 0, 0);
-			this->button4->Size = System::Drawing::Size(210, 62);
-			this->button4->TabIndex = 5;
-			this->button4->Text = L"Gavka";
-			this->button4->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button4->UseVisualStyleBackColor = false;
+			this->btnSMServices->Location = System::Drawing::Point(0, 90);
+			this->btnSMServices->Margin = System::Windows::Forms::Padding(40, 4, 4, 4);
+			this->btnSMServices->Name = L"btnSMServices";
+			this->btnSMServices->Padding = System::Windows::Forms::Padding(40, 0, 0, 0);
+			this->btnSMServices->Size = System::Drawing::Size(210, 45);
+			this->btnSMServices->TabIndex = 4;
+			this->btnSMServices->Text = L"Services";
+			this->btnSMServices->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnSMServices->UseVisualStyleBackColor = false;
 			// 
-			// button3
+			// btnSMHistory
 			// 
-			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+			this->btnSMHistory->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
 				static_cast<System::Int32>(static_cast<System::Byte>(119)));
-			this->button3->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button3->FlatAppearance->BorderSize = 0;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
+			this->btnSMHistory->Dock = System::Windows::Forms::DockStyle::Top;
+			this->btnSMHistory->FlatAppearance->BorderSize = 0;
+			this->btnSMHistory->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnSMHistory->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->button3->Location = System::Drawing::Point(0, 124);
-			this->button3->Margin = System::Windows::Forms::Padding(40, 4, 4, 4);
-			this->button3->Name = L"button3";
-			this->button3->Padding = System::Windows::Forms::Padding(40, 0, 0, 0);
-			this->button3->Size = System::Drawing::Size(210, 62);
-			this->button3->TabIndex = 4;
-			this->button3->Text = L"Gavka";
-			this->button3->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button3->UseVisualStyleBackColor = false;
+			this->btnSMHistory->Location = System::Drawing::Point(0, 45);
+			this->btnSMHistory->Margin = System::Windows::Forms::Padding(40, 4, 4, 4);
+			this->btnSMHistory->Name = L"btnSMHistory";
+			this->btnSMHistory->Padding = System::Windows::Forms::Padding(40, 0, 0, 0);
+			this->btnSMHistory->Size = System::Drawing::Size(210, 45);
+			this->btnSMHistory->TabIndex = 3;
+			this->btnSMHistory->Text = L"History";
+			this->btnSMHistory->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnSMHistory->UseVisualStyleBackColor = false;
 			// 
-			// button2
+			// btnSMAbout
 			// 
-			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+			this->btnSMAbout->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
 				static_cast<System::Int32>(static_cast<System::Byte>(119)));
-			this->button2->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button2->FlatAppearance->BorderSize = 0;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
+			this->btnSMAbout->Dock = System::Windows::Forms::DockStyle::Top;
+			this->btnSMAbout->FlatAppearance->BorderSize = 0;
+			this->btnSMAbout->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnSMAbout->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->button2->Location = System::Drawing::Point(0, 62);
-			this->button2->Margin = System::Windows::Forms::Padding(40, 4, 4, 4);
-			this->button2->Name = L"button2";
-			this->button2->Padding = System::Windows::Forms::Padding(40, 0, 0, 0);
-			this->button2->Size = System::Drawing::Size(210, 62);
-			this->button2->TabIndex = 3;
-			this->button2->Text = L"Gavka";
-			this->button2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button2->UseVisualStyleBackColor = false;
+			this->btnSMAbout->Location = System::Drawing::Point(0, 0);
+			this->btnSMAbout->Margin = System::Windows::Forms::Padding(40, 4, 4, 4);
+			this->btnSMAbout->Name = L"btnSMAbout";
+			this->btnSMAbout->Padding = System::Windows::Forms::Padding(40, 0, 0, 0);
+			this->btnSMAbout->Size = System::Drawing::Size(210, 45);
+			this->btnSMAbout->TabIndex = 2;
+			this->btnSMAbout->Text = L"About";
+			this->btnSMAbout->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnSMAbout->UseVisualStyleBackColor = false;
 			// 
-			// button1
+			// btnHome
 			// 
-			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
-				static_cast<System::Int32>(static_cast<System::Byte>(119)));
-			this->button1->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button1->FlatAppearance->BorderSize = 0;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
+			this->btnHome->Dock = System::Windows::Forms::DockStyle::Top;
+			this->btnHome->FlatAppearance->BorderSize = 0;
+			this->btnHome->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnHome->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->button1->Location = System::Drawing::Point(0, 0);
-			this->button1->Margin = System::Windows::Forms::Padding(40, 4, 4, 4);
-			this->button1->Name = L"button1";
-			this->button1->Padding = System::Windows::Forms::Padding(40, 0, 0, 0);
-			this->button1->Size = System::Drawing::Size(210, 62);
-			this->button1->TabIndex = 2;
-			this->button1->Text = L"Gavka";
-			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button1->UseVisualStyleBackColor = false;
-			// 
-			// btnGavka
-			// 
-			this->btnGavka->Dock = System::Windows::Forms::DockStyle::Top;
-			this->btnGavka->FlatAppearance->BorderSize = 0;
-			this->btnGavka->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnGavka->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
-				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->btnGavka->Location = System::Drawing::Point(0, 74);
-			this->btnGavka->Margin = System::Windows::Forms::Padding(40, 0, 0, 0);
-			this->btnGavka->Name = L"btnGavka";
-			this->btnGavka->Padding = System::Windows::Forms::Padding(50, 0, 0, 0);
-			this->btnGavka->Size = System::Drawing::Size(210, 62);
-			this->btnGavka->TabIndex = 1;
-			this->btnGavka->Text = L"Gavka";
-			this->btnGavka->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnGavka->UseVisualStyleBackColor = true;
-			this->btnGavka->Click += gcnew System::EventHandler(this, &frmMain::btnGavka_Click);
-			this->btnGavka->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &frmMain::btnGavka_Paint);
+			this->btnHome->Location = System::Drawing::Point(0, 74);
+			this->btnHome->Margin = System::Windows::Forms::Padding(0);
+			this->btnHome->Name = L"btnHome";
+			this->btnHome->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
+			this->btnHome->Size = System::Drawing::Size(210, 60);
+			this->btnHome->TabIndex = 1;
+			this->btnHome->Text = L"Home";
+			this->btnHome->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnHome->UseVisualStyleBackColor = true;
+			this->btnHome->Click += gcnew System::EventHandler(this, &frmMain::btnHome_Click);
+			this->btnHome->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &frmMain::btnHome_Paint);
 			// 
 			// pnlLogo
 			// 
@@ -355,10 +361,10 @@ namespace UI1 {
 			this->pnlFooter->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(48)),
 				static_cast<System::Int32>(static_cast<System::Byte>(69)));
 			this->pnlFooter->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->pnlFooter->Location = System::Drawing::Point(210, 578);
+			this->pnlFooter->Location = System::Drawing::Point(210, 552);
 			this->pnlFooter->Margin = System::Windows::Forms::Padding(4);
 			this->pnlFooter->Name = L"pnlFooter";
-			this->pnlFooter->Size = System::Drawing::Size(1005, 74);
+			this->pnlFooter->Size = System::Drawing::Size(1005, 100);
 			this->pnlFooter->TabIndex = 3;
 			// 
 			// frmMain
@@ -391,7 +397,9 @@ namespace UI1 {
 	private:
 
 		#pragma region VARs
+
 		String^ CurrentDir = System::IO::Directory::GetCurrentDirectory();
+
 		#pragma endregion VARs
 
 
@@ -401,19 +409,20 @@ namespace UI1 {
 			//
 		}
 
-		System::Void btnGavka_Click(System::Object^ sender, System::EventArgs^ e) {
+		System::Void btnHome_Click(System::Object^ sender, System::EventArgs^ e) {
 			pnlGavkaSM->Visible = !pnlGavkaSM->Visible;
 		}
 
 		System::Void btnExit_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 			Graphics^ g = e->Graphics;
 			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::HighQuality;
-			g->DrawImage(Image::FromFile(CurrentDir + "\\Sources\\UI\\exit_berry.png"), 13, 13, 35, 35);
+			g->DrawImage(Image::FromFile(CurrentDir + "\\Sources\\UI\\exit_berry.png"), 13, 13, 35, 35);			
+
 		}
-		System::Void btnGavka_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+		System::Void btnHome_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 			Graphics^ g = e->Graphics;
 			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::HighQuality;
-			g->DrawImage(Image::FromFile(CurrentDir + "\\Sources\\UI\\gav_berry.png"), 13, 13, 35, 35);
+			g->DrawImage(Image::FromFile(CurrentDir + "\\Sources\\UI\\dot_berry.png"), 5, 13, 35, 35);			
 		}
 		System::Void btnExit_Click(System::Object^ sender, System::EventArgs^ e) {
 			this->Close();
