@@ -1,13 +1,19 @@
 #pragma once
 
 namespace UI1 {
-
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+
+
+
+	typedef enum COLOR_SCHEME {	ICEBOX, WAZGEN };
+	typedef enum COLORS	{ I1, I2, I3, I4, I5 };
+
+
 
 	public ref class frmMain : public System::Windows::Forms::Form {
 		
@@ -242,6 +248,7 @@ namespace UI1 {
 			this->pnlLogo->Name = L"pnlLogo";
 			this->pnlLogo->Size = System::Drawing::Size(210, 74);
 			this->pnlLogo->TabIndex = 0;
+			this->pnlLogo->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &frmMain::pnlLogo_Paint);
 			// 
 			// pnlLine
 			// 
@@ -256,6 +263,10 @@ namespace UI1 {
 			this->pnlLine->Name = L"pnlLine";
 			this->pnlLine->Size = System::Drawing::Size(1215, 35);
 			this->pnlLine->TabIndex = 1;
+			this->pnlLine->MouseDoubleClick += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::pnlLine_MDC);
+			this->pnlLine->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::pnlLine_MouseDown);
+			this->pnlLine->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::pnlLine_MouseMove);
+			this->pnlLine->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::pnlLine_MouseUp);
 			// 
 			// btnLMin
 			// 
@@ -368,7 +379,7 @@ namespace UI1 {
 			this->ResumeLayout(false);
 
 		}
-#pragma endregion
+	#pragma endregion
 
 	private:
 
@@ -379,6 +390,27 @@ namespace UI1 {
 
 		#pragma endregion VARs
 
+		#pragma region ProgerVods
+		void formDrugMD(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+			if (e->Button == Windows::Forms::MouseButtons::Left) {
+				xOffset_ = -e->X - SystemInformation::FrameBorderSize.Width + 4;
+				yOffset_ = -e->Y - SystemInformation::FrameBorderSize.Height + 4;
+				mouseOffset_ = System::Drawing::Point(xOffset_, yOffset_);
+				isMouseDown_ = true;
+			}
+		}
+		void formDrugMM(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+			if (isMouseDown_) {
+				Point mousePos = Control::MousePosition;
+				mousePos.Offset(mouseOffset_.X, mouseOffset_.Y);
+				Location = mousePos;
+			}
+		}
+		void formDrugMU(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+			if (e->Button == Windows::Forms::MouseButtons::Left) { isMouseDown_ = false; }
+		}
+		#pragma endregion ProgerVods
+		
 		#pragma region VOIDs
 		System::Void frmMain_Load     (System::Object^ sender, System::EventArgs^ e) {
 			//
@@ -429,31 +461,13 @@ namespace UI1 {
 		}
 		System::Void frmMain_MouseUp  (System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { formDrugMU(sender, e); }
 
-
-
-		void formDrugMD(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
-			if (e->Button == Windows::Forms::MouseButtons::Left) {
-				xOffset_ = -e->X - SystemInformation::FrameBorderSize.Width;
-				yOffset_ = -e->Y - SystemInformation::FrameBorderSize.Height;
-				mouseOffset_ = System::Drawing::Point(xOffset_, yOffset_);
-				isMouseDown_ = true;
-			}
+		System::Void pnlLine_MDC	  (System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+			WindowState = (WindowState == FormWindowState::Maximized ? FormWindowState::Normal : FormWindowState::Maximized);
+			Invalidate();
 		}
-		void formDrugMM(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
-			if (isMouseDown_) {
-				Point mousePos = Control::MousePosition;
-				mousePos.Offset(mouseOffset_.X, mouseOffset_.Y);
-				Location = mousePos;
-			}
-		}
-		void formDrugMU(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
-			if (e->Button == Windows::Forms::MouseButtons::Left) { isMouseDown_ = false; }
-		}
-
-
-
-
-
+		System::Void pnlLine_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { formDrugMD(sender, e); }
+		System::Void pnlLine_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { formDrugMM(sender, e); }
+		System::Void pnlLine_MouseUp  (System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { formDrugMU(sender, e); }
 
 		System::Void btnHome_Click(System::Object^ sender, System::EventArgs^ e) {
 			pnlGavkaSM->Visible = !pnlGavkaSM->Visible;
@@ -474,8 +488,6 @@ namespace UI1 {
 			this->Close();
 		}
 
-
-
 		System::Void btnLMin_Click(System::Object^ sender, System::EventArgs^ e) {
 			if		(WindowState == FormWindowState::Normal)	{ fws = WindowState; WindowState = FormWindowState::Minimized; }
 			else if (WindowState == FormWindowState::Maximized) { fws = WindowState; WindowState = FormWindowState::Minimized; }
@@ -490,8 +502,14 @@ namespace UI1 {
 			Close();
 		}
 
+		System::Void pnlLogo_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+
+		}
 
 		#pragma endregion VOIDs
 
+	
+
+	
 	};
 }
