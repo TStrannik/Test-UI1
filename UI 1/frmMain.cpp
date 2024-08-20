@@ -45,5 +45,6 @@ int main(array<String^>^ args) {
 // Cyrilic
 // FormResize
 // Form Win+left etc...
+// Component checkbox UI-on\off Android-style
 // 
 // AUTHORISZTION form
