@@ -2,14 +2,10 @@
 #include <Windows.h>
 #include <iostream>
 
-
 using namespace System;
 using namespace System::Windows::Forms;
 
 [STAThreadAttribute]
-
-
-
 void APPLICATION_START() {
 	system("color 70");
 	std::cout << "\n APPLICATION START\n\n";
@@ -32,8 +28,6 @@ void APPLICATION_END() {
 	//system("pause");
 }
 
-
-
 /// ver 0.1.0
 int main(array<String^>^ args) {
 	APPLICATION_START();
@@ -41,3 +35,16 @@ int main(array<String^>^ args) {
 	APPLICATION_END();
 	return 0;
 }
+
+
+
+// TODO:
+// 
+// Struct COLORS
+// Color schemes
+// Cyrilic
+// FormResize
+// Form Win+left etc...
+// Component checkbox UI-on\off Android-style
+// 
+// AUTHORISZTION form
