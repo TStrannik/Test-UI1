@@ -125,6 +125,9 @@
     <ClInclude Include="uiButton.h">
       <FileType>CppControl</FileType>
     </ClInclude>
+    <ClInclude Include="uiTextBox.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="uiToggleOval.h">
       <FileType>CppControl</FileType>
     </ClInclude>
@@ -142,6 +145,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="uiButton.cpp" />
+    <ClCompile Include="uiTextBox.cpp" />
     <ClCompile Include="uiToggleOval.cpp" />
     <ClCompile Include="uiPanelMenu.cpp" />
   </ItemGroup>
@@ -160,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="uiButton.resx" />
+    <EmbeddedResource Include="uiTextBox.resx">
+      <DependentUpon>uiTextBox.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uiToggleOval.resx">
       <DependentUpon>uiToggleOval.h</DependentUpon>
     </EmbeddedResource>

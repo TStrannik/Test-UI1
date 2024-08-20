@@ -51,6 +51,10 @@ namespace UI1 {
 	private: System::Windows::Forms::RichTextBox^ richTextBox1;
 	private: System::Windows::Forms::Label^ label3;
 	private: ClassLibraryUI::uiButton^ uiButton3;
+	private: ClassLibraryUI::uiTextBox^ uiTextBox1;
+
+
+
 
 
 
@@ -139,11 +143,12 @@ namespace UI1 {
 			this->uiButton2 = (gcnew ClassLibraryUI::uiButton());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->uiButton3 = (gcnew ClassLibraryUI::uiButton());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->uiTextBox1 = (gcnew ClassLibraryUI::uiTextBox());
 			this->pnlMenu->SuspendLayout();
 			this->pnlMenuSM->SuspendLayout();
 			this->pnlLine->SuspendLayout();
@@ -605,6 +610,7 @@ namespace UI1 {
 			// 
 			// panel2
 			// 
+			this->panel2->Controls->Add(this->uiTextBox1);
 			this->panel2->Controls->Add(this->uiButton3);
 			this->panel2->Controls->Add(this->label4);
 			this->panel2->Controls->Add(this->richTextBox1);
@@ -613,41 +619,8 @@ namespace UI1 {
 			this->panel2->Location = System::Drawing::Point(209, 316);
 			this->panel2->Name = L"panel2";
 			this->panel2->Padding = System::Windows::Forms::Padding(15, 0, 15, 0);
-			this->panel2->Size = System::Drawing::Size(300, 171);
+			this->panel2->Size = System::Drawing::Size(300, 214);
 			this->panel2->TabIndex = 14;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(18, 50);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(173, 23);
-			this->textBox1->TabIndex = 0;
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(15, 29);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(79, 18);
-			this->label3->TabIndex = 9;
-			this->label3->Text = L"Текстбокс";
-			// 
-			// richTextBox1
-			// 
-			this->richTextBox1->Location = System::Drawing::Point(18, 104);
-			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(173, 23);
-			this->richTextBox1->TabIndex = 10;
-			this->richTextBox1->Text = L"";
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(15, 83);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(109, 18);
-			this->label4->TabIndex = 11;
-			this->label4->Text = L"Рич текстбокс";
 			// 
 			// uiButton3
 			// 
@@ -670,6 +643,58 @@ namespace UI1 {
 			this->uiButton3->TabIndex = 13;
 			this->uiButton3->Text = L"Отправить";
 			this->uiButton3->UseVisualStyleBackColor = false;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(15, 83);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(109, 18);
+			this->label4->TabIndex = 11;
+			this->label4->Text = L"Рич текстбокс";
+			// 
+			// richTextBox1
+			// 
+			this->richTextBox1->Location = System::Drawing::Point(18, 104);
+			this->richTextBox1->Name = L"richTextBox1";
+			this->richTextBox1->Size = System::Drawing::Size(173, 23);
+			this->richTextBox1->TabIndex = 10;
+			this->richTextBox1->Text = L"";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(15, 29);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(79, 18);
+			this->label3->TabIndex = 9;
+			this->label3->Text = L"Текстбокс";
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(18, 50);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(173, 23);
+			this->textBox1->TabIndex = 0;
+			// 
+			// uiTextBox1
+			// 
+			this->uiTextBox1->BackColor = System::Drawing::Color::White;
+			this->uiTextBox1->BorderRadius = 10;
+			this->uiTextBox1->Caption = nullptr;
+			this->uiTextBox1->ColorEnterBack = System::Drawing::Color::Tomato;
+			this->uiTextBox1->ColorEnterBord = System::Drawing::Color::White;
+			this->uiTextBox1->ColorEnterText = System::Drawing::Color::White;
+			this->uiTextBox1->ColorLeaveBack = System::Drawing::Color::Transparent;
+			this->uiTextBox1->ColorLeaveBord = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
+				static_cast<System::Int32>(static_cast<System::Byte>(169)));
+			this->uiTextBox1->ColorLeaveText = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
+				static_cast<System::Int32>(static_cast<System::Byte>(169)));
+			this->uiTextBox1->ForeColor = System::Drawing::Color::Black;
+			this->uiTextBox1->Location = System::Drawing::Point(19, 146);
+			this->uiTextBox1->Name = L"uiTextBox1";
+			this->uiTextBox1->Size = System::Drawing::Size(170, 30);
+			this->uiTextBox1->TabIndex = 14;
 			// 
 			// frmMain
 			// 
@@ -809,26 +834,26 @@ namespace UI1 {
 				//path->FillMode = System::Drawing::Drawing2D::FillMode::Winding;
 
 				//int r = 5;
-				int r = 10;
+				int r = 7;
 				int w = this->Width;
 				int h = this->Height;
 
 				path->StartFigure();
 				////// Round
 				
-				path->AddArc(0,   0,   r, r, 180, 90);
+				/*path->AddArc(0,   0,   r, r, 180, 90);
 				path->AddArc(w-r, 0,   r, r, 270, 90);
 				path->AddArc(w-r, h-r, r, r,   0, 90);
-				path->AddArc(0,   h-r, r, r,  90, 90);
+				path->AddArc(0,   h-r, r, r,  90, 90);*/
 				
 
 				////// Bevel
-				/*
+				
 				path->AddLine(0, r, r, 0); path->AddLine(r, 0, w - r, 0);
 				path->AddLine(w - r, 0, w, r); path->AddLine(w, r, w, h - r);
 				path->AddLine(w, h - r, w - r, h); path->AddLine(w - r, h, r, h);
 				path->AddLine(0, h - r, r, h); path->AddLine(0, h - r, 0, r);
-				*/
+				
 
 				path->CloseFigure();
 
