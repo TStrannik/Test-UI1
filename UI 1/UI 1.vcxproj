@@ -123,11 +123,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="frmMain.cpp" />
+    <ClCompile Include="uiToggleBox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="frmMain.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="uiToggleBox.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmMain.resx">

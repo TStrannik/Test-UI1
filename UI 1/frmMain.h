@@ -34,6 +34,7 @@ namespace UI1 {
 	private: System::Windows::Forms::Panel^ pnlC3;
 	private: System::Windows::Forms::Panel^ pnlC2;
 	private: System::Windows::Forms::Label^ lblColSch;
+	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Panel^ pnlC5;
 
 	public: frmMain(void) { InitializeComponent();	}
@@ -92,6 +93,7 @@ namespace UI1 {
 			this->pnlC2 = (gcnew System::Windows::Forms::Panel());
 			this->pnlC1 = (gcnew System::Windows::Forms::Panel());
 			this->lblColSch = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pnlMenu->SuspendLayout();
 			this->pnlMenuSM->SuspendLayout();
 			this->pnlLine->SuspendLayout();
@@ -440,6 +442,15 @@ namespace UI1 {
 			this->lblColSch->Text = L"ICEBOX";
 			this->lblColSch->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(221, 132);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(131, 18);
+			this->label1->TabIndex = 6;
+			this->label1->Text = L"Sample togglebox";
+			// 
 			// frmMain
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 18);
@@ -447,6 +458,7 @@ namespace UI1 {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
 			this->ClientSize = System::Drawing::Size(1153, 643);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->lblColSch);
 			this->Controls->Add(this->pnlColorSample);
 			this->Controls->Add(this->pnlFooter);
