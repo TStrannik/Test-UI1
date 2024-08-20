@@ -11,7 +11,7 @@ void APPLICATION_START() {
 	std::cout << "\n APPLICATION START\n\n";
 	std::cout << "\tStatistic:\n\n";
 
-
+	// hjn t,fk
 	// Let's code
 	std::cout << "\tInfo of Application here =/\n";
 
