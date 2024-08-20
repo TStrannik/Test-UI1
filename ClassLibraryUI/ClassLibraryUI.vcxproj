@@ -122,6 +122,7 @@
     <ClInclude Include="ClassLibraryUI.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="uiButton.h" />
     <ClInclude Include="uiToggleOval.h">
       <FileType>CppControl</FileType>
     </ClInclude>
@@ -138,6 +139,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="uiButton.cpp" />
     <ClCompile Include="uiToggleOval.cpp" />
     <ClCompile Include="uiPanelMenu.cpp" />
   </ItemGroup>
@@ -155,6 +157,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="uiButton.resx" />
     <EmbeddedResource Include="uiToggleOval.resx">
       <DependentUpon>uiToggleOval.h</DependentUpon>
     </EmbeddedResource>

@@ -31,31 +31,22 @@ namespace ClassLibraryUI {
 		property Color offToggleColor;
 		property bool Checked;
 
-	public: uiToggleOval(void) { uiCostructor(); InitializeComponent(); } void uiCostructor();
+	public: uiToggleOval(void) { StartSet(); InitializeComponent(); } void StartSet();
 	protected: ~uiToggleOval() { if (components) delete components; }
 
-	private: System::Windows::Forms::Button^ button1;
+
 	private:
 		System::ComponentModel::Container ^components;
 
 		#pragma region Windows Form Designer generated code
 		void InitializeComponent(void)
 		{
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(0, 0);
-			this->button1->Name = L"uiToggleOval";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"uiToggleOval";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// uiButton
+			// uiToggleOval
 			// 
 			this->Size = System::Drawing::Size(100, 30);
+			this->Click += gcnew System::EventHandler(this, &uiToggleOval::uiToggleOval_Click);
 			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &uiToggleOval::uiToggleOval_Paint);
 			this->MouseEnter += gcnew System::EventHandler(this, &uiToggleOval::uiToggleOval_MouseEnter);
 			this->MouseLeave += gcnew System::EventHandler(this, &uiToggleOval::uiToggleOval_MouseLeave);
@@ -93,6 +84,9 @@ namespace ClassLibraryUI {
 
 
 		}
+		System::Void uiToggleOval_Click(System::Object^ sender, System::EventArgs^ e) {
+			Checked = !Checked; Invalidate();
+		}
 		System::Void uiToggleOval_MouseEnter(System::Object^ sender, System::EventArgs^ e) { Invalidate(); }
 		System::Void uiToggleOval_MouseLeave(System::Object^ sender, System::EventArgs^ e) { Invalidate(); }
 
@@ -111,6 +105,7 @@ namespace ClassLibraryUI {
 
 			return path;
 		}
+
 
 	};
 }

@@ -3,7 +3,7 @@
 
 using namespace ClassLibraryUI;
 
-void uiToggleOval::uiCostructor() {
+void uiToggleOval::StartSet() {
 
 	this->MinimumSize = System::Drawing::Size(45, 22);
 	SetStyle(

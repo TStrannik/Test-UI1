@@ -37,6 +37,10 @@ namespace UI1 {
 	private: System::Windows::Forms::Panel^ pnlC2;
 	private: System::Windows::Forms::Label^ lblColSch;
 	private: System::Windows::Forms::Label^ label1;
+	private: ClassLibraryUI::uiToggleOval^ uiToggleOval1;
+	private: System::Windows::Forms::Label^ label2;
+	private: ClassLibraryUI::uiToggleOval^ uiToggleOval2;
+
 
 
 
@@ -108,6 +112,9 @@ namespace UI1 {
 			this->pnlC1 = (gcnew System::Windows::Forms::Panel());
 			this->lblColSch = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->uiToggleOval1 = (gcnew ClassLibraryUI::uiToggleOval());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->uiToggleOval2 = (gcnew ClassLibraryUI::uiToggleOval());
 			this->pnlMenu->SuspendLayout();
 			this->pnlMenuSM->SuspendLayout();
 			this->pnlLine->SuspendLayout();
@@ -138,7 +145,7 @@ namespace UI1 {
 			this->btnContact->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnContact->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->btnContact->Location = System::Drawing::Point(0, 301);
+			this->btnContact->Location = System::Drawing::Point(0, 309);
 			this->btnContact->Margin = System::Windows::Forms::Padding(45, 0, 0, 0);
 			this->btnContact->Name = L"btnContact";
 			this->btnContact->Padding = System::Windows::Forms::Padding(16, 0, 0, 0);
@@ -174,7 +181,7 @@ namespace UI1 {
 			this->btnExamples->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnExamples->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->btnExamples->Location = System::Drawing::Point(0, 251);
+			this->btnExamples->Location = System::Drawing::Point(0, 259);
 			this->btnExamples->Margin = System::Windows::Forms::Padding(45, 0, 0, 0);
 			this->btnExamples->Name = L"btnExamples";
 			this->btnExamples->Padding = System::Windows::Forms::Padding(16, 0, 0, 0);
@@ -195,7 +202,7 @@ namespace UI1 {
 			this->pnlMenuSM->Location = System::Drawing::Point(0, 120);
 			this->pnlMenuSM->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->pnlMenuSM->Name = L"pnlMenuSM";
-			this->pnlMenuSM->Size = System::Drawing::Size(180, 131);
+			this->pnlMenuSM->Size = System::Drawing::Size(180, 139);
 			this->pnlMenuSM->TabIndex = 2;
 			// 
 			// btnSMServices
@@ -465,6 +472,47 @@ namespace UI1 {
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"Sample togglebox";
 			// 
+			// uiToggleOval1
+			// 
+			this->uiToggleOval1->Checked = false;
+			this->uiToggleOval1->Location = System::Drawing::Point(358, 126);
+			this->uiToggleOval1->MinimumSize = System::Drawing::Size(45, 22);
+			this->uiToggleOval1->Name = L"uiToggleOval1";
+			this->uiToggleOval1->offBackColor = System::Drawing::Color::Gray;
+			this->uiToggleOval1->offToggleColor = System::Drawing::Color::Gainsboro;
+			this->uiToggleOval1->onBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			this->uiToggleOval1->onToggleColor = System::Drawing::Color::WhiteSmoke;
+			this->uiToggleOval1->Size = System::Drawing::Size(70, 30);
+			this->uiToggleOval1->TabIndex = 7;
+			this->uiToggleOval1->Text = L"uiToggleOval1";
+			this->uiToggleOval1->UseVisualStyleBackColor = true;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(221, 177);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(131, 18);
+			this->label2->TabIndex = 8;
+			this->label2->Text = L"Sample togglebox";
+			// 
+			// uiToggleOval2
+			// 
+			this->uiToggleOval2->Checked = true;
+			this->uiToggleOval2->Location = System::Drawing::Point(358, 171);
+			this->uiToggleOval2->MinimumSize = System::Drawing::Size(45, 22);
+			this->uiToggleOval2->Name = L"uiToggleOval2";
+			this->uiToggleOval2->offBackColor = System::Drawing::Color::Gray;
+			this->uiToggleOval2->offToggleColor = System::Drawing::Color::Gainsboro;
+			this->uiToggleOval2->onBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			this->uiToggleOval2->onToggleColor = System::Drawing::Color::WhiteSmoke;
+			this->uiToggleOval2->Size = System::Drawing::Size(70, 30);
+			this->uiToggleOval2->TabIndex = 9;
+			this->uiToggleOval2->Text = L"uiToggleOval2";
+			this->uiToggleOval2->UseVisualStyleBackColor = true;
+			// 
 			// frmMain
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 18);
@@ -472,6 +520,9 @@ namespace UI1 {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
 			this->ClientSize = System::Drawing::Size(907, 665);
+			this->Controls->Add(this->uiToggleOval2);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->uiToggleOval1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->lblColSch);
 			this->Controls->Add(this->pnlColorSample);
