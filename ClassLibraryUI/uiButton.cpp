@@ -3,9 +3,8 @@
 
 using namespace ClassLibraryUI;
 
-void uiButton::uiCostructor() {
-	//System::Drawing::Size^ Size = System::Drawing::Size(30, 100); //C# Size = new Size(100, 30);
-
+void uiButton::StartSet() {
+	//this->MinimumSize = System::Drawing::Size(45, 22);
 	SetStyle(
 		ControlStyles::AllPaintingInWmPaint |
 		ControlStyles::OptimizedDoubleBuffer |
@@ -18,7 +17,7 @@ void uiButton::uiCostructor() {
 	BackColor = Color::Black;
 	ForeColor = Color::White;
 
-	SF->Alignment	  = StringAlignment::Center;
+	SF->Alignment = StringAlignment::Center;
 	SF->LineAlignment = StringAlignment::Center;
 
 	Font = (gcnew System::Drawing::Font("Arial", 10, FontStyle::Bold));
@@ -26,12 +25,12 @@ void uiButton::uiCostructor() {
 	Text = L"SampleText";
 	Caption = L"SampleText";
 	BorderRadius = 10;
-	ColorLeaveBord = Color::Tomato;
+	ColorLeaveBord = Color::FromArgb(255, 119, 141, 169);
 	ColorLeaveBack = Color::Transparent;
-	ColorLeaveText = Color::Tomato;
+	ColorLeaveText = Color::FromArgb(255, 119, 141, 169);
 
 	ColorEnterBord = Color::White;
 	ColorEnterBack = Color::Tomato;
 	ColorEnterText = Color::White;
-	
+
 }

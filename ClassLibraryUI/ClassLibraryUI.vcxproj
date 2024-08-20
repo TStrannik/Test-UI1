@@ -122,7 +122,9 @@
     <ClInclude Include="ClassLibraryUI.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="uiButton.h" />
+    <ClInclude Include="uiButton.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="uiToggleOval.h">
       <FileType>CppControl</FileType>
     </ClInclude>
