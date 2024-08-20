@@ -37,9 +37,15 @@ namespace UI1 {
 	private: System::Windows::Forms::Panel^ pnlC2;
 	private: System::Windows::Forms::Label^ lblColSch;
 	private: System::Windows::Forms::Label^ label1;
-	private: ClassLibraryUI::uiToggleOval^ uiToggleOval1;
+
 	private: System::Windows::Forms::Label^ label2;
+	private: ClassLibraryUI::uiToggleOval^ uiToggleOval1;
 	private: ClassLibraryUI::uiToggleOval^ uiToggleOval2;
+
+
+
+
+
 
 
 
@@ -112,8 +118,8 @@ namespace UI1 {
 			this->pnlC1 = (gcnew System::Windows::Forms::Panel());
 			this->lblColSch = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->uiToggleOval1 = (gcnew ClassLibraryUI::uiToggleOval());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->uiToggleOval1 = (gcnew ClassLibraryUI::uiToggleOval());
 			this->uiToggleOval2 = (gcnew ClassLibraryUI::uiToggleOval());
 			this->pnlMenu->SuspendLayout();
 			this->pnlMenuSM->SuspendLayout();
@@ -472,22 +478,6 @@ namespace UI1 {
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"Sample togglebox";
 			// 
-			// uiToggleOval1
-			// 
-			this->uiToggleOval1->Checked = false;
-			this->uiToggleOval1->Location = System::Drawing::Point(358, 126);
-			this->uiToggleOval1->MinimumSize = System::Drawing::Size(45, 22);
-			this->uiToggleOval1->Name = L"uiToggleOval1";
-			this->uiToggleOval1->offBackColor = System::Drawing::Color::Gray;
-			this->uiToggleOval1->offToggleColor = System::Drawing::Color::Gainsboro;
-			this->uiToggleOval1->onBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
-				static_cast<System::Int32>(static_cast<System::Byte>(119)));
-			this->uiToggleOval1->onToggleColor = System::Drawing::Color::WhiteSmoke;
-			this->uiToggleOval1->Size = System::Drawing::Size(70, 30);
-			this->uiToggleOval1->TabIndex = 7;
-			this->uiToggleOval1->Text = L"uiToggleOval1";
-			this->uiToggleOval1->UseVisualStyleBackColor = true;
-			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
@@ -497,6 +487,21 @@ namespace UI1 {
 			this->label2->TabIndex = 8;
 			this->label2->Text = L"Sample togglebox";
 			// 
+			// uiToggleOval1
+			// 
+			this->uiToggleOval1->Checked = false;
+			this->uiToggleOval1->Location = System::Drawing::Point(358, 126);
+			this->uiToggleOval1->MinimumSize = System::Drawing::Size(45, 22);
+			this->uiToggleOval1->Name = L"uiToggleOval1";
+			this->uiToggleOval1->offBackColor = System::Drawing::Color::Gray;
+			this->uiToggleOval1->offToggleColor = System::Drawing::Color::Gainsboro;
+			this->uiToggleOval1->onBackColor = System::Drawing::Color::MediumSlateBlue;
+			this->uiToggleOval1->onToggleColor = System::Drawing::Color::WhiteSmoke;
+			this->uiToggleOval1->Size = System::Drawing::Size(70, 30);
+			this->uiToggleOval1->TabIndex = 9;
+			this->uiToggleOval1->Text = L"uiToggleOval1";
+			this->uiToggleOval1->UseVisualStyleBackColor = true;
+			// 
 			// uiToggleOval2
 			// 
 			this->uiToggleOval2->Checked = true;
@@ -505,11 +510,10 @@ namespace UI1 {
 			this->uiToggleOval2->Name = L"uiToggleOval2";
 			this->uiToggleOval2->offBackColor = System::Drawing::Color::Gray;
 			this->uiToggleOval2->offToggleColor = System::Drawing::Color::Gainsboro;
-			this->uiToggleOval2->onBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
-				static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			this->uiToggleOval2->onBackColor = System::Drawing::Color::MediumSlateBlue;
 			this->uiToggleOval2->onToggleColor = System::Drawing::Color::WhiteSmoke;
 			this->uiToggleOval2->Size = System::Drawing::Size(70, 30);
-			this->uiToggleOval2->TabIndex = 9;
+			this->uiToggleOval2->TabIndex = 10;
 			this->uiToggleOval2->Text = L"uiToggleOval2";
 			this->uiToggleOval2->UseVisualStyleBackColor = true;
 			// 
@@ -521,8 +525,8 @@ namespace UI1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
 			this->ClientSize = System::Drawing::Size(907, 665);
 			this->Controls->Add(this->uiToggleOval2);
-			this->Controls->Add(this->label2);
 			this->Controls->Add(this->uiToggleOval1);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->lblColSch);
 			this->Controls->Add(this->pnlColorSample);
@@ -537,6 +541,7 @@ namespace UI1 {
 			this->Name = L"frmMain";
 			this->ShowIcon = false;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->Text = L"B";
 			this->Load += gcnew System::EventHandler(this, &frmMain::frmMain_Load);
 			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &frmMain::frmMain_Paint);
 			this->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::frmMain_MouseDown);
@@ -630,6 +635,8 @@ namespace UI1 {
 			btnContact->ForeColor	 = C5;
 			btnExit->ForeColor		 = C5;
 			this->BackColor			 = C5;
+
+			Refresh();
 		}
 		#pragma endregion ProgerVods
 		

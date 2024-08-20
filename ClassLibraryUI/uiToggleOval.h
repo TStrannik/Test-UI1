@@ -31,6 +31,7 @@ namespace ClassLibraryUI {
 		property Color offToggleColor;
 		property bool Checked;
 
+
 	public: uiToggleOval(void) { StartSet(); InitializeComponent(); } void StartSet();
 	protected: ~uiToggleOval() { if (components) delete components; }
 
@@ -55,6 +56,7 @@ namespace ClassLibraryUI {
 		}
 		#pragma endregion
 
+		#pragma region Voids
 	private:
 		System::Void uiToggleOval_Load(System::Object^ sender, System::EventArgs^ e) {
 			//
@@ -89,6 +91,8 @@ namespace ClassLibraryUI {
 		}
 		System::Void uiToggleOval_MouseEnter(System::Object^ sender, System::EventArgs^ e) { Invalidate(); }
 		System::Void uiToggleOval_MouseLeave(System::Object^ sender, System::EventArgs^ e) { Invalidate(); }
+
+		#pragma endregion Voids
 
 
 		GraphicsPath^ GetFigurePath()
