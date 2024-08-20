@@ -23,6 +23,7 @@ namespace ClassLibraryUI {
 
 	public ref class uiToggleOval : public System::Windows::Forms::Button		//::UserControl	
 	{
+		#pragma region Kernel
 	public:
 		/// Fields
 		property Color onBackColor;
@@ -30,6 +31,7 @@ namespace ClassLibraryUI {
 		property Color offBackColor;
 		property Color offToggleColor;
 		property bool Checked;
+		
 
 
 	public: uiToggleOval(void) { StartSet(); InitializeComponent(); } void StartSet();
@@ -38,6 +40,7 @@ namespace ClassLibraryUI {
 
 	private:
 		System::ComponentModel::Container ^components;
+		#pragma endregion Kernel
 
 		#pragma region Windows Form Designer generated code
 		void InitializeComponent(void)
