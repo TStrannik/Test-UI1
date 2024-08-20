@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 namespace UI1 {
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -35,6 +37,18 @@ namespace UI1 {
 	private: System::Windows::Forms::Panel^ pnlC2;
 	private: System::Windows::Forms::Label^ lblColSch;
 	private: System::Windows::Forms::Label^ label1;
+
+
+
+
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Panel^ pnlC5;
 
 	public: frmMain(void) { InitializeComponent();	}
@@ -114,7 +128,7 @@ namespace UI1 {
 			this->pnlMenu->Location = System::Drawing::Point(0, 30);
 			this->pnlMenu->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->pnlMenu->Name = L"pnlMenu";
-			this->pnlMenu->Size = System::Drawing::Size(180, 613);
+			this->pnlMenu->Size = System::Drawing::Size(180, 635);
 			this->pnlMenu->TabIndex = 0;
 			// 
 			// btnContact
@@ -141,7 +155,7 @@ namespace UI1 {
 			this->btnExit->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnExit->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->btnExit->Location = System::Drawing::Point(0, 563);
+			this->btnExit->Location = System::Drawing::Point(0, 585);
 			this->btnExit->Margin = System::Windows::Forms::Padding(45, 0, 0, 0);
 			this->btnExit->Name = L"btnExit";
 			this->btnExit->Padding = System::Windows::Forms::Padding(56, 0, 0, 0);
@@ -285,7 +299,7 @@ namespace UI1 {
 			this->pnlLine->Location = System::Drawing::Point(0, 0);
 			this->pnlLine->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->pnlLine->Name = L"pnlLine";
-			this->pnlLine->Size = System::Drawing::Size(1153, 30);
+			this->pnlLine->Size = System::Drawing::Size(907, 30);
 			this->pnlLine->TabIndex = 1;
 			this->pnlLine->MouseDoubleClick += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::pnlLine_MDC);
 			this->pnlLine->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::pnlLine_MouseDown);
@@ -304,7 +318,7 @@ namespace UI1 {
 			this->btnLMin->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnLMin->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->btnLMin->Location = System::Drawing::Point(1033, 0);
+			this->btnLMin->Location = System::Drawing::Point(787, 0);
 			this->btnLMin->Margin = System::Windows::Forms::Padding(45, 0, 0, 0);
 			this->btnLMin->Name = L"btnLMin";
 			this->btnLMin->Size = System::Drawing::Size(40, 30);
@@ -324,7 +338,7 @@ namespace UI1 {
 			this->btnLMax->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnLMax->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->btnLMax->Location = System::Drawing::Point(1073, 0);
+			this->btnLMax->Location = System::Drawing::Point(827, 0);
 			this->btnLMax->Margin = System::Windows::Forms::Padding(45, 0, 0, 0);
 			this->btnLMax->Name = L"btnLMax";
 			this->btnLMax->Size = System::Drawing::Size(40, 30);
@@ -344,7 +358,7 @@ namespace UI1 {
 			this->btnLCls->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnLCls->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->btnLCls->Location = System::Drawing::Point(1113, 0);
+			this->btnLCls->Location = System::Drawing::Point(867, 0);
 			this->btnLCls->Margin = System::Windows::Forms::Padding(45, 0, 0, 0);
 			this->btnLCls->Name = L"btnLCls";
 			this->btnLCls->Size = System::Drawing::Size(40, 30);
@@ -360,7 +374,7 @@ namespace UI1 {
 			this->pnlHeader->Location = System::Drawing::Point(180, 30);
 			this->pnlHeader->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->pnlHeader->Name = L"pnlHeader";
-			this->pnlHeader->Size = System::Drawing::Size(973, 70);
+			this->pnlHeader->Size = System::Drawing::Size(727, 70);
 			this->pnlHeader->TabIndex = 2;
 			// 
 			// pnlFooter
@@ -368,10 +382,10 @@ namespace UI1 {
 			this->pnlFooter->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(48)),
 				static_cast<System::Int32>(static_cast<System::Byte>(69)));
 			this->pnlFooter->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->pnlFooter->Location = System::Drawing::Point(180, 573);
+			this->pnlFooter->Location = System::Drawing::Point(180, 595);
 			this->pnlFooter->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->pnlFooter->Name = L"pnlFooter";
-			this->pnlFooter->Size = System::Drawing::Size(973, 70);
+			this->pnlFooter->Size = System::Drawing::Size(727, 70);
 			this->pnlFooter->TabIndex = 3;
 			// 
 			// pnlColorSample
@@ -385,7 +399,7 @@ namespace UI1 {
 			this->pnlColorSample->Controls->Add(this->pnlC3);
 			this->pnlColorSample->Controls->Add(this->pnlC2);
 			this->pnlColorSample->Controls->Add(this->pnlC1);
-			this->pnlColorSample->Location = System::Drawing::Point(1016, 541);
+			this->pnlColorSample->Location = System::Drawing::Point(770, 563);
 			this->pnlColorSample->Name = L"pnlColorSample";
 			this->pnlColorSample->Size = System::Drawing::Size(125, 25);
 			this->pnlColorSample->TabIndex = 4;
@@ -434,7 +448,7 @@ namespace UI1 {
 			// 
 			this->lblColSch->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->lblColSch->AutoSize = true;
-			this->lblColSch->Location = System::Drawing::Point(1014, 521);
+			this->lblColSch->Location = System::Drawing::Point(768, 543);
 			this->lblColSch->Margin = System::Windows::Forms::Padding(0, 0, 3, 0);
 			this->lblColSch->Name = L"lblColSch";
 			this->lblColSch->Size = System::Drawing::Size(60, 18);
@@ -457,7 +471,7 @@ namespace UI1 {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->ClientSize = System::Drawing::Size(1153, 643);
+			this->ClientSize = System::Drawing::Size(907, 665);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->lblColSch);
 			this->Controls->Add(this->pnlColorSample);
@@ -580,7 +594,8 @@ namespace UI1 {
 				//path->FillMode = System::Drawing::Drawing2D::FillMode::Alternate;
 				//path->FillMode = System::Drawing::Drawing2D::FillMode::Winding;
 
-				int r = 5;
+				//int r = 5;
+				int r = 10;
 				int w = this->Width;
 				int h = this->Height;
 
