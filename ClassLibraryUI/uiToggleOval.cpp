@@ -15,9 +15,8 @@ void uiToggleOval::StartSet() {
 	);
 	DoubleBuffered = true;
 
-
 	Checked = false;
-	onBackColor = Color::MediumSlateBlue;
+	onBackColor = Color::FromArgb(255, 119, 141, 169);
 	onToggleColor = Color::WhiteSmoke;
 	offBackColor = Color::Gray;
 	offToggleColor = Color::Gainsboro;

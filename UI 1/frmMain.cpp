@@ -40,11 +40,14 @@ int main(array<String^>^ args) {
 
 // TODO:
 // 
-// Struct COLORS
-// Color schemes
-// Cyrilic
-// FormResize
-// Form Win+left etc...
-// Component checkbox UI-on\off Android-style
+// (+) Struct COLORS
+// (+) Color schemes
+// ( ) Cyrilic
+// ( ) FormResize
+// ( ) Form Win+left etc...
+// (+) Component checkbox UI-on\off Android-style
 // 
-// AUTHORISZTION form
+// ( ) AUTHORISZTION form
+// ( ) Component line + .gif background
+// ( ) TetxtBox with Radius = 5 (composite object)
+// ( ) TetxtBox with placeholder

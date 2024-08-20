@@ -2,9 +2,6 @@
 #include <iostream>
 #include <vector>	//?
 
-
-
-
 using namespace System;
 using namespace System::Collections::Generic;
 using namespace System::Text;
@@ -49,7 +46,7 @@ namespace ClassLibraryUI {
 			// 
 			// uiToggleOval
 			// 
-			this->Size = System::Drawing::Size(100, 30);
+			this->Size = System::Drawing::Size(70, 30);
 			this->Click += gcnew System::EventHandler(this, &uiToggleOval::uiToggleOval_Click);
 			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &uiToggleOval::uiToggleOval_Paint);
 			this->MouseEnter += gcnew System::EventHandler(this, &uiToggleOval::uiToggleOval_MouseEnter);

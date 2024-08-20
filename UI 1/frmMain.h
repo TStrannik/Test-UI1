@@ -41,6 +41,20 @@ namespace UI1 {
 	private: System::Windows::Forms::Label^ label2;
 	private: ClassLibraryUI::uiToggleOval^ uiToggleOval1;
 	private: ClassLibraryUI::uiToggleOval^ uiToggleOval2;
+	private: ClassLibraryUI::uiButton^ uiButton1;
+	private: ClassLibraryUI::uiButton^ uiButton2;
+	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Button^ btnHome;
+	private: System::Windows::Forms::Panel^ panel2;
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::RichTextBox^ richTextBox1;
+	private: System::Windows::Forms::Label^ label3;
+	private: ClassLibraryUI::uiButton^ uiButton3;
+
+
+
+
 
 
 
@@ -73,7 +87,7 @@ namespace UI1 {
 	private: System::Windows::Forms::Panel^ pnlLine;
 	private: System::Windows::Forms::Panel^ pnlHeader;
 	private: System::Windows::Forms::Panel^ pnlFooter;
-	private: System::Windows::Forms::Button^ btnHome;
+
 	private: System::Windows::Forms::Button^ btnExamples;
 	private: System::Windows::Forms::Panel^ pnlMenuSM;
 
@@ -121,10 +135,21 @@ namespace UI1 {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->uiToggleOval1 = (gcnew ClassLibraryUI::uiToggleOval());
 			this->uiToggleOval2 = (gcnew ClassLibraryUI::uiToggleOval());
+			this->uiButton1 = (gcnew ClassLibraryUI::uiButton());
+			this->uiButton2 = (gcnew ClassLibraryUI::uiButton());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->uiButton3 = (gcnew ClassLibraryUI::uiButton());
 			this->pnlMenu->SuspendLayout();
 			this->pnlMenuSM->SuspendLayout();
 			this->pnlLine->SuspendLayout();
 			this->pnlColorSample->SuspendLayout();
+			this->panel1->SuspendLayout();
+			this->panel2->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// pnlMenu
@@ -157,7 +182,7 @@ namespace UI1 {
 			this->btnContact->Padding = System::Windows::Forms::Padding(16, 0, 0, 0);
 			this->btnContact->Size = System::Drawing::Size(180, 50);
 			this->btnContact->TabIndex = 5;
-			this->btnContact->Text = L"Contacts";
+			this->btnContact->Text = L"Контакты";
 			this->btnContact->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnContact->UseVisualStyleBackColor = true;
 			// 
@@ -174,7 +199,7 @@ namespace UI1 {
 			this->btnExit->Padding = System::Windows::Forms::Padding(56, 0, 0, 0);
 			this->btnExit->Size = System::Drawing::Size(180, 50);
 			this->btnExit->TabIndex = 4;
-			this->btnExit->Text = L"Exit";
+			this->btnExit->Text = L"Выход";
 			this->btnExit->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnExit->UseVisualStyleBackColor = true;
 			this->btnExit->Click += gcnew System::EventHandler(this, &frmMain::btnExit_Click);
@@ -193,7 +218,7 @@ namespace UI1 {
 			this->btnExamples->Padding = System::Windows::Forms::Padding(16, 0, 0, 0);
 			this->btnExamples->Size = System::Drawing::Size(180, 50);
 			this->btnExamples->TabIndex = 3;
-			this->btnExamples->Text = L"Examples";
+			this->btnExamples->Text = L"Портфолио";
 			this->btnExamples->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnExamples->UseVisualStyleBackColor = true;
 			// 
@@ -226,7 +251,7 @@ namespace UI1 {
 			this->btnSMServices->Padding = System::Windows::Forms::Padding(45, 0, 0, 0);
 			this->btnSMServices->Size = System::Drawing::Size(180, 45);
 			this->btnSMServices->TabIndex = 4;
-			this->btnSMServices->Text = L"Services";
+			this->btnSMServices->Text = L"Услуги";
 			this->btnSMServices->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnSMServices->UseVisualStyleBackColor = false;
 			// 
@@ -245,7 +270,7 @@ namespace UI1 {
 			this->btnSMHistory->Padding = System::Windows::Forms::Padding(45, 0, 0, 0);
 			this->btnSMHistory->Size = System::Drawing::Size(180, 45);
 			this->btnSMHistory->TabIndex = 3;
-			this->btnSMHistory->Text = L"History";
+			this->btnSMHistory->Text = L"История";
 			this->btnSMHistory->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnSMHistory->UseVisualStyleBackColor = false;
 			// 
@@ -264,7 +289,7 @@ namespace UI1 {
 			this->btnSMAbout->Padding = System::Windows::Forms::Padding(45, 0, 0, 0);
 			this->btnSMAbout->Size = System::Drawing::Size(180, 45);
 			this->btnSMAbout->TabIndex = 2;
-			this->btnSMAbout->Text = L"About";
+			this->btnSMAbout->Text = L"О нас";
 			this->btnSMAbout->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnSMAbout->UseVisualStyleBackColor = false;
 			// 
@@ -281,7 +306,7 @@ namespace UI1 {
 			this->btnHome->Padding = System::Windows::Forms::Padding(34, 0, 0, 0);
 			this->btnHome->Size = System::Drawing::Size(180, 50);
 			this->btnHome->TabIndex = 1;
-			this->btnHome->Text = L"Home";
+			this->btnHome->Text = L"Главная";
 			this->btnHome->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnHome->UseVisualStyleBackColor = true;
 			this->btnHome->Click += gcnew System::EventHandler(this, &frmMain::btnHome_Click);
@@ -472,30 +497,31 @@ namespace UI1 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(221, 132);
+			this->label1->Location = System::Drawing::Point(15, 28);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(131, 18);
+			this->label1->Size = System::Drawing::Size(146, 18);
 			this->label1->TabIndex = 6;
-			this->label1->Text = L"Sample togglebox";
+			this->label1->Text = L"Пример тогглбокса";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(221, 177);
+			this->label2->Location = System::Drawing::Point(15, 73);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(131, 18);
+			this->label2->Size = System::Drawing::Size(99, 18);
 			this->label2->TabIndex = 8;
-			this->label2->Text = L"Sample togglebox";
+			this->label2->Text = L"Метки лэйбл";
 			// 
 			// uiToggleOval1
 			// 
 			this->uiToggleOval1->Checked = false;
-			this->uiToggleOval1->Location = System::Drawing::Point(358, 126);
+			this->uiToggleOval1->Location = System::Drawing::Point(212, 22);
 			this->uiToggleOval1->MinimumSize = System::Drawing::Size(45, 22);
 			this->uiToggleOval1->Name = L"uiToggleOval1";
 			this->uiToggleOval1->offBackColor = System::Drawing::Color::Gray;
 			this->uiToggleOval1->offToggleColor = System::Drawing::Color::Gainsboro;
-			this->uiToggleOval1->onBackColor = System::Drawing::Color::MediumSlateBlue;
+			this->uiToggleOval1->onBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
+				static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			this->uiToggleOval1->onToggleColor = System::Drawing::Color::WhiteSmoke;
 			this->uiToggleOval1->Size = System::Drawing::Size(70, 30);
 			this->uiToggleOval1->TabIndex = 9;
@@ -505,17 +531,145 @@ namespace UI1 {
 			// uiToggleOval2
 			// 
 			this->uiToggleOval2->Checked = true;
-			this->uiToggleOval2->Location = System::Drawing::Point(358, 171);
+			this->uiToggleOval2->Location = System::Drawing::Point(212, 67);
 			this->uiToggleOval2->MinimumSize = System::Drawing::Size(45, 22);
 			this->uiToggleOval2->Name = L"uiToggleOval2";
 			this->uiToggleOval2->offBackColor = System::Drawing::Color::Gray;
 			this->uiToggleOval2->offToggleColor = System::Drawing::Color::Gainsboro;
-			this->uiToggleOval2->onBackColor = System::Drawing::Color::MediumSlateBlue;
+			this->uiToggleOval2->onBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
+				static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			this->uiToggleOval2->onToggleColor = System::Drawing::Color::WhiteSmoke;
 			this->uiToggleOval2->Size = System::Drawing::Size(70, 30);
 			this->uiToggleOval2->TabIndex = 10;
 			this->uiToggleOval2->Text = L"uiToggleOval2";
 			this->uiToggleOval2->UseVisualStyleBackColor = true;
+			// 
+			// uiButton1
+			// 
+			this->uiButton1->BackColor = System::Drawing::Color::Black;
+			this->uiButton1->BorderRadius = 10;
+			this->uiButton1->Caption = L"SampleText";
+			this->uiButton1->ColorEnterBack = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
+				static_cast<System::Int32>(static_cast<System::Byte>(169)));
+			this->uiButton1->ColorEnterBord = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
+				static_cast<System::Int32>(static_cast<System::Byte>(169)));
+			this->uiButton1->ColorEnterText = System::Drawing::Color::White;
+			this->uiButton1->ColorLeaveBack = System::Drawing::Color::Transparent;
+			this->uiButton1->ColorLeaveBord = System::Drawing::Color::Black;
+			this->uiButton1->ColorLeaveText = System::Drawing::Color::Black;
+			this->uiButton1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->uiButton1->Font = (gcnew System::Drawing::Font(L"Arial", 10, System::Drawing::FontStyle::Bold));
+			this->uiButton1->ForeColor = System::Drawing::Color::White;
+			this->uiButton1->Location = System::Drawing::Point(182, 129);
+			this->uiButton1->Name = L"uiButton1";
+			this->uiButton1->Size = System::Drawing::Size(100, 30);
+			this->uiButton1->TabIndex = 11;
+			this->uiButton1->Text = L"Отменить";
+			this->uiButton1->UseVisualStyleBackColor = false;
+			// 
+			// uiButton2
+			// 
+			this->uiButton2->BackColor = System::Drawing::Color::Black;
+			this->uiButton2->BorderRadius = 10;
+			this->uiButton2->Caption = L"SampleText";
+			this->uiButton2->ColorEnterBack = System::Drawing::Color::White;
+			this->uiButton2->ColorEnterBord = System::Drawing::Color::White;
+			this->uiButton2->ColorEnterText = System::Drawing::Color::Black;
+			this->uiButton2->ColorLeaveBack = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
+				static_cast<System::Int32>(static_cast<System::Byte>(169)));
+			this->uiButton2->ColorLeaveBord = System::Drawing::Color::Transparent;
+			this->uiButton2->ColorLeaveText = System::Drawing::Color::White;
+			this->uiButton2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->uiButton2->Font = (gcnew System::Drawing::Font(L"Arial", 10, System::Drawing::FontStyle::Bold));
+			this->uiButton2->ForeColor = System::Drawing::Color::White;
+			this->uiButton2->Location = System::Drawing::Point(76, 129);
+			this->uiButton2->Name = L"uiButton2";
+			this->uiButton2->Size = System::Drawing::Size(100, 30);
+			this->uiButton2->TabIndex = 12;
+			this->uiButton2->Text = L"Принять";
+			this->uiButton2->UseVisualStyleBackColor = false;
+			// 
+			// panel1
+			// 
+			this->panel1->Controls->Add(this->label1);
+			this->panel1->Controls->Add(this->uiButton2);
+			this->panel1->Controls->Add(this->label2);
+			this->panel1->Controls->Add(this->uiButton1);
+			this->panel1->Controls->Add(this->uiToggleOval1);
+			this->panel1->Controls->Add(this->uiToggleOval2);
+			this->panel1->Location = System::Drawing::Point(209, 118);
+			this->panel1->Name = L"panel1";
+			this->panel1->Padding = System::Windows::Forms::Padding(15, 0, 15, 0);
+			this->panel1->Size = System::Drawing::Size(300, 171);
+			this->panel1->TabIndex = 13;
+			// 
+			// panel2
+			// 
+			this->panel2->Controls->Add(this->uiButton3);
+			this->panel2->Controls->Add(this->label4);
+			this->panel2->Controls->Add(this->richTextBox1);
+			this->panel2->Controls->Add(this->label3);
+			this->panel2->Controls->Add(this->textBox1);
+			this->panel2->Location = System::Drawing::Point(209, 316);
+			this->panel2->Name = L"panel2";
+			this->panel2->Padding = System::Windows::Forms::Padding(15, 0, 15, 0);
+			this->panel2->Size = System::Drawing::Size(300, 171);
+			this->panel2->TabIndex = 14;
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(18, 50);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(173, 23);
+			this->textBox1->TabIndex = 0;
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(15, 29);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(79, 18);
+			this->label3->TabIndex = 9;
+			this->label3->Text = L"Текстбокс";
+			// 
+			// richTextBox1
+			// 
+			this->richTextBox1->Location = System::Drawing::Point(18, 104);
+			this->richTextBox1->Name = L"richTextBox1";
+			this->richTextBox1->Size = System::Drawing::Size(173, 23);
+			this->richTextBox1->TabIndex = 10;
+			this->richTextBox1->Text = L"";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(15, 83);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(109, 18);
+			this->label4->TabIndex = 11;
+			this->label4->Text = L"Рич текстбокс";
+			// 
+			// uiButton3
+			// 
+			this->uiButton3->BackColor = System::Drawing::Color::Black;
+			this->uiButton3->BorderRadius = 10;
+			this->uiButton3->Caption = L"SampleText";
+			this->uiButton3->ColorEnterBack = System::Drawing::Color::White;
+			this->uiButton3->ColorEnterBord = System::Drawing::Color::White;
+			this->uiButton3->ColorEnterText = System::Drawing::Color::Black;
+			this->uiButton3->ColorLeaveBack = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
+				static_cast<System::Int32>(static_cast<System::Byte>(169)));
+			this->uiButton3->ColorLeaveBord = System::Drawing::Color::Transparent;
+			this->uiButton3->ColorLeaveText = System::Drawing::Color::White;
+			this->uiButton3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->uiButton3->Font = (gcnew System::Drawing::Font(L"Arial", 10, System::Drawing::FontStyle::Bold));
+			this->uiButton3->ForeColor = System::Drawing::Color::White;
+			this->uiButton3->Location = System::Drawing::Point(197, 50);
+			this->uiButton3->Name = L"uiButton3";
+			this->uiButton3->Size = System::Drawing::Size(85, 77);
+			this->uiButton3->TabIndex = 13;
+			this->uiButton3->Text = L"Отправить";
+			this->uiButton3->UseVisualStyleBackColor = false;
 			// 
 			// frmMain
 			// 
@@ -524,10 +678,8 @@ namespace UI1 {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				static_cast<System::Int32>(static_cast<System::Byte>(221)));
 			this->ClientSize = System::Drawing::Size(907, 665);
-			this->Controls->Add(this->uiToggleOval2);
-			this->Controls->Add(this->uiToggleOval1);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->label1);
+			this->Controls->Add(this->panel2);
+			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->lblColSch);
 			this->Controls->Add(this->pnlColorSample);
 			this->Controls->Add(this->pnlFooter);
@@ -551,6 +703,10 @@ namespace UI1 {
 			this->pnlMenuSM->ResumeLayout(false);
 			this->pnlLine->ResumeLayout(false);
 			this->pnlColorSample->ResumeLayout(false);
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
+			this->panel2->ResumeLayout(false);
+			this->panel2->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
