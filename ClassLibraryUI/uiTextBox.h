@@ -25,9 +25,11 @@ namespace ClassLibraryUI {
 	public ref class uiTextBox : public System::Windows::Forms::UserControl
 	{
 		#pragma region Fields
+
 	public:
+		property bool	 PasswordBox;
+		//property char	 PasswordChar;
 		property int     BorderRadius;
-		property String^ Caption;
 		property Color   ColorLeaveBack;
 		property Color   ColorLeaveBord;
 		property Color   ColorLeaveText;
@@ -38,6 +40,10 @@ namespace ClassLibraryUI {
 
 	private:
 		StringFormat^ SF = gcnew StringFormat;
+		String^ CurrentDir = System::IO::Directory::GetCurrentDirectory();
+
+		String^ Password;
+
 		#pragma endregion Fields
 
 		#pragma region Kernel
@@ -45,6 +51,7 @@ namespace ClassLibraryUI {
 	protected: ~uiTextBox()		{ if (components) delete components; }
 	private: System::Windows::Forms::TextBox^ txtBox;
 	private: System::Windows::Forms::Label^ lblPH;
+	private: System::Windows::Forms::Button^ btnEye;
 	protected:
 
 	protected:
@@ -56,17 +63,19 @@ namespace ClassLibraryUI {
 		#pragma region Windows Form Designer generated code
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(uiTextBox::typeid));
 			this->txtBox = (gcnew System::Windows::Forms::TextBox());
 			this->lblPH = (gcnew System::Windows::Forms::Label());
+			this->btnEye = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// txtBox
 			// 
 			this->txtBox->BackColor = System::Drawing::Color::White;
 			this->txtBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->txtBox->Location = System::Drawing::Point(4, 9);
+			this->txtBox->Location = System::Drawing::Point(62, 9);
 			this->txtBox->Name = L"txtBox";
-			this->txtBox->Size = System::Drawing::Size(146, 13);
+			this->txtBox->Size = System::Drawing::Size(20, 13);
 			this->txtBox->TabIndex = 0;
 			this->txtBox->TextChanged += gcnew System::EventHandler(this, &uiTextBox::txtBox_TextChanged);
 			this->txtBox->GotFocus += gcnew System::EventHandler(this, &uiTextBox::RemoveText);
@@ -80,7 +89,7 @@ namespace ClassLibraryUI {
 			this->lblPH->Font = (gcnew System::Drawing::Font(L"Montserrat SemiBold", 9.749999F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->lblPH->ForeColor = System::Drawing::Color::LightGray;
-			this->lblPH->Location = System::Drawing::Point(3, 9);
+			this->lblPH->Location = System::Drawing::Point(3, 4);
 			this->lblPH->Name = L"lblPH";
 			this->lblPH->Size = System::Drawing::Size(53, 18);
 			this->lblPH->TabIndex = 1;
@@ -88,8 +97,25 @@ namespace ClassLibraryUI {
 			this->lblPH->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->lblPH->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &uiTextBox::lblPH_MouseClick);
 			// 
+			// btnEye
+			// 
+			this->btnEye->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnEye.BackgroundImage")));
+			this->btnEye->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->btnEye->FlatAppearance->BorderSize = 0;
+			this->btnEye->FlatAppearance->MouseDownBackColor = System::Drawing::Color::White;
+			this->btnEye->FlatAppearance->MouseOverBackColor = System::Drawing::Color::White;
+			this->btnEye->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnEye->Location = System::Drawing::Point(139, 5);
+			this->btnEye->Name = L"btnEye";
+			this->btnEye->Size = System::Drawing::Size(30, 20);
+			this->btnEye->TabIndex = 2;
+			this->btnEye->UseVisualStyleBackColor = true;
+			this->btnEye->Click += gcnew System::EventHandler(this, &uiTextBox::btnEye_Click);
+			this->btnEye->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &uiTextBox::btnEye_Paint);
+			// 
 			// uiTextBox
 			// 
+			this->Controls->Add(this->btnEye);
 			this->Controls->Add(this->lblPH);
 			this->Controls->Add(this->txtBox);
 			this->Name = L"uiTextBox";
@@ -103,31 +129,41 @@ namespace ClassLibraryUI {
 		#pragma endregion
 
 		#pragma region Voids
-	private: 
+	private:
 		System::Void uiTextBox_Load(System::Object^ sender, System::EventArgs^ e) {
-			txtBox->Left = 10; txtBox->Top = 5; txtBox->Width = Width - 20;
-			lblPH->Left = txtBox->Left + 1; lblPH->Top = txtBox->Top; lblPH->Text = PlaceHolder;		
+			int r = BorderRadius;
+			int mw = r < 10 ? 10 : r;
+			int mh = 5;
+			int eyeW = PasswordBox ? 20 : 0;
+
+			txtBox->Left = mw; txtBox->Top = mh;
+			txtBox->Width = Width - mw * 2 - eyeW - 2;
+
+			lblPH->Left = txtBox->Left + 1; lblPH->Top = txtBox->Top;
+			lblPH->Text = PlaceHolder;
+
+			btnEye->Width = 30; btnEye->Height = 20;
+			btnEye->Left = Width - mw - btnEye->Width; btnEye->Top = mh;
+			btnEye->Visible = PasswordBox;
+
 			AddText(sender, e);
 		}
-		System::Void txtBox_TextChanged(System::Object^ sender, System::EventArgs^ e)
-		{ RemoveText(sender, e); }
-
 		System::Void uiTextBox_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-
 			Graphics^ g = e->Graphics;
+			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias;
 			int w = Width - 1, h = Height - 1;
-			Pen^	 ebdPen = gcnew Pen(ColorEnterBord);
+			Pen^ ebdPen = gcnew Pen(ColorEnterBord);
 			Brush^ ebkBrush = gcnew SolidBrush(ColorEnterBack);
 			Brush^ etxBrush = gcnew SolidBrush(ColorEnterText);
 
-			Pen^	 lbdPen = gcnew Pen(ColorLeaveBord);
+			Pen^ lbdPen = gcnew Pen(ColorLeaveBord);
 			Brush^ lbkBrush = gcnew SolidBrush(ColorLeaveBack);
 			Brush^ ltxBrush = gcnew SolidBrush(ColorLeaveText);
 
-			Pen^	 bdPen = gcnew Pen(Color::Black);
+			Pen^ bdPen = gcnew Pen(Color::Black);
 			Brush^ bkBrush = gcnew SolidBrush(BackColor);
 			Brush^ txBrush = gcnew SolidBrush(BackColor);
-			
+
 			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::HighQuality;	// :AntiAlias;
 			g->Clear(Parent->BackColor);
 
@@ -155,10 +191,28 @@ namespace ClassLibraryUI {
 				g->FillPath(bkBrush, gp);
 			}
 		}
+		
 
-		System::Void lblPH_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
-		{ txtBox->Focus(); }
+		System::Void btnEye_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+			//Graphics^ g = e->Graphics;
+			//g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias;
+			//int w = btnEye->Width - 1, h = btnEye->Height - 1;
+			//Pen^	 bdPen = gcnew Pen(Color::Black); // Pen(Color::LightGray);
+			//Brush^ bkBrush = gcnew SolidBrush(BackColor);
+			//Brush^ txBrush = gcnew SolidBrush(BackColor);
 
+			/*g->DrawImage(Image::FromFile(CurrentDir + "\\..\\Sources\\UI\\eye1.png"), 0, 0, 30, 20);*/
+		}
+		System::Void btnEye_Click(System::Object^ sender, System::EventArgs^ e) {
+			//// set *******
+		}
+
+		System::Void txtBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+			RemoveText(sender, e);
+		}
+		System::Void lblPH_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+			txtBox->Focus();
+		}
 
 	public:
 		void RemoveText(System::Object^ sender, System::EventArgs^ e)
