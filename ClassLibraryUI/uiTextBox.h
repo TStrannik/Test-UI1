@@ -38,14 +38,6 @@ namespace ClassLibraryUI {
 
 	private:
 		StringFormat^ SF = gcnew StringFormat;
-
-
-		void PHolder::set() {
-			Refresh();
-			Invalidate();
-		}
-
-
 		#pragma endregion Fields
 
 		#pragma region Kernel
@@ -68,6 +60,7 @@ namespace ClassLibraryUI {
 			// 
 			// txtBox
 			// 
+			this->txtBox->BackColor = System::Drawing::Color::White;
 			this->txtBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->txtBox->Location = System::Drawing::Point(4, 9);
 			this->txtBox->Name = L"txtBox";
@@ -94,15 +87,18 @@ namespace ClassLibraryUI {
 	private: 
 		System::Void uiTextBox_Load(System::Object^ sender, System::EventArgs^ e) {
 			txtBox->Left = 10; txtBox->Top = 5; txtBox->Width = Width - 20;
-
 			
-			AddText(sender, e);
-			//txtBox->Focus();
-			//this->Parent->Focus();
+
+			std::cout << "\tLOAD\n";
+
 			//setPHolder(PHolder);
+			this->RemoveText(sender, e);
 		}
 
 		System::Void uiTextBox_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+
+			std::cout << "\tPaint\n";
+
 			Graphics^ g = e->Graphics;
 
 			int w = Width - 1, h = Height - 1;
@@ -145,43 +141,57 @@ namespace ClassLibraryUI {
 
 				g->FillPath(bkBrush, gp);
 			}
-
 		}
 
 	
 		System::Void txtBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-			//setPHolder(PHolder);
+			setPHolder(PHolder);			
 		}
 
 	public:
 		void RemoveText(System::Object^ sender, System::EventArgs^ e) {
-			if (txtBox->Text == PHolder) {
-				txtBox->Text = "";
+			std::cout << "\tRemoveText\n";
 
-				//setPHolder("");
-			}
+			//if (txtBox->Text->Length == 0) setPHolder("");
+
+			//if (txtBox->Text == PHolder) {
+			//	txtBox->Text = "";
+			//	//setPHolder("");
+			//}
+
+
+			setPHolder(PHolder); txtBox->Refresh();
+			
+
+			
 		}
 		void AddText(System::Object^ sender, System::EventArgs^ e) {
-			if (String::IsNullOrWhiteSpace(txtBox->Text)) {
+			/*if (String::IsNullOrWhiteSpace(txtBox->Text)) {
 				txtBox->Text = PHolder;
+			}*/
+
+			std::cout << "\tAddText\n";
+			
+			//if (String::IsNullOrWhiteSpace(txtBox->Text)) {
 				//setPHolder(PHolder);
-			}
+			//}
 		}
 
 		#pragma endregion Voids
 	
 
 		void setPHolder(String^ PHolder) {
-			//if (txtBox->Text->Length < 1) 
-			if (1)
-			{
-				Graphics^ g = txtBox->CreateGraphics();
-				Brush^ txBrush = gcnew SolidBrush(Color::Gray);
-				StringFormat^ HF = gcnew StringFormat;
-				HF->Alignment = StringAlignment::Near;
-				HF->LineAlignment = StringAlignment::Near;
-				g->DrawString(PHolder, Font, txBrush, -3, 1, HF);
-			}
+					
+			std::cout << "\tsetPHolder\n";
+
+
+			Graphics^ g = txtBox->CreateGraphics();
+			Brush^ txBrush = gcnew SolidBrush(Color::LightGray);
+			StringFormat^ HF = gcnew StringFormat;
+			HF->Alignment = StringAlignment::Near;
+			HF->LineAlignment = StringAlignment::Near;
+			g->DrawString(PHolder, Font, txBrush, -3, 1, HF);
+				
 		}
 
 	};
@@ -204,4 +214,13 @@ public void AddText(object sender, EventArgs e)
 	if (string.IsNullOrWhiteSpace(myTxtbx.Text))
 		myTxtbx.Text = "Enter text here...";
 }
+
+
+void AddText(System::Object^ sender, System::EventArgs^ e) {
+	if (String::IsNullOrWhiteSpace(txtBox->Text)) {
+		txtBox->Text = PHolder;
+	}
+}
+
+
 */

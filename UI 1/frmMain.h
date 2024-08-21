@@ -52,6 +52,17 @@ namespace UI1 {
 	private: System::Windows::Forms::Label^ label3;
 	private: ClassLibraryUI::uiButton^ uiButton3;
 	private: ClassLibraryUI::uiTextBox^ uiTextBox1;
+	private: System::Windows::Forms::Label^ label5;
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -152,6 +163,7 @@ namespace UI1 {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->uiTextBox1 = (gcnew ClassLibraryUI::uiTextBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->pnlMenu->SuspendLayout();
 			this->pnlMenuSM->SuspendLayout();
 			this->pnlLine->SuspendLayout();
@@ -613,6 +625,7 @@ namespace UI1 {
 			// 
 			// panel2
 			// 
+			this->panel2->Controls->Add(this->label5);
 			this->panel2->Controls->Add(this->uiTextBox1);
 			this->panel2->Controls->Add(this->uiButton3);
 			this->panel2->Controls->Add(this->label4);
@@ -658,6 +671,7 @@ namespace UI1 {
 			// 
 			// richTextBox1
 			// 
+			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->richTextBox1->Location = System::Drawing::Point(18, 104);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->Size = System::Drawing::Size(173, 23);
@@ -694,11 +708,20 @@ namespace UI1 {
 			this->uiTextBox1->ColorLeaveText = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
 				static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			this->uiTextBox1->ForeColor = System::Drawing::Color::Black;
-			this->uiTextBox1->Location = System::Drawing::Point(19, 150);
+			this->uiTextBox1->Location = System::Drawing::Point(18, 164);
 			this->uiTextBox1->Name = L"uiTextBox1";
-			this->uiTextBox1->PHolder = L"e-mail";
+			this->uiTextBox1->PHolder = L"Holder";
 			this->uiTextBox1->Size = System::Drawing::Size(170, 30);
-			this->uiTextBox1->TabIndex = 14;
+			this->uiTextBox1->TabIndex = 15;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(18, 143);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(148, 18);
+			this->label5->TabIndex = 16;
+			this->label5->Text = L"Не работает холдер";
 			// 
 			// frmMain
 			// 
