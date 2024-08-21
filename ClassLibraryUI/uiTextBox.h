@@ -64,6 +64,7 @@ namespace ClassLibraryUI {
 			this->txtBox->Name = L"txtBox";
 			this->txtBox->Size = System::Drawing::Size(146, 13);
 			this->txtBox->TabIndex = 0;
+			this->txtBox->TextChanged += gcnew System::EventHandler(this, &uiTextBox::txtBox_TextChanged);
 			// 
 			// uiTextBox
 			// 
@@ -87,8 +88,6 @@ namespace ClassLibraryUI {
 		}
 
 		System::Void uiTextBox_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-
-			
 			Graphics^ g = e->Graphics;
 
 			int w = Width - 1, h = Height - 1;
@@ -111,10 +110,6 @@ namespace ClassLibraryUI {
 
 			int r = BorderRadius;
 
-
-			// Text!!!! Caption
-
-
 			if (r == 0) {
 				g->DrawRectangle(bdPen, 0, 0, w, h);
 				g->FillRectangle(bkBrush, 0, 0, w, h);
@@ -135,12 +130,28 @@ namespace ClassLibraryUI {
 
 				g->FillPath(bkBrush, gp);
 			}
-			g->DrawString(Text, Font, txBrush, (int)(w / 2), (int)(h / 2), SF);
+
+		}
+
+		System::Void txtBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+			Graphics^ g = txtBox->CreateGraphics();
+			Brush^ txBrush = gcnew SolidBrush(Color::Gray);
+			StringFormat^ HF = gcnew StringFormat;
+
+			SF->Alignment	  = StringAlignment::Near;
+			SF->LineAlignment = StringAlignment::Near;
+
+			int l = txtBox->Left,	   t = txtBox->Top;
+			int w = txtBox->Width - 1, h = txtBox->Height - 1;
+			String^ PHolder = L"Holder";
+
+			g->DrawString(PHolder, Font, txBrush, 0, 0, HF);
 		}
 
 		#pragma endregion Voids
 	
-	};
+	
+};
 }
 
 
