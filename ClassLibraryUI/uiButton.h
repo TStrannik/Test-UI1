@@ -18,8 +18,10 @@ using namespace System::Drawing;
 namespace ClassLibraryUI {
 	public ref class uiButton : public System::Windows::Forms::Button	//::UserControls
 	{
+		#pragma region Kernel
 	public:		uiButton(void) { StartSet(); InitializeComponent(); } void StartSet();
 	protected: ~uiButton() { if (components) delete components; }
+		#pragma endregion Kernel
 
 		#pragma region Vars/Properties
 	public:

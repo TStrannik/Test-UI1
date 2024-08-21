@@ -77,6 +77,9 @@ namespace UI1 {
 
 
 
+
+
+
 	private: System::Windows::Forms::Panel^ pnlC5;
 
 	public: frmMain(void) { InitializeComponent();	}
@@ -691,8 +694,9 @@ namespace UI1 {
 			this->uiTextBox1->ColorLeaveText = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
 				static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			this->uiTextBox1->ForeColor = System::Drawing::Color::Black;
-			this->uiTextBox1->Location = System::Drawing::Point(19, 146);
+			this->uiTextBox1->Location = System::Drawing::Point(19, 150);
 			this->uiTextBox1->Name = L"uiTextBox1";
+			this->uiTextBox1->PHolder = L"e-mail";
 			this->uiTextBox1->Size = System::Drawing::Size(170, 30);
 			this->uiTextBox1->TabIndex = 14;
 			// 

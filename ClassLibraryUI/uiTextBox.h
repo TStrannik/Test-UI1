@@ -34,9 +34,18 @@ namespace ClassLibraryUI {
 		property Color   ColorEnterBack;
 		property Color   ColorEnterBord;
 		property Color   ColorEnterText;
+		property String^ PHolder;
 
 	private:
 		StringFormat^ SF = gcnew StringFormat;
+
+
+		void PHolder::set() {
+			Refresh();
+			Invalidate();
+		}
+
+
 		#pragma endregion Fields
 
 		#pragma region Kernel
@@ -65,6 +74,8 @@ namespace ClassLibraryUI {
 			this->txtBox->Size = System::Drawing::Size(146, 13);
 			this->txtBox->TabIndex = 0;
 			this->txtBox->TextChanged += gcnew System::EventHandler(this, &uiTextBox::txtBox_TextChanged);
+			this->txtBox->GotFocus += gcnew System::EventHandler(this, &uiTextBox::RemoveText);
+			this->txtBox->LostFocus += gcnew System::EventHandler(this, &uiTextBox::AddText);
 			// 
 			// uiTextBox
 			// 
@@ -84,7 +95,11 @@ namespace ClassLibraryUI {
 		System::Void uiTextBox_Load(System::Object^ sender, System::EventArgs^ e) {
 			txtBox->Left = 10; txtBox->Top = 5; txtBox->Width = Width - 20;
 
-
+			
+			AddText(sender, e);
+			//txtBox->Focus();
+			//this->Parent->Focus();
+			//setPHolder(PHolder);
 		}
 
 		System::Void uiTextBox_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
@@ -133,28 +148,44 @@ namespace ClassLibraryUI {
 
 		}
 
+	
 		System::Void txtBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-			Graphics^ g = txtBox->CreateGraphics();
-			Brush^ txBrush = gcnew SolidBrush(Color::Gray);
-			StringFormat^ HF = gcnew StringFormat;
+			//setPHolder(PHolder);
+		}
 
-			SF->Alignment	  = StringAlignment::Near;
-			SF->LineAlignment = StringAlignment::Near;
+	public:
+		void RemoveText(System::Object^ sender, System::EventArgs^ e) {
+			if (txtBox->Text == PHolder) {
+				txtBox->Text = "";
 
-			int l = txtBox->Left,	   t = txtBox->Top;
-			int w = txtBox->Width - 1, h = txtBox->Height - 1;
-			String^ PHolder = L"Holder";
-
-			g->DrawString(PHolder, Font, txBrush, 0, 0, HF);
+				//setPHolder("");
+			}
+		}
+		void AddText(System::Object^ sender, System::EventArgs^ e) {
+			if (String::IsNullOrWhiteSpace(txtBox->Text)) {
+				txtBox->Text = PHolder;
+				//setPHolder(PHolder);
+			}
 		}
 
 		#pragma endregion Voids
 	
-	
-};
+
+		void setPHolder(String^ PHolder) {
+			//if (txtBox->Text->Length < 1) 
+			if (1)
+			{
+				Graphics^ g = txtBox->CreateGraphics();
+				Brush^ txBrush = gcnew SolidBrush(Color::Gray);
+				StringFormat^ HF = gcnew StringFormat;
+				HF->Alignment = StringAlignment::Near;
+				HF->LineAlignment = StringAlignment::Near;
+				g->DrawString(PHolder, Font, txBrush, -3, 1, HF);
+			}
+		}
+
+	};
 }
-
-
 
 /*
 Textbox myTxtbx = new Textbox();
