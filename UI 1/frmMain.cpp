@@ -1,4 +1,5 @@
 #include "frmMain.h"
+
 #include <Windows.h>
 #include <iostream>
 
@@ -45,8 +46,12 @@ int main(array<String^>^ args) {
 // ( ) FormResize
 // ( ) Form Win+left etc...
 // (+) Component checkbox UI-on\off Android-style
+// ( ) Shtorka Curtain
 // 
 // ( ) AUTHORISZTION form
 // ( ) Component line + .gif background
 // (+) TetxtBox with Radius = 5 (composite object)
-// ( ) TetxtBox with placeholder
+// (+) TetxtBox with placeholder
+// ( ) TetxtBox with WRONG-color
+// ( ) TetxtBox with simbols\dots, eye
+// ( ) TetxtBox with checkmark

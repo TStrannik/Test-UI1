@@ -23,7 +23,7 @@ void uiTextBox::StartSet() {
 	SF->LineAlignment = StringAlignment::Center;
 
 	Text = L"SampleText";
-	PHolder = L"Holder";
+	PlaceHolder = L"Holder";
 
 	BorderRadius = 10;
 	ColorLeaveBord = Color::FromArgb(255, 119, 141, 169);

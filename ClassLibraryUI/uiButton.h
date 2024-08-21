@@ -84,7 +84,8 @@ namespace ClassLibraryUI {
 			Brush^ bkBrush = gcnew SolidBrush(BackColor);
 			Brush^ txBrush = gcnew SolidBrush(BackColor);
 
-			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::HighQuality;	// :AntiAlias;
+			//g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::HighQuality;	// :AntiAlias;
+			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias;
 			g->Clear(Parent->BackColor);
 
 

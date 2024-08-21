@@ -34,7 +34,7 @@ namespace ClassLibraryUI {
 		property Color   ColorEnterBack;
 		property Color   ColorEnterBord;
 		property Color   ColorEnterText;
-		property String^ PHolder;
+		property String^ PlaceHolder;
 
 	private:
 		StringFormat^ SF = gcnew StringFormat;
@@ -44,6 +44,7 @@ namespace ClassLibraryUI {
 	public:		uiTextBox(void) { StartSet(); InitializeComponent(); } void StartSet();
 	protected: ~uiTextBox()		{ if (components) delete components; }
 	private: System::Windows::Forms::TextBox^ txtBox;
+	private: System::Windows::Forms::Label^ lblPH;
 	protected:
 
 	protected:
@@ -56,6 +57,7 @@ namespace ClassLibraryUI {
 		void InitializeComponent(void)
 		{
 			this->txtBox = (gcnew System::Windows::Forms::TextBox());
+			this->lblPH = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// txtBox
@@ -70,8 +72,25 @@ namespace ClassLibraryUI {
 			this->txtBox->GotFocus += gcnew System::EventHandler(this, &uiTextBox::RemoveText);
 			this->txtBox->LostFocus += gcnew System::EventHandler(this, &uiTextBox::AddText);
 			// 
+			// lblPH
+			// 
+			this->lblPH->AutoSize = true;
+			this->lblPH->BackColor = System::Drawing::Color::Transparent;
+			this->lblPH->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->lblPH->Font = (gcnew System::Drawing::Font(L"Montserrat SemiBold", 9.749999F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->lblPH->ForeColor = System::Drawing::Color::LightGray;
+			this->lblPH->Location = System::Drawing::Point(3, 9);
+			this->lblPH->Name = L"lblPH";
+			this->lblPH->Size = System::Drawing::Size(53, 18);
+			this->lblPH->TabIndex = 1;
+			this->lblPH->Text = L"Holder";
+			this->lblPH->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->lblPH->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &uiTextBox::lblPH_MouseClick);
+			// 
 			// uiTextBox
 			// 
+			this->Controls->Add(this->lblPH);
 			this->Controls->Add(this->txtBox);
 			this->Name = L"uiTextBox";
 			this->Size = System::Drawing::Size(170, 30);
@@ -87,22 +106,16 @@ namespace ClassLibraryUI {
 	private: 
 		System::Void uiTextBox_Load(System::Object^ sender, System::EventArgs^ e) {
 			txtBox->Left = 10; txtBox->Top = 5; txtBox->Width = Width - 20;
-			
-
-			std::cout << "\tLOAD\n";
-
-			//setPHolder(PHolder);
-			this->RemoveText(sender, e);
+			lblPH->Left = txtBox->Left + 1; lblPH->Top = txtBox->Top; lblPH->Text = PlaceHolder;		
+			AddText(sender, e);
 		}
+		System::Void txtBox_TextChanged(System::Object^ sender, System::EventArgs^ e)
+		{ RemoveText(sender, e); }
 
 		System::Void uiTextBox_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 
-			std::cout << "\tPaint\n";
-
 			Graphics^ g = e->Graphics;
-
 			int w = Width - 1, h = Height - 1;
-
 			Pen^	 ebdPen = gcnew Pen(ColorEnterBord);
 			Brush^ ebkBrush = gcnew SolidBrush(ColorEnterBack);
 			Brush^ etxBrush = gcnew SolidBrush(ColorEnterText);
@@ -143,84 +156,17 @@ namespace ClassLibraryUI {
 			}
 		}
 
-	
-		System::Void txtBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-			setPHolder(PHolder);			
-		}
+		System::Void lblPH_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+		{ txtBox->Focus(); }
+
 
 	public:
-		void RemoveText(System::Object^ sender, System::EventArgs^ e) {
-			std::cout << "\tRemoveText\n";
-
-			//if (txtBox->Text->Length == 0) setPHolder("");
-
-			//if (txtBox->Text == PHolder) {
-			//	txtBox->Text = "";
-			//	//setPHolder("");
-			//}
-
-
-			setPHolder(PHolder); txtBox->Refresh();
-			
-
-			
-		}
-		void AddText(System::Object^ sender, System::EventArgs^ e) {
-			/*if (String::IsNullOrWhiteSpace(txtBox->Text)) {
-				txtBox->Text = PHolder;
-			}*/
-
-			std::cout << "\tAddText\n";
-			
-			//if (String::IsNullOrWhiteSpace(txtBox->Text)) {
-				//setPHolder(PHolder);
-			//}
-		}
+		void RemoveText(System::Object^ sender, System::EventArgs^ e)
+		{ lblPH->Visible = txtBox->Text->Length == 0; }
+		void AddText(System::Object^ sender, System::EventArgs^ e)
+		{ lblPH->Visible = String::IsNullOrWhiteSpace(txtBox->Text); }
 
 		#pragma endregion Voids
-	
-
-		void setPHolder(String^ PHolder) {
-					
-			std::cout << "\tsetPHolder\n";
-
-
-			Graphics^ g = txtBox->CreateGraphics();
-			Brush^ txBrush = gcnew SolidBrush(Color::LightGray);
-			StringFormat^ HF = gcnew StringFormat;
-			HF->Alignment = StringAlignment::Near;
-			HF->LineAlignment = StringAlignment::Near;
-			g->DrawString(PHolder, Font, txBrush, -3, 1, HF);
-				
-		}
 
 	};
 }
-
-/*
-Textbox myTxtbx = new Textbox();
-myTxtbx.Text = "Enter text here...";
-myTxtbx.GotFocus += GotFocus.EventHandle(RemoveText);
-myTxtbx.LostFocus += LostFocus.EventHandle(AddText);
-public void RemoveText(object sender, EventArgs e)
-{
-	if (myTxtbx.Text == "Enter text here...")
-	{
-		myTxtbx.Text = "";
-	}
-}
-public void AddText(object sender, EventArgs e)
-{
-	if (string.IsNullOrWhiteSpace(myTxtbx.Text))
-		myTxtbx.Text = "Enter text here...";
-}
-
-
-void AddText(System::Object^ sender, System::EventArgs^ e) {
-	if (String::IsNullOrWhiteSpace(txtBox->Text)) {
-		txtBox->Text = PHolder;
-	}
-}
-
-
-*/
