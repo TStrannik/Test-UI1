@@ -8,6 +8,7 @@ using namespace System::Windows::Forms;
 
 [STAThreadAttribute]
 void APPLICATION_START() {
+	setlocale(LC_ALL, "RU_ru");
 	system("color 70");
 	std::cout << "\n APPLICATION START\n\n";
 	std::cout << "\tStatistic:\n\n";
