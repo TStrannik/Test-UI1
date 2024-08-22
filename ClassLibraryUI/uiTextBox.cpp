@@ -27,6 +27,8 @@ void uiTextBox::StartSet() {
 
 	PasswordBox = false;
 	//PasswordChar = "*";
+	ShowPasswordChar = true;
+
 	BorderRadius = 10;
 	ColorLeaveBord = Color::FromArgb(255, 119, 141, 169);
 	ColorLeaveBack = Color::Transparent;

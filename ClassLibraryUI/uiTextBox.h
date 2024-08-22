@@ -28,6 +28,7 @@ namespace ClassLibraryUI {
 	public:
 		property bool	 PasswordBox;
 		//property char	 PasswordChar;
+		property bool	 ShowPasswordChar;
 		property int     BorderRadius;
 		property Color   ColorLeaveBack;
 		property Color   ColorLeaveBord;
@@ -194,7 +195,9 @@ namespace ClassLibraryUI {
 		}
 		
 		System::Void btnEye_Click(System::Object^ sender, System::EventArgs^ e) {
-			//// set *******
+			ShowPasswordChar = !ShowPasswordChar;
+
+			switchPasswordChars();
 		}
 		System::Void btnEye_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 			//
@@ -226,6 +229,14 @@ namespace ClassLibraryUI {
 			System::IO::Directory::SetCurrentDirectory(stepDir);
 			String^ dir = stepDir + "\\ClassLibraryUI\\Sources\\UI\\";
 			return dir;
+		}
+		bool switchPasswordChars() {
+			if (!PasswordBox) return false;
+
+			int l = txtBox->Text->Length;
+			Password = txtBox->Text;
+
+
 		}
 
 		#pragma endregion Voids
