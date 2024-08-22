@@ -46,17 +46,17 @@ namespace UI1 {
 	private: System::Windows::Forms::Button^ btnHome;
 	private: System::Windows::Forms::Panel^ panel2;
 
-	private: System::Windows::Forms::Label^ label3;
+
 	private: ClassLibraryUI::uiButton^ uiButton3;
 
 	private: System::Windows::Forms::Label^ label5;
 
 
 	private: System::Windows::Forms::Label^ label6;
-	private: ClassLibraryUI::uiButton^ uiButton4;
-	private: System::Windows::Forms::Panel^ panel3;
 
-	private: ClassLibraryUI::uiButton^ uiButton5;
+
+
+
 
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: ClassLibraryUI::uiTextBox^ uiTextBox2;
@@ -131,23 +131,18 @@ namespace UI1 {
 			   this->uiButton2 = (gcnew ClassLibraryUI::uiButton());
 			   this->panel1 = (gcnew System::Windows::Forms::Panel());
 			   this->panel2 = (gcnew System::Windows::Forms::Panel());
+			   this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			   this->uiTextBox2 = (gcnew ClassLibraryUI::uiTextBox());
+			   this->uiTextBox1 = (gcnew ClassLibraryUI::uiTextBox());
 			   this->label6 = (gcnew System::Windows::Forms::Label());
 			   this->label5 = (gcnew System::Windows::Forms::Label());
 			   this->uiButton3 = (gcnew ClassLibraryUI::uiButton());
-			   this->label3 = (gcnew System::Windows::Forms::Label());
-			   this->uiButton4 = (gcnew ClassLibraryUI::uiButton());
-			   this->panel3 = (gcnew System::Windows::Forms::Panel());
-			   this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			   this->uiButton5 = (gcnew ClassLibraryUI::uiButton());
-			   this->uiTextBox1 = (gcnew ClassLibraryUI::uiTextBox());
-			   this->uiTextBox2 = (gcnew ClassLibraryUI::uiTextBox());
 			   this->pnlMenu->SuspendLayout();
 			   this->pnlMenuSM->SuspendLayout();
 			   this->pnlLine->SuspendLayout();
 			   this->pnlColorSample->SuspendLayout();
 			   this->panel1->SuspendLayout();
 			   this->panel2->SuspendLayout();
-			   this->panel3->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			   this->SuspendLayout();
 			   // 
@@ -447,6 +442,7 @@ namespace UI1 {
 			   // 
 			   // panel2
 			   // 
+			   this->panel2->Controls->Add(this->pictureBox1);
 			   this->panel2->Controls->Add(this->uiTextBox2);
 			   this->panel2->Controls->Add(this->uiTextBox1);
 			   this->panel2->Controls->Add(this->label6);
@@ -454,6 +450,54 @@ namespace UI1 {
 			   this->panel2->Controls->Add(this->uiButton3);
 			   resources->ApplyResources(this->panel2, L"panel2");
 			   this->panel2->Name = L"panel2";
+			   // 
+			   // pictureBox1
+			   // 
+			   resources->ApplyResources(this->pictureBox1, L"pictureBox1");
+			   this->pictureBox1->Name = L"pictureBox1";
+			   this->pictureBox1->TabStop = false;
+			   // 
+			   // uiTextBox2
+			   // 
+			   this->uiTextBox2->BackColor = System::Drawing::Color::White;
+			   this->uiTextBox2->BorderRadius = 10;
+			   this->uiTextBox2->ColorEnterBack = System::Drawing::Color::Tomato;
+			   this->uiTextBox2->ColorEnterBord = System::Drawing::Color::White;
+			   this->uiTextBox2->ColorEnterText = System::Drawing::Color::White;
+			   this->uiTextBox2->ColorLeaveBack = System::Drawing::Color::White;
+			   this->uiTextBox2->ColorLeaveBord = System::Drawing::Color::Black;
+			   this->uiTextBox2->ColorLeaveText = System::Drawing::Color::Black;
+			   this->uiTextBox2->ColorWrongBack = System::Drawing::Color::LightCoral;
+			   this->uiTextBox2->ColorWrongBord = System::Drawing::Color::Red;
+			   this->uiTextBox2->ColorWrongText = System::Drawing::Color::Black;
+			   this->uiTextBox2->ForeColor = System::Drawing::Color::Black;
+			   resources->ApplyResources(this->uiTextBox2, L"uiTextBox2");
+			   this->uiTextBox2->Name = L"uiTextBox2";
+			   this->uiTextBox2->PasswordBox = true;
+			   this->uiTextBox2->PasswordChar = '*';
+			   this->uiTextBox2->PlaceHolder = L"Password";
+			   this->uiTextBox2->ShowPassword = false;
+			   // 
+			   // uiTextBox1
+			   // 
+			   this->uiTextBox1->BackColor = System::Drawing::Color::White;
+			   this->uiTextBox1->BorderRadius = 10;
+			   this->uiTextBox1->ColorEnterBack = System::Drawing::Color::Tomato;
+			   this->uiTextBox1->ColorEnterBord = System::Drawing::Color::White;
+			   this->uiTextBox1->ColorEnterText = System::Drawing::Color::White;
+			   this->uiTextBox1->ColorLeaveBack = System::Drawing::Color::White;
+			   this->uiTextBox1->ColorLeaveBord = System::Drawing::Color::Black;
+			   this->uiTextBox1->ColorLeaveText = System::Drawing::Color::Black;
+			   this->uiTextBox1->ColorWrongBack = System::Drawing::Color::LightCoral;
+			   this->uiTextBox1->ColorWrongBord = System::Drawing::Color::Red;
+			   this->uiTextBox1->ColorWrongText = System::Drawing::Color::Black;
+			   this->uiTextBox1->ForeColor = System::Drawing::Color::Black;
+			   resources->ApplyResources(this->uiTextBox1, L"uiTextBox1");
+			   this->uiTextBox1->Name = L"uiTextBox1";
+			   this->uiTextBox1->PasswordBox = false;
+			   this->uiTextBox1->PasswordChar = '*';
+			   this->uiTextBox1->PlaceHolder = L"Username";
+			   this->uiTextBox1->ShowPassword = false;
 			   // 
 			   // label6
 			   // 
@@ -482,109 +526,12 @@ namespace UI1 {
 			   this->uiButton3->Name = L"uiButton3";
 			   this->uiButton3->UseVisualStyleBackColor = false;
 			   // 
-			   // label3
-			   // 
-			   resources->ApplyResources(this->label3, L"label3");
-			   this->label3->Name = L"label3";
-			   // 
-			   // uiButton4
-			   // 
-			   this->uiButton4->BackColor = System::Drawing::Color::Black;
-			   this->uiButton4->BorderRadius = 0;
-			   this->uiButton4->Caption = L"SampleText";
-			   this->uiButton4->ColorEnterBack = System::Drawing::Color::White;
-			   this->uiButton4->ColorEnterBord = System::Drawing::Color::White;
-			   this->uiButton4->ColorEnterText = System::Drawing::Color::Black;
-			   this->uiButton4->ColorLeaveBack = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
-			   this->uiButton4->ColorLeaveBord = System::Drawing::Color::Black;
-			   this->uiButton4->ColorLeaveText = System::Drawing::Color::White;
-			   resources->ApplyResources(this->uiButton4, L"uiButton4");
-			   this->uiButton4->ForeColor = System::Drawing::Color::White;
-			   this->uiButton4->Name = L"uiButton4";
-			   this->uiButton4->UseVisualStyleBackColor = false;
-			   // 
-			   // panel3
-			   // 
-			   this->panel3->Controls->Add(this->pictureBox1);
-			   this->panel3->Controls->Add(this->uiButton5);
-			   this->panel3->Controls->Add(this->label3);
-			   this->panel3->Controls->Add(this->uiButton4);
-			   resources->ApplyResources(this->panel3, L"panel3");
-			   this->panel3->Name = L"panel3";
-			   // 
-			   // pictureBox1
-			   // 
-			   resources->ApplyResources(this->pictureBox1, L"pictureBox1");
-			   this->pictureBox1->Name = L"pictureBox1";
-			   this->pictureBox1->TabStop = false;
-			   // 
-			   // uiButton5
-			   // 
-			   this->uiButton5->BackColor = System::Drawing::Color::Black;
-			   this->uiButton5->BorderRadius = 0;
-			   this->uiButton5->Caption = L"SampleText";
-			   this->uiButton5->ColorEnterBack = System::Drawing::Color::White;
-			   this->uiButton5->ColorEnterBord = System::Drawing::Color::White;
-			   this->uiButton5->ColorEnterText = System::Drawing::Color::Black;
-			   this->uiButton5->ColorLeaveBack = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
-			   this->uiButton5->ColorLeaveBord = System::Drawing::Color::Black;
-			   this->uiButton5->ColorLeaveText = System::Drawing::Color::White;
-			   resources->ApplyResources(this->uiButton5, L"uiButton5");
-			   this->uiButton5->ForeColor = System::Drawing::Color::White;
-			   this->uiButton5->Name = L"uiButton5";
-			   this->uiButton5->UseVisualStyleBackColor = false;
-			   // 
-			   // uiTextBox1
-			   // 
-			   this->uiTextBox1->BackColor = System::Drawing::Color::White;
-			   this->uiTextBox1->BorderRadius = 10;
-			   this->uiTextBox1->ColorEnterBack = System::Drawing::Color::Tomato;
-			   this->uiTextBox1->ColorEnterBord = System::Drawing::Color::White;
-			   this->uiTextBox1->ColorEnterText = System::Drawing::Color::White;
-			   this->uiTextBox1->ColorLeaveBack = System::Drawing::Color::White;
-			   this->uiTextBox1->ColorLeaveBord = System::Drawing::Color::Black;
-			   this->uiTextBox1->ColorLeaveText = System::Drawing::Color::Black;
-			   this->uiTextBox1->ColorWrongBack = System::Drawing::Color::LightCoral;
-			   this->uiTextBox1->ColorWrongBord = System::Drawing::Color::Red;
-			   this->uiTextBox1->ColorWrongText = System::Drawing::Color::Black;
-			   this->uiTextBox1->ForeColor = System::Drawing::Color::Black;
-			   resources->ApplyResources(this->uiTextBox1, L"uiTextBox1");
-			   this->uiTextBox1->Name = L"uiTextBox1";
-			   this->uiTextBox1->PasswordBox = false;
-			   this->uiTextBox1->PasswordChar = '*';
-			   this->uiTextBox1->PlaceHolder = L"Username";
-			   this->uiTextBox1->ShowPassword = false;
-			   // 
-			   // uiTextBox2
-			   // 
-			   this->uiTextBox2->BackColor = System::Drawing::Color::White;
-			   this->uiTextBox2->BorderRadius = 10;
-			   this->uiTextBox2->ColorEnterBack = System::Drawing::Color::Tomato;
-			   this->uiTextBox2->ColorEnterBord = System::Drawing::Color::White;
-			   this->uiTextBox2->ColorEnterText = System::Drawing::Color::White;
-			   this->uiTextBox2->ColorLeaveBack = System::Drawing::Color::White;
-			   this->uiTextBox2->ColorLeaveBord = System::Drawing::Color::Black;
-			   this->uiTextBox2->ColorLeaveText = System::Drawing::Color::Black;
-			   this->uiTextBox2->ColorWrongBack = System::Drawing::Color::LightCoral;
-			   this->uiTextBox2->ColorWrongBord = System::Drawing::Color::Red;
-			   this->uiTextBox2->ColorWrongText = System::Drawing::Color::Black;
-			   this->uiTextBox2->ForeColor = System::Drawing::Color::Black;
-			   resources->ApplyResources(this->uiTextBox2, L"uiTextBox2");
-			   this->uiTextBox2->Name = L"uiTextBox2";
-			   this->uiTextBox2->PasswordBox = true;
-			   this->uiTextBox2->PasswordChar = '*';
-			   this->uiTextBox2->PlaceHolder = L"Password";
-			   this->uiTextBox2->ShowPassword = false;
-			   // 
 			   // frmMain
 			   // 
 			   resources->ApplyResources(this, L"$this");
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			   this->Controls->Add(this->panel3);
 			   this->Controls->Add(this->panel2);
 			   this->Controls->Add(this->panel1);
 			   this->Controls->Add(this->lblColSch);
@@ -609,8 +556,6 @@ namespace UI1 {
 			   this->panel1->PerformLayout();
 			   this->panel2->ResumeLayout(false);
 			   this->panel2->PerformLayout();
-			   this->panel3->ResumeLayout(false);
-			   this->panel3->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			   this->ResumeLayout(false);
 			   this->PerformLayout();
