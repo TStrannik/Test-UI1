@@ -246,7 +246,7 @@ namespace ClassLibraryUI {
 			ShowPassword ? mtbBox->PasswordChar = PasswordChar : mtbBox->PasswordChar = NULL;
 			ShowPassword = !ShowPassword;
 
-
+			PasswordBox ? mtbBox->Focus() : txtBox->Focus();
 
 			
 
@@ -256,8 +256,9 @@ namespace ClassLibraryUI {
 			// Use thah
 			//////// FOR paint
 			//// CS_WRONG
-			UICompState = !ShowPassword ? CS_WRONG : CS_LEAVE;
-			Invalidate();
+
+		//	UICompState = !ShowPassword ? CS_WRONG : CS_LEAVE;
+		//	Invalidate();
 
 			
 		}

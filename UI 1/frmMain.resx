@@ -117,14 +117,114 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;btnContact.Name" xml:space="preserve">
+    <value>btnContact</value>
+  </data>
+  <data name="&gt;&gt;btnContact.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnContact.Parent" xml:space="preserve">
+    <value>pnlMenu</value>
+  </data>
+  <data name="&gt;&gt;btnContact.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>pnlMenu</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnExamples.Name" xml:space="preserve">
+    <value>btnExamples</value>
+  </data>
+  <data name="&gt;&gt;btnExamples.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExamples.Parent" xml:space="preserve">
+    <value>pnlMenu</value>
+  </data>
+  <data name="&gt;&gt;btnExamples.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuSM.Name" xml:space="preserve">
+    <value>pnlMenuSM</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuSM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuSM.Parent" xml:space="preserve">
+    <value>pnlMenu</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuSM.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnHome.Name" xml:space="preserve">
+    <value>btnHome</value>
+  </data>
+  <data name="&gt;&gt;btnHome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnHome.Parent" xml:space="preserve">
+    <value>pnlMenu</value>
+  </data>
+  <data name="&gt;&gt;btnHome.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pnlLogo.Name" xml:space="preserve">
+    <value>pnlLogo</value>
+  </data>
+  <data name="&gt;&gt;pnlLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLogo.Parent" xml:space="preserve">
+    <value>pnlMenu</value>
+  </data>
+  <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pnlMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="pnlMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="pnlMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 635</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlMenu.Name" xml:space="preserve">
+    <value>pnlMenu</value>
+  </data>
+  <data name="&gt;&gt;pnlMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlMenu.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
   <data name="btnContact.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
   <data name="btnContact.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnContact.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
@@ -146,7 +246,6 @@
   <data name="btnContact.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 50</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnContact.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
@@ -261,6 +360,69 @@
   </data>
   <data name="&gt;&gt;btnExamples.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnSMServices.Name" xml:space="preserve">
+    <value>btnSMServices</value>
+  </data>
+  <data name="&gt;&gt;btnSMServices.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSMServices.Parent" xml:space="preserve">
+    <value>pnlMenuSM</value>
+  </data>
+  <data name="&gt;&gt;btnSMServices.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnSMHistory.Name" xml:space="preserve">
+    <value>btnSMHistory</value>
+  </data>
+  <data name="&gt;&gt;btnSMHistory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSMHistory.Parent" xml:space="preserve">
+    <value>pnlMenuSM</value>
+  </data>
+  <data name="&gt;&gt;btnSMHistory.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnSMAbout.Name" xml:space="preserve">
+    <value>btnSMAbout</value>
+  </data>
+  <data name="&gt;&gt;btnSMAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSMAbout.Parent" xml:space="preserve">
+    <value>pnlMenuSM</value>
+  </data>
+  <data name="&gt;&gt;btnSMAbout.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlMenuSM.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlMenuSM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 120</value>
+  </data>
+  <data name="pnlMenuSM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="pnlMenuSM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 136</value>
+  </data>
+  <data name="pnlMenuSM.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuSM.Name" xml:space="preserve">
+    <value>pnlMenuSM</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuSM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuSM.Parent" xml:space="preserve">
+    <value>pnlMenu</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuSM.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="btnSMServices.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -379,33 +541,6 @@
   <data name="&gt;&gt;btnSMAbout.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="pnlMenuSM.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="pnlMenuSM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 120</value>
-  </data>
-  <data name="pnlMenuSM.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="pnlMenuSM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 136</value>
-  </data>
-  <data name="pnlMenuSM.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pnlMenuSM.Name" xml:space="preserve">
-    <value>pnlMenuSM</value>
-  </data>
-  <data name="&gt;&gt;pnlMenuSM.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlMenuSM.Parent" xml:space="preserve">
-    <value>pnlMenu</value>
-  </data>
-  <data name="&gt;&gt;pnlMenuSM.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="btnHome.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -523,32 +658,68 @@
   <data name="&gt;&gt;pnlLogo.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="pnlMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+  <data name="&gt;&gt;btnLMin.Name" xml:space="preserve">
+    <value>btnLMin</value>
   </data>
-  <data name="pnlMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 30</value>
+  <data name="&gt;&gt;btnLMin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pnlMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+  <data name="&gt;&gt;btnLMin.Parent" xml:space="preserve">
+    <value>pnlLine</value>
   </data>
-  <data name="pnlMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 635</value>
-  </data>
-  <data name="pnlMenu.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;btnLMin.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;pnlMenu.Name" xml:space="preserve">
-    <value>pnlMenu</value>
+  <data name="&gt;&gt;btnLMax.Name" xml:space="preserve">
+    <value>btnLMax</value>
   </data>
-  <data name="&gt;&gt;pnlMenu.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnLMax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLMax.Parent" xml:space="preserve">
+    <value>pnlLine</value>
+  </data>
+  <data name="&gt;&gt;btnLMax.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnLCls.Name" xml:space="preserve">
+    <value>btnLCls</value>
+  </data>
+  <data name="&gt;&gt;btnLCls.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLCls.Parent" xml:space="preserve">
+    <value>pnlLine</value>
+  </data>
+  <data name="&gt;&gt;btnLCls.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlLine.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlLine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlLine.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="pnlLine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>907, 30</value>
+  </data>
+  <data name="pnlLine.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlLine.Name" xml:space="preserve">
+    <value>pnlLine</value>
+  </data>
+  <data name="&gt;&gt;pnlLine.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnlMenu.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnlLine.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pnlMenu.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;pnlLine.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="btnLMin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -675,33 +846,6 @@
   <data name="&gt;&gt;btnLCls.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="pnlLine.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="pnlLine.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pnlLine.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="pnlLine.Size" type="System.Drawing.Size, System.Drawing">
-    <value>907, 30</value>
-  </data>
-  <data name="pnlLine.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pnlLine.Name" xml:space="preserve">
-    <value>pnlLine</value>
-  </data>
-  <data name="&gt;&gt;pnlLine.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlLine.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlLine.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="pnlHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -727,7 +871,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlHeader.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="pnlFooter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -754,10 +898,91 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlFooter.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="pnlColorSample.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;pnlC5.Name" xml:space="preserve">
+    <value>pnlC5</value>
+  </data>
+  <data name="&gt;&gt;pnlC5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlC5.Parent" xml:space="preserve">
+    <value>pnlColorSample</value>
+  </data>
+  <data name="&gt;&gt;pnlC5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlC4.Name" xml:space="preserve">
+    <value>pnlC4</value>
+  </data>
+  <data name="&gt;&gt;pnlC4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlC4.Parent" xml:space="preserve">
+    <value>pnlColorSample</value>
+  </data>
+  <data name="&gt;&gt;pnlC4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlC3.Name" xml:space="preserve">
+    <value>pnlC3</value>
+  </data>
+  <data name="&gt;&gt;pnlC3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlC3.Parent" xml:space="preserve">
+    <value>pnlColorSample</value>
+  </data>
+  <data name="&gt;&gt;pnlC3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnlC2.Name" xml:space="preserve">
+    <value>pnlC2</value>
+  </data>
+  <data name="&gt;&gt;pnlC2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlC2.Parent" xml:space="preserve">
+    <value>pnlColorSample</value>
+  </data>
+  <data name="&gt;&gt;pnlC2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pnlC1.Name" xml:space="preserve">
+    <value>pnlC1</value>
+  </data>
+  <data name="&gt;&gt;pnlC1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlC1.Parent" xml:space="preserve">
+    <value>pnlColorSample</value>
+  </data>
+  <data name="&gt;&gt;pnlC1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="pnlColorSample.Location" type="System.Drawing.Point, System.Drawing">
+    <value>770, 563</value>
+  </data>
+  <data name="pnlColorSample.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 25</value>
+  </data>
+  <data name="pnlColorSample.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pnlColorSample.Name" xml:space="preserve">
+    <value>pnlColorSample</value>
+  </data>
+  <data name="&gt;&gt;pnlColorSample.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlColorSample.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlColorSample.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="pnlC5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -879,27 +1104,6 @@
   <data name="&gt;&gt;pnlC1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="pnlColorSample.Location" type="System.Drawing.Point, System.Drawing">
-    <value>770, 563</value>
-  </data>
-  <data name="pnlColorSample.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 25</value>
-  </data>
-  <data name="pnlColorSample.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pnlColorSample.Name" xml:space="preserve">
-    <value>pnlColorSample</value>
-  </data>
-  <data name="&gt;&gt;pnlColorSample.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlColorSample.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlColorSample.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="lblColSch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -934,7 +1138,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblColSch.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1126,7 +1330,77 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
+  </data>
+  <data name="pictureBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGeYUxB9wAAACBjSFJNAACH
+        EAAAjBIAAP1NAACBPgAAWesAARIPAAA85gAAGc66ySIyAAABK2lDQ1BQaG90b3Nob3AgSUNDIHByb2Zp
+        bGUAACjPY2BgMnB0cXJlEmBgyM0rKQpyd1KIiIxSYD/PwMbAzAAGicnFBY4BAT4gdl5+XioDBvh2jYER
+        RF/WBZnFQBrgSi4oKgHSf4DYKCW1OJmBgdEAyM4uLykAijPOAbJFkrLB7A0gdlFIkDOQfQTI5kuHsK+A
+        2EkQ9hMQuwjoCSD7C0h9OpjNxAE2B8KWAbFLUitA9jI45xdUFmWmZ5QoGFpaWio4puQnpSoEVxaXpOYW
+        K3jmJecXFeQXJZakpgDVQtwHBoIQhaAQ0wBqtNBkoDIAxQOE9TkQHL6MYmcQYgiQXFpUBmUyMhkT5iPM
+        mCPBwOC/lIGB5Q9CzKSXgWGBDgMD/1SEmJohA4OAPgPDvjkAwMZP/eeaqagAAAAJcEhZcwAACxIAAAsS
+        AdLdfvwAAAdLSURBVEhLxdYLTFvXGQfwkyUNSVPWLNNGSZMBbqC8QrKEQMMrlKQkKVCgIVATwG/j9+v6
+        2tc2GDD4FRswDg4YmwXzmgHbpF2isCZtsmyaWqnTpGmZlGhrqmqqtqVRJ7ZVSQucnUtKxs3cknUvpL/Q
+        vb46v3t8zvf5AAjh/yWgoqIiaiorK8Ghwnxw8rV6gHe6gczko+G2UY+6y/s7lXn4vsYZhNruKYg7JlF+
+        CBXWcTj5xjX4y/fe9ZsHwtvsgzOgbzgEXP5/5OvA+2SmoZ8+wKahwjICxW2DS9KOoSW1bXz5BTSOIMSs
+        o1DrGLtNdAfrnN7Qpn8LrqmjZ+jsvlnMPgZlJj9UWgJQYz13q1kklyfs3H54X/5LhAA3n9+VmnHj2/E7
+        7zTKzVDbE/6DcyjM6vOHNn8tuORQwRNHy19VMRSWeYHRCzmY9fZJOqNehHcBgVQFEAyyC0rXtVl6v3P0
+        SHFVSuaBUDUT+/QE1wAtZ2cud3R20QhcCXRa9XIocGNDfdQ0NdBBTW1dTbPW8VuBvg9m5+SNpCbTUl4u
+        ewVICOtqGCAYlB4uBnm52bl0huBNFfralR0DN7WErlinxaLDMokwaqRC7nqV3tSJdc9AjW3kNwMD3lKb
+        xQQKioq/FM7N/j7o9wY4Suv4vKi1/45Wpz9lILCNekINyFBgkYAXNUIe42mVvqtP0jkCFe39Pz83Eki1
+        mjtAfiGCNV3A7xsCN2/eBHqDYRnu8/iW4xn0l3DUp9/nanqgWI71ikWCOLFYBMhQYDazMWqYDbWJUk37
+        hArt2gah4Wpl9ckEtL4gv6gE7Ny5A4yPj4Nbt24BDMNAbGwsaGJxAZPDB0w2Zz9H2Xld2OKBPIk6zOE1
+        J3L4QkCGAjMa66OmkX4iVaw2zup6pmFVo+xySlpmQgItGZB/ycnJFHjLli0gJiYGFBQfBkUvluzjYl3X
+        ULlBrlgd4fAESRy+CMGPzJjFaIgaxqmTKVK8LUzWbg1b/ePdWXt27Nge/6Xwpk2bwHPP0cCRl45mIfgt
+        kXEA8sTYDJfXnMBFsyVDgV0uFyUez1mgUsrBqbrqZCneHiIbw2t87Vv7sw/Qno1/hnRjELwZwbEI3org
+        WARvRvDGXbtooLDoxRweZv6JmIQl+DSbJ0yQSKRAqZCtBXuABlejNa5LluHGaYP7PGSprO9nZqab0tMz
+        TrMw24fq05OLPE33H5kKy4fClv5PyOvjNeyffW9HnPbQkZd90g7/vLQd1b1AOt7AYCcIRWIEy9eEY7Rq
+        ZWI9o9nF1/b+heiZgZhtbAltlgWR8eyC0jqypHVOLbdOslUSaA/gpyegwvyDJTTLBbS2iw/6dxCyMcfH
+        9Sxxj1Ao3IvgDRSYyUA7eFVYTfVxdEazh0/0/o0cnIRJYCUr1wKDe4GhtNyXdQ0v6HpDlGcePofCVdv/
+        XHqsrKXgYPY2CpyZkUbJ87sS00ur6BekJh/UucLLM3ow0IP/8q7hRaH+zF0+0fMrHu64xsbs73Fwx110
+        H5IV8BBGMXp+BPl69+dJyWmeDevAsxS4CP0QrE7+weyk8hMNQVGrZ4HonfkCDEJ9XwSitYR0vuajmlo6
+        lyNv3cDXOoEcb/kmk8kysuSmT/SuCOVF9X2zkIs77+3Zd8CxPW5bHAUuLMijJC93P63s1VNTwlbP4kMY
+        lRS5yaSmYdjAk1/t7+/fPRsOAXefi8x6TCkv5slbfqFzRRYpsJuEHfey9mY747/7rWf+dRgNpO8LQ9SD
+        YYPY+Htje2fT67ORdV/AWyRyFd4kafsTWpql/zhMrhm55kLjwH2mQDUz6PUl0SXmJxrlFiVLaZmXoLol
+        n1+9278SLsg/+FjwyqwV1jHIVrR/cHboXKHMNhWjtAcHVz5fnTXh48dKQX7eC48JR6DcHIAMieEDr38k
+        X6a3bVS2OnvlljFUy5OUZ9eEL168CF6pKAN5B3MfG2bK2m4HRsdfMOjw9TyZnhC1eT/Xuai1vCYcDofB
+        229fRcedMpC1OwPsyUxNOV5VH5GgwxzZGFbD5DXZkThq+8dShVrX1qrLEmFtA4LWgc/I9X8Ubul/A/IJ
+        12dpGXtcTz8VE/9P8OUrV4CgmQeqKytATVV5Ampzk5I27wLZfVbDKwOig98SB3d+Sm8m7qCX+Ctmm0D3
+        qR2OjOHM61Da4b13qKTUmfE8jVrHJHzhwgUwNzcHUE8FFeXlW2tr6/ZWV5/QNvKxX2NoMxFRWuJXhXw5
+        gjwGm7wf1TKEnTk5uQcy09OefBTegOBvzM7OgkuXLgGZVApKjx4DPQ573MT0eW+rK7iksk9AHIVsJFo0
+        qAZtJMw2ClXWwPJhfqWEltMTQvUegFb36Lw/ECR4IsXW/dk5AMEP0WU4EonEIvxJlPUkzGazgdvtBu++
+        8078m5ev+GbOX1zyjc5A+5kANNiHyYMfOryTGHWWGoTruiegvX8UTkyF4NzcpbvXr18X37hx4ykuhwNo
+        SYlUePXF/zJRb/73A8HfATDeMoZ/zs1hAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pictureBox2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 107</value>
+  </data>
+  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1177,7 +1451,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="uiTextBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>56, 103</value>
@@ -1198,7 +1472,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;uiTextBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="uiTextBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>56, 41</value>
@@ -1219,7 +1493,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;uiTextBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1246,7 +1520,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1273,7 +1547,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="uiButton3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1303,7 +1577,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;uiButton3.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>209, 316</value>
@@ -1327,7 +1601,112 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="uiTextBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>542, 140</value>
+  </data>
+  <data name="uiTextBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 30</value>
+  </data>
+  <data name="uiTextBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox3.Name" xml:space="preserve">
+    <value>uiTextBox3</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox3.Type" xml:space="preserve">
+    <value>ClassLibraryUI.uiTextBox, ClassLibraryUI, Version=1.0.9000.28565, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="uiButton4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="uiButton4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt, style=Bold</value>
+  </data>
+  <data name="uiButton4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>711, 140</value>
+  </data>
+  <data name="uiButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 30</value>
+  </data>
+  <data name="uiButton4.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="uiButton4.Text" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="&gt;&gt;uiButton4.Name" xml:space="preserve">
+    <value>uiButton4</value>
+  </data>
+  <data name="&gt;&gt;uiButton4.Type" xml:space="preserve">
+    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.28565, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;uiButton4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;uiButton4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="uiButton5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="uiButton5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt, style=Bold</value>
+  </data>
+  <data name="uiButton5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="uiButton5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>711, 185</value>
+  </data>
+  <data name="uiButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 30</value>
+  </data>
+  <data name="uiButton5.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="uiButton5.Text" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="&gt;&gt;uiButton5.Name" xml:space="preserve">
+    <value>uiButton5</value>
+  </data>
+  <data name="&gt;&gt;uiButton5.Type" xml:space="preserve">
+    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.28565, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;uiButton5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;uiButton5.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="uiTextBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>542, 185</value>
+  </data>
+  <data name="uiTextBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 30</value>
+  </data>
+  <data name="uiTextBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox4.Name" xml:space="preserve">
+    <value>uiTextBox4</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox4.Type" xml:space="preserve">
+    <value>ClassLibraryUI.uiTextBox, ClassLibraryUI, Version=1.0.9000.28565, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox4.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
