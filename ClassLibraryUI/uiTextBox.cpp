@@ -22,19 +22,25 @@ void uiTextBox::StartSet() {
 	SF->Alignment = StringAlignment::Center;
 	SF->LineAlignment = StringAlignment::Center;
 
-	Text = L"SampleText";
-	PlaceHolder = L"Holder";
+	//Text = L"SampleText";
+	PlaceHolder = L"Placeholder";
 
 	PasswordBox = false;
 	PasswordChar = '*';
-	ShowPasswordChar = true;
+	ShowPassword = false;
+
 
 	BorderRadius = 10;
-	ColorLeaveBord = Color::FromArgb(255, 119, 141, 169);
-	ColorLeaveBack = Color::Transparent;
-	ColorLeaveText = Color::FromArgb(255, 119, 141, 169);
+	ColorLeaveBord = Color::Black;
+	ColorLeaveBack = Color::White;
+	ColorLeaveText = Color::Black;
 
 	ColorEnterBord = Color::White;
 	ColorEnterBack = Color::Tomato;
 	ColorEnterText = Color::White;
+
+	ColorWrongBack = Color::LightCoral;
+	ColorWrongBord = Color::Red;
+	ColorWrongText = Color::Black;
+
 }

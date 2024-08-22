@@ -28,7 +28,7 @@ namespace ClassLibraryUI {
 	public:
 		property bool	 PasswordBox;
 		property wchar_t PasswordChar;
-		property bool	 ShowPasswordChar;
+		property bool	 ShowPassword;
 		property int     BorderRadius;
 		property Color   ColorLeaveBack;
 		property Color   ColorLeaveBord;
@@ -36,11 +36,16 @@ namespace ClassLibraryUI {
 		property Color   ColorEnterBack;
 		property Color   ColorEnterBord;
 		property Color   ColorEnterText;
+		property Color   ColorWrongBack;
+		property Color   ColorWrongBord;
+		property Color   ColorWrongText;	
 		property String^ PlaceHolder;
 
 	private:
 		StringFormat^ SF = gcnew StringFormat;
 		String^ CurrentDir = System::IO::Directory::GetCurrentDirectory();
+		int UICompState;
+
 	private: System::Windows::Forms::MaskedTextBox^ mtbBox;
 
 		String^ Password;
@@ -124,7 +129,7 @@ namespace ClassLibraryUI {
 			this->mtbBox->Name = L"mtbBox";
 			this->mtbBox->PasswordChar = '*';
 			this->mtbBox->Size = System::Drawing::Size(20, 13);
-			this->mtbBox->TabIndex = 3;
+			this->mtbBox->TabIndex = 0;
 			this->mtbBox->TextChanged += gcnew System::EventHandler(this, &uiTextBox::mtbBox_TextChanged);
 			// 
 			// uiTextBox
@@ -147,8 +152,7 @@ namespace ClassLibraryUI {
 	private:
 		System::Void uiTextBox_Load(System::Object^ sender, System::EventArgs^ e) {
 			int r = BorderRadius;
-			int mw = r < 10 ? 10 : r;
-			int mh = 5;
+			int mw = r < 10 ? 10 : r; int mh = 5;
 			int eyeW = PasswordBox ? 20 : 0;
 
 			txtBox->Left = mw; txtBox->Top = mh;
@@ -181,9 +185,26 @@ namespace ClassLibraryUI {
 			Brush^ lbkBrush = gcnew SolidBrush(ColorLeaveBack);
 			Brush^ ltxBrush = gcnew SolidBrush(ColorLeaveText);
 
+			Pen^ wbdPen = gcnew Pen(ColorWrongBord);
+			Brush^ wbkBrush = gcnew SolidBrush(ColorWrongBack);
+			Brush^ wtxBrush = gcnew SolidBrush(ColorWrongText);
+
 			Pen^ bdPen = gcnew Pen(Color::Black);
 			Brush^ bkBrush = gcnew SolidBrush(BackColor);
 			Brush^ txBrush = gcnew SolidBrush(BackColor);
+
+
+			switch (UICompState) {
+			case CS_LEAVE:
+				bdPen = lbdPen; bkBrush = lbkBrush; txBrush = ltxBrush;
+				BackColor = ColorLeaveBack;
+				break;
+			case CS_WRONG:
+				bdPen = wbdPen; bkBrush = wbkBrush; txBrush = wtxBrush;
+				BackColor = ColorWrongBack;
+				break;
+			}
+
 
 			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::HighQuality;	// :AntiAlias;
 			g->Clear(Parent->BackColor);
@@ -210,12 +231,35 @@ namespace ClassLibraryUI {
 				gp->CloseFigure();
 
 				g->FillPath(bkBrush, gp);
-			}
+			}	
+
+			
+
+			txtBox->BackColor = BackColor;
+			mtbBox->BackColor = BackColor;
+			btnEye->BackColor = BackColor;
+			btnEye->FlatAppearance->MouseOverBackColor = BackColor;
+			btnEye->FlatAppearance->MouseDownBackColor = BackColor;
 		}
 		
 		System::Void btnEye_Click(System::Object^ sender, System::EventArgs^ e) {
-			ShowPasswordChar ? mtbBox->PasswordChar = NULL : mtbBox->PasswordChar = PasswordChar;
-			ShowPasswordChar = !ShowPasswordChar;
+			ShowPassword ? mtbBox->PasswordChar = PasswordChar : mtbBox->PasswordChar = NULL;
+			ShowPassword = !ShowPassword;
+
+
+
+			
+
+
+
+			/// TODO:
+			// Use thah
+			//////// FOR paint
+			//// CS_WRONG
+			UICompState = !ShowPassword ? CS_WRONG : CS_LEAVE;
+			Invalidate();
+
+			
 		}
 		System::Void btnEye_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 			//
