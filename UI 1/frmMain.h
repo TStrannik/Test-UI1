@@ -63,11 +63,17 @@ namespace UI1 {
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: ClassLibraryUI::uiTextBox^ uiTextBox5;
 	private: System::Windows::Forms::Label^ label4;
-	private: ClassLibraryUI::uiTextBox^ uiTextBox6;
-	private: ClassLibraryUI::uiTextBox^ uiTextBox7;
-	private: ClassLibraryUI::uiTextBox^ uiTextBox8;
+
+
+
 	private: System::Windows::Forms::MaskedTextBox^ maskedTextBox1;
 	private: System::Windows::Forms::Button^ button1;
+	private: ClassLibraryUI::uiTextBox^ uiTextBox6;
+	private: ClassLibraryUI::uiTextBox^ uiTextBox7;
+
+
+
+
 
 
 
@@ -153,11 +159,10 @@ namespace UI1 {
 			   this->uiButton5 = (gcnew ClassLibraryUI::uiButton());
 			   this->uiTextBox4 = (gcnew ClassLibraryUI::uiTextBox());
 			   this->uiTextBox3 = (gcnew ClassLibraryUI::uiTextBox());
-			   this->uiTextBox6 = (gcnew ClassLibraryUI::uiTextBox());
-			   this->uiTextBox7 = (gcnew ClassLibraryUI::uiTextBox());
-			   this->uiTextBox8 = (gcnew ClassLibraryUI::uiTextBox());
 			   this->maskedTextBox1 = (gcnew System::Windows::Forms::MaskedTextBox());
 			   this->button1 = (gcnew System::Windows::Forms::Button());
+			   this->uiTextBox6 = (gcnew ClassLibraryUI::uiTextBox());
+			   this->uiTextBox7 = (gcnew ClassLibraryUI::uiTextBox());
 			   this->pnlMenu->SuspendLayout();
 			   this->pnlMenuSM->SuspendLayout();
 			   this->pnlLine->SuspendLayout();
@@ -657,6 +662,18 @@ namespace UI1 {
 			   this->uiTextBox3->PlaceHolder = L"e-mail";
 			   this->uiTextBox3->ShowPasswordChar = true;
 			   // 
+			   // maskedTextBox1
+			   // 
+			   resources->ApplyResources(this->maskedTextBox1, L"maskedTextBox1");
+			   this->maskedTextBox1->Name = L"maskedTextBox1";
+			   // 
+			   // button1
+			   // 
+			   resources->ApplyResources(this->button1, L"button1");
+			   this->button1->Name = L"button1";
+			   this->button1->UseVisualStyleBackColor = true;
+			   this->button1->Click += gcnew System::EventHandler(this, &frmMain::button1_Click);
+			   // 
 			   // uiTextBox6
 			   // 
 			   this->uiTextBox6->BackColor = System::Drawing::Color::White;
@@ -673,13 +690,14 @@ namespace UI1 {
 			   resources->ApplyResources(this->uiTextBox6, L"uiTextBox6");
 			   this->uiTextBox6->Name = L"uiTextBox6";
 			   this->uiTextBox6->PasswordBox = false;
-			   this->uiTextBox6->PlaceHolder = L"Holder";
+			   this->uiTextBox6->PasswordChar = '*';
+			   this->uiTextBox6->PlaceHolder = L"Username";
 			   this->uiTextBox6->ShowPasswordChar = true;
 			   // 
 			   // uiTextBox7
 			   // 
 			   this->uiTextBox7->BackColor = System::Drawing::Color::White;
-			   this->uiTextBox7->BorderRadius = 0;
+			   this->uiTextBox7->BorderRadius = 10;
 			   this->uiTextBox7->ColorEnterBack = System::Drawing::Color::Tomato;
 			   this->uiTextBox7->ColorEnterBord = System::Drawing::Color::White;
 			   this->uiTextBox7->ColorEnterText = System::Drawing::Color::White;
@@ -692,39 +710,9 @@ namespace UI1 {
 			   resources->ApplyResources(this->uiTextBox7, L"uiTextBox7");
 			   this->uiTextBox7->Name = L"uiTextBox7";
 			   this->uiTextBox7->PasswordBox = true;
-			   this->uiTextBox7->PlaceHolder = L"Holder";
+			   this->uiTextBox7->PasswordChar = '&';
+			   this->uiTextBox7->PlaceHolder = L"password";
 			   this->uiTextBox7->ShowPasswordChar = true;
-			   // 
-			   // uiTextBox8
-			   // 
-			   this->uiTextBox8->BackColor = System::Drawing::Color::White;
-			   this->uiTextBox8->BorderRadius = 10;
-			   this->uiTextBox8->ColorEnterBack = System::Drawing::Color::Tomato;
-			   this->uiTextBox8->ColorEnterBord = System::Drawing::Color::White;
-			   this->uiTextBox8->ColorEnterText = System::Drawing::Color::White;
-			   this->uiTextBox8->ColorLeaveBack = System::Drawing::Color::Transparent;
-			   this->uiTextBox8->ColorLeaveBord = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
-			   this->uiTextBox8->ColorLeaveText = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
-			   this->uiTextBox8->ForeColor = System::Drawing::Color::Black;
-			   resources->ApplyResources(this->uiTextBox8, L"uiTextBox8");
-			   this->uiTextBox8->Name = L"uiTextBox8";
-			   this->uiTextBox8->PasswordBox = true;
-			   this->uiTextBox8->PlaceHolder = L"Holder";
-			   this->uiTextBox8->ShowPasswordChar = true;
-			   // 
-			   // maskedTextBox1
-			   // 
-			   resources->ApplyResources(this->maskedTextBox1, L"maskedTextBox1");
-			   this->maskedTextBox1->Name = L"maskedTextBox1";
-			   // 
-			   // button1
-			   // 
-			   resources->ApplyResources(this->button1, L"button1");
-			   this->button1->Name = L"button1";
-			   this->button1->UseVisualStyleBackColor = true;
-			   this->button1->Click += gcnew System::EventHandler(this, &frmMain::button1_Click);
 			   // 
 			   // frmMain
 			   // 
@@ -732,11 +720,10 @@ namespace UI1 {
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			   this->Controls->Add(this->button1);
-			   this->Controls->Add(this->maskedTextBox1);
-			   this->Controls->Add(this->uiTextBox8);
 			   this->Controls->Add(this->uiTextBox7);
 			   this->Controls->Add(this->uiTextBox6);
+			   this->Controls->Add(this->button1);
+			   this->Controls->Add(this->maskedTextBox1);
 			   this->Controls->Add(this->panel3);
 			   this->Controls->Add(this->panel2);
 			   this->Controls->Add(this->panel1);

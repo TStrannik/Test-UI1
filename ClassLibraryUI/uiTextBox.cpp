@@ -26,7 +26,7 @@ void uiTextBox::StartSet() {
 	PlaceHolder = L"Holder";
 
 	PasswordBox = false;
-	//PasswordChar = "*";
+	PasswordChar = '*';
 	ShowPasswordChar = true;
 
 	BorderRadius = 10;

@@ -27,7 +27,7 @@ namespace ClassLibraryUI {
 
 	public:
 		property bool	 PasswordBox;
-		//property char	 PasswordChar;
+		property wchar_t PasswordChar;
 		property bool	 ShowPasswordChar;
 		property int     BorderRadius;
 		property Color   ColorLeaveBack;
@@ -41,6 +41,7 @@ namespace ClassLibraryUI {
 	private:
 		StringFormat^ SF = gcnew StringFormat;
 		String^ CurrentDir = System::IO::Directory::GetCurrentDirectory();
+	private: System::Windows::Forms::MaskedTextBox^ mtbBox;
 
 		String^ Password;
 
@@ -67,6 +68,7 @@ namespace ClassLibraryUI {
 			this->txtBox = (gcnew System::Windows::Forms::TextBox());
 			this->lblPH = (gcnew System::Windows::Forms::Label());
 			this->btnEye = (gcnew System::Windows::Forms::Button());
+			this->mtbBox = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->SuspendLayout();
 			// 
 			// txtBox
@@ -115,11 +117,22 @@ namespace ClassLibraryUI {
 			this->btnEye->MouseEnter += gcnew System::EventHandler(this, &uiTextBox::btnEye_MouseEnter);
 			this->btnEye->MouseLeave += gcnew System::EventHandler(this, &uiTextBox::btnEye_MouseLeave);
 			// 
+			// mtbBox
+			// 
+			this->mtbBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->mtbBox->Location = System::Drawing::Point(88, 9);
+			this->mtbBox->Name = L"mtbBox";
+			this->mtbBox->PasswordChar = '*';
+			this->mtbBox->Size = System::Drawing::Size(20, 13);
+			this->mtbBox->TabIndex = 3;
+			this->mtbBox->TextChanged += gcnew System::EventHandler(this, &uiTextBox::mtbBox_TextChanged);
+			// 
 			// uiTextBox
 			// 
-			this->Controls->Add(this->btnEye);
 			this->Controls->Add(this->lblPH);
+			this->Controls->Add(this->btnEye);
 			this->Controls->Add(this->txtBox);
+			this->Controls->Add(this->mtbBox);
 			this->Name = L"uiTextBox";
 			this->Size = System::Drawing::Size(170, 30);
 			this->Load += gcnew System::EventHandler(this, &uiTextBox::uiTextBox_Load);
@@ -140,6 +153,12 @@ namespace ClassLibraryUI {
 
 			txtBox->Left = mw; txtBox->Top = mh;
 			txtBox->Width = Width - mw * 2 - eyeW - 2;
+			txtBox->Visible = !PasswordBox;
+
+			mtbBox->Left = mw; mtbBox->Top = mh;
+			mtbBox->Width = Width - mw * 2 - eyeW - 2;
+			mtbBox->PasswordChar = PasswordChar;
+			mtbBox->Visible = PasswordBox;
 
 			lblPH->Left = txtBox->Left + 1; lblPH->Top = txtBox->Top;
 			lblPH->Text = PlaceHolder;
@@ -195,9 +214,8 @@ namespace ClassLibraryUI {
 		}
 		
 		System::Void btnEye_Click(System::Object^ sender, System::EventArgs^ e) {
+			ShowPasswordChar ? mtbBox->PasswordChar = NULL : mtbBox->PasswordChar = PasswordChar;
 			ShowPasswordChar = !ShowPasswordChar;
-
-			switchPasswordChars();
 		}
 		System::Void btnEye_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 			//
@@ -208,19 +226,29 @@ namespace ClassLibraryUI {
 		System::Void btnEye_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
 			btnEye->BackgroundImage = Image::FromFile(getUIDir() + "\\eye1.png");
 		}
-		
+
+		System::Void mtbBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+			RemoveText(sender, e);
+		}
 		System::Void txtBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 			RemoveText(sender, e);
 		}
 		System::Void lblPH_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
-			txtBox->Focus();
+			txtBox->Focus(); mtbBox->Focus();
 		}
 
 	public:
 		void RemoveText(System::Object^ sender, System::EventArgs^ e)
-		{ lblPH->Visible = txtBox->Text->Length == 0; }
+		{ 
+			if (!PasswordBox) lblPH->Visible = txtBox->Text->Length == 0;
+			else			  lblPH->Visible = mtbBox->Text->Length == 0;
+		}
+
 		void AddText(System::Object^ sender, System::EventArgs^ e)
-		{ lblPH->Visible = String::IsNullOrWhiteSpace(txtBox->Text); }
+		{ 
+			if (!PasswordBox) lblPH->Visible = String::IsNullOrWhiteSpace(txtBox->Text);
+			else			  lblPH->Visible = String::IsNullOrWhiteSpace(mtbBox->Text);
+		}
 		String^ getUIDir() {
 			String^ stepDir = CurrentDir;
 			int c = CurrentDir->Length - 1;
@@ -230,17 +258,10 @@ namespace ClassLibraryUI {
 			String^ dir = stepDir + "\\ClassLibraryUI\\Sources\\UI\\";
 			return dir;
 		}
-		bool switchPasswordChars() {
-			if (!PasswordBox) return false;
-
-			int l = txtBox->Text->Length;
-			Password = txtBox->Text;
-
-
-		}
 
 		#pragma endregion Voids
 
+	
 	
 	
 	};
