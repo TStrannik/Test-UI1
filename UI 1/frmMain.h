@@ -64,45 +64,6 @@ namespace UI1 {
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: ClassLibraryUI::uiTextBox^ uiTextBox5;
 	private: System::Windows::Forms::Label^ label4;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Panel^ pnlC5;
 
 	public: frmMain(void) { InitializeComponent(); }
@@ -195,7 +156,6 @@ namespace UI1 {
 			   // 
 			   // pnlMenu
 			   // 
-			   resources->ApplyResources(this->pnlMenu, L"pnlMenu");
 			   this->pnlMenu->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(27)), static_cast<System::Int32>(static_cast<System::Byte>(38)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(59)));
 			   this->pnlMenu->Controls->Add(this->btnContact);
@@ -204,6 +164,7 @@ namespace UI1 {
 			   this->pnlMenu->Controls->Add(this->pnlMenuSM);
 			   this->pnlMenu->Controls->Add(this->btnHome);
 			   this->pnlMenu->Controls->Add(this->pnlLogo);
+			   resources->ApplyResources(this->pnlMenu, L"pnlMenu");
 			   this->pnlMenu->Name = L"pnlMenu";
 			   // 
 			   // btnContact
@@ -237,19 +198,19 @@ namespace UI1 {
 			   // 
 			   // pnlMenuSM
 			   // 
-			   resources->ApplyResources(this->pnlMenuSM, L"pnlMenuSM");
 			   this->pnlMenuSM->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(224)));
 			   this->pnlMenuSM->Controls->Add(this->btnSMServices);
 			   this->pnlMenuSM->Controls->Add(this->btnSMHistory);
 			   this->pnlMenuSM->Controls->Add(this->btnSMAbout);
+			   resources->ApplyResources(this->pnlMenuSM, L"pnlMenuSM");
 			   this->pnlMenuSM->Name = L"pnlMenuSM";
 			   // 
 			   // btnSMServices
 			   // 
-			   resources->ApplyResources(this->btnSMServices, L"btnSMServices");
 			   this->btnSMServices->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			   resources->ApplyResources(this->btnSMServices, L"btnSMServices");
 			   this->btnSMServices->FlatAppearance->BorderSize = 0;
 			   this->btnSMServices->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(221)));
@@ -258,9 +219,9 @@ namespace UI1 {
 			   // 
 			   // btnSMHistory
 			   // 
-			   resources->ApplyResources(this->btnSMHistory, L"btnSMHistory");
 			   this->btnSMHistory->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			   resources->ApplyResources(this->btnSMHistory, L"btnSMHistory");
 			   this->btnSMHistory->FlatAppearance->BorderSize = 0;
 			   this->btnSMHistory->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(221)));
@@ -269,9 +230,9 @@ namespace UI1 {
 			   // 
 			   // btnSMAbout
 			   // 
-			   resources->ApplyResources(this->btnSMAbout, L"btnSMAbout");
 			   this->btnSMAbout->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			   resources->ApplyResources(this->btnSMAbout, L"btnSMAbout");
 			   this->btnSMAbout->FlatAppearance->BorderSize = 0;
 			   this->btnSMAbout->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(221)));
@@ -291,20 +252,20 @@ namespace UI1 {
 			   // 
 			   // pnlLogo
 			   // 
-			   resources->ApplyResources(this->pnlLogo, L"pnlLogo");
 			   this->pnlLogo->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)), static_cast<System::Int32>(static_cast<System::Byte>(27)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(42)));
+			   resources->ApplyResources(this->pnlLogo, L"pnlLogo");
 			   this->pnlLogo->Name = L"pnlLogo";
 			   this->pnlLogo->Click += gcnew System::EventHandler(this, &frmMain::pnlLogo_Click);
 			   // 
 			   // pnlLine
 			   // 
-			   resources->ApplyResources(this->pnlLine, L"pnlLine");
 			   this->pnlLine->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			   this->pnlLine->Controls->Add(this->btnLMin);
 			   this->pnlLine->Controls->Add(this->btnLMax);
 			   this->pnlLine->Controls->Add(this->btnLCls);
+			   resources->ApplyResources(this->pnlLine, L"pnlLine");
 			   this->pnlLine->Name = L"pnlLine";
 			   this->pnlLine->MouseDoubleClick += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::pnlLine_MDC);
 			   this->pnlLine->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::pnlLine_MouseDown);
@@ -352,16 +313,16 @@ namespace UI1 {
 			   // 
 			   // pnlHeader
 			   // 
-			   resources->ApplyResources(this->pnlHeader, L"pnlHeader");
 			   this->pnlHeader->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(48)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			   resources->ApplyResources(this->pnlHeader, L"pnlHeader");
 			   this->pnlHeader->Name = L"pnlHeader";
 			   // 
 			   // pnlFooter
 			   // 
-			   resources->ApplyResources(this->pnlFooter, L"pnlFooter");
 			   this->pnlFooter->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(48)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			   resources->ApplyResources(this->pnlFooter, L"pnlFooter");
 			   this->pnlFooter->Name = L"pnlFooter";
 			   // 
 			   // pnlColorSample
@@ -419,8 +380,8 @@ namespace UI1 {
 			   // 
 			   // uiToggleOval1
 			   // 
-			   resources->ApplyResources(this->uiToggleOval1, L"uiToggleOval1");
 			   this->uiToggleOval1->Checked = false;
+			   resources->ApplyResources(this->uiToggleOval1, L"uiToggleOval1");
 			   this->uiToggleOval1->Name = L"uiToggleOval1";
 			   this->uiToggleOval1->offBackColor = System::Drawing::Color::Gray;
 			   this->uiToggleOval1->offToggleColor = System::Drawing::Color::Gainsboro;
@@ -431,8 +392,8 @@ namespace UI1 {
 			   // 
 			   // uiToggleOval2
 			   // 
-			   resources->ApplyResources(this->uiToggleOval2, L"uiToggleOval2");
 			   this->uiToggleOval2->Checked = true;
+			   resources->ApplyResources(this->uiToggleOval2, L"uiToggleOval2");
 			   this->uiToggleOval2->Name = L"uiToggleOval2";
 			   this->uiToggleOval2->offBackColor = System::Drawing::Color::Gray;
 			   this->uiToggleOval2->offToggleColor = System::Drawing::Color::Gainsboro;
@@ -443,7 +404,6 @@ namespace UI1 {
 			   // 
 			   // uiButton1
 			   // 
-			   resources->ApplyResources(this->uiButton1, L"uiButton1");
 			   this->uiButton1->BackColor = System::Drawing::Color::Black;
 			   this->uiButton1->BorderRadius = 10;
 			   this->uiButton1->Caption = L"SampleText";
@@ -455,13 +415,13 @@ namespace UI1 {
 			   this->uiButton1->ColorLeaveBack = System::Drawing::Color::Transparent;
 			   this->uiButton1->ColorLeaveBord = System::Drawing::Color::Black;
 			   this->uiButton1->ColorLeaveText = System::Drawing::Color::Black;
+			   resources->ApplyResources(this->uiButton1, L"uiButton1");
 			   this->uiButton1->ForeColor = System::Drawing::Color::White;
 			   this->uiButton1->Name = L"uiButton1";
 			   this->uiButton1->UseVisualStyleBackColor = false;
 			   // 
 			   // uiButton2
 			   // 
-			   resources->ApplyResources(this->uiButton2, L"uiButton2");
 			   this->uiButton2->BackColor = System::Drawing::Color::Black;
 			   this->uiButton2->BorderRadius = 10;
 			   this->uiButton2->Caption = L"SampleText";
@@ -472,24 +432,24 @@ namespace UI1 {
 				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			   this->uiButton2->ColorLeaveBord = System::Drawing::Color::Transparent;
 			   this->uiButton2->ColorLeaveText = System::Drawing::Color::White;
+			   resources->ApplyResources(this->uiButton2, L"uiButton2");
 			   this->uiButton2->ForeColor = System::Drawing::Color::White;
 			   this->uiButton2->Name = L"uiButton2";
 			   this->uiButton2->UseVisualStyleBackColor = false;
 			   // 
 			   // panel1
 			   // 
-			   resources->ApplyResources(this->panel1, L"panel1");
 			   this->panel1->Controls->Add(this->label1);
 			   this->panel1->Controls->Add(this->uiButton2);
 			   this->panel1->Controls->Add(this->label2);
 			   this->panel1->Controls->Add(this->uiButton1);
 			   this->panel1->Controls->Add(this->uiToggleOval1);
 			   this->panel1->Controls->Add(this->uiToggleOval2);
+			   resources->ApplyResources(this->panel1, L"panel1");
 			   this->panel1->Name = L"panel1";
 			   // 
 			   // panel2
 			   // 
-			   resources->ApplyResources(this->panel2, L"panel2");
 			   this->panel2->Controls->Add(this->uiTextBox5);
 			   this->panel2->Controls->Add(this->label4);
 			   this->panel2->Controls->Add(this->uiTextBox2);
@@ -497,11 +457,11 @@ namespace UI1 {
 			   this->panel2->Controls->Add(this->uiTextBox1);
 			   this->panel2->Controls->Add(this->label5);
 			   this->panel2->Controls->Add(this->uiButton3);
+			   resources->ApplyResources(this->panel2, L"panel2");
 			   this->panel2->Name = L"panel2";
 			   // 
 			   // uiTextBox5
 			   // 
-			   resources->ApplyResources(this->uiTextBox5, L"uiTextBox5");
 			   this->uiTextBox5->BackColor = System::Drawing::Color::White;
 			   this->uiTextBox5->BorderRadius = 10;
 			   this->uiTextBox5->ColorEnterBack = System::Drawing::Color::Tomato;
@@ -513,6 +473,7 @@ namespace UI1 {
 			   this->uiTextBox5->ColorLeaveText = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			   this->uiTextBox5->ForeColor = System::Drawing::Color::Black;
+			   resources->ApplyResources(this->uiTextBox5, L"uiTextBox5");
 			   this->uiTextBox5->Name = L"uiTextBox5";
 			   this->uiTextBox5->PasswordBox = false;
 			   this->uiTextBox5->PlaceHolder = L"******";
@@ -524,7 +485,6 @@ namespace UI1 {
 			   // 
 			   // uiTextBox2
 			   // 
-			   resources->ApplyResources(this->uiTextBox2, L"uiTextBox2");
 			   this->uiTextBox2->BackColor = System::Drawing::Color::White;
 			   this->uiTextBox2->BorderRadius = 10;
 			   this->uiTextBox2->ColorEnterBack = System::Drawing::Color::Tomato;
@@ -536,6 +496,7 @@ namespace UI1 {
 			   this->uiTextBox2->ColorLeaveText = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			   this->uiTextBox2->ForeColor = System::Drawing::Color::Black;
+			   resources->ApplyResources(this->uiTextBox2, L"uiTextBox2");
 			   this->uiTextBox2->Name = L"uiTextBox2";
 			   this->uiTextBox2->PasswordBox = false;
 			   this->uiTextBox2->PlaceHolder = L"e-mail";
@@ -547,7 +508,6 @@ namespace UI1 {
 			   // 
 			   // uiTextBox1
 			   // 
-			   resources->ApplyResources(this->uiTextBox1, L"uiTextBox1");
 			   this->uiTextBox1->BackColor = System::Drawing::Color::White;
 			   this->uiTextBox1->BorderRadius = 10;
 			   this->uiTextBox1->ColorEnterBack = System::Drawing::Color::Tomato;
@@ -559,6 +519,7 @@ namespace UI1 {
 			   this->uiTextBox1->ColorLeaveText = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			   this->uiTextBox1->ForeColor = System::Drawing::Color::Black;
+			   resources->ApplyResources(this->uiTextBox1, L"uiTextBox1");
 			   this->uiTextBox1->Name = L"uiTextBox1";
 			   this->uiTextBox1->PasswordBox = false;
 			   this->uiTextBox1->PlaceHolder = L"login";
@@ -570,7 +531,6 @@ namespace UI1 {
 			   // 
 			   // uiButton3
 			   // 
-			   resources->ApplyResources(this->uiButton3, L"uiButton3");
 			   this->uiButton3->BackColor = System::Drawing::Color::Black;
 			   this->uiButton3->BorderRadius = 10;
 			   this->uiButton3->Caption = L"SampleText";
@@ -581,6 +541,7 @@ namespace UI1 {
 				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			   this->uiButton3->ColorLeaveBord = System::Drawing::Color::Transparent;
 			   this->uiButton3->ColorLeaveText = System::Drawing::Color::White;
+			   resources->ApplyResources(this->uiButton3, L"uiButton3");
 			   this->uiButton3->ForeColor = System::Drawing::Color::White;
 			   this->uiButton3->Name = L"uiButton3";
 			   this->uiButton3->UseVisualStyleBackColor = false;
@@ -592,7 +553,6 @@ namespace UI1 {
 			   // 
 			   // uiButton4
 			   // 
-			   resources->ApplyResources(this->uiButton4, L"uiButton4");
 			   this->uiButton4->BackColor = System::Drawing::Color::Black;
 			   this->uiButton4->BorderRadius = 0;
 			   this->uiButton4->Caption = L"SampleText";
@@ -603,19 +563,20 @@ namespace UI1 {
 				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			   this->uiButton4->ColorLeaveBord = System::Drawing::Color::Black;
 			   this->uiButton4->ColorLeaveText = System::Drawing::Color::White;
+			   resources->ApplyResources(this->uiButton4, L"uiButton4");
 			   this->uiButton4->ForeColor = System::Drawing::Color::White;
 			   this->uiButton4->Name = L"uiButton4";
 			   this->uiButton4->UseVisualStyleBackColor = false;
 			   // 
 			   // panel3
 			   // 
-			   resources->ApplyResources(this->panel3, L"panel3");
 			   this->panel3->Controls->Add(this->pictureBox1);
 			   this->panel3->Controls->Add(this->uiButton5);
 			   this->panel3->Controls->Add(this->uiTextBox4);
 			   this->panel3->Controls->Add(this->uiTextBox3);
 			   this->panel3->Controls->Add(this->label3);
 			   this->panel3->Controls->Add(this->uiButton4);
+			   resources->ApplyResources(this->panel3, L"panel3");
 			   this->panel3->Name = L"panel3";
 			   // 
 			   // pictureBox1
@@ -626,7 +587,6 @@ namespace UI1 {
 			   // 
 			   // uiButton5
 			   // 
-			   resources->ApplyResources(this->uiButton5, L"uiButton5");
 			   this->uiButton5->BackColor = System::Drawing::Color::Black;
 			   this->uiButton5->BorderRadius = 0;
 			   this->uiButton5->Caption = L"SampleText";
@@ -637,13 +597,13 @@ namespace UI1 {
 				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			   this->uiButton5->ColorLeaveBord = System::Drawing::Color::Black;
 			   this->uiButton5->ColorLeaveText = System::Drawing::Color::White;
+			   resources->ApplyResources(this->uiButton5, L"uiButton5");
 			   this->uiButton5->ForeColor = System::Drawing::Color::White;
 			   this->uiButton5->Name = L"uiButton5";
 			   this->uiButton5->UseVisualStyleBackColor = false;
 			   // 
 			   // uiTextBox4
 			   // 
-			   resources->ApplyResources(this->uiTextBox4, L"uiTextBox4");
 			   this->uiTextBox4->BackColor = System::Drawing::Color::White;
 			   this->uiTextBox4->BorderRadius = 0;
 			   this->uiTextBox4->ColorEnterBack = System::Drawing::Color::Tomato;
@@ -655,13 +615,13 @@ namespace UI1 {
 			   this->uiTextBox4->ColorLeaveText = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			   this->uiTextBox4->ForeColor = System::Drawing::Color::Black;
+			   resources->ApplyResources(this->uiTextBox4, L"uiTextBox4");
 			   this->uiTextBox4->Name = L"uiTextBox4";
 			   this->uiTextBox4->PasswordBox = false;
 			   this->uiTextBox4->PlaceHolder = L"e-mail";
 			   // 
 			   // uiTextBox3
 			   // 
-			   resources->ApplyResources(this->uiTextBox3, L"uiTextBox3");
 			   this->uiTextBox3->BackColor = System::Drawing::Color::White;
 			   this->uiTextBox3->BorderRadius = 0;
 			   this->uiTextBox3->ColorEnterBack = System::Drawing::Color::Tomato;
@@ -673,6 +633,7 @@ namespace UI1 {
 			   this->uiTextBox3->ColorLeaveText = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(119)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(169)));
 			   this->uiTextBox3->ForeColor = System::Drawing::Color::Black;
+			   resources->ApplyResources(this->uiTextBox3, L"uiTextBox3");
 			   this->uiTextBox3->Name = L"uiTextBox3";
 			   this->uiTextBox3->PasswordBox = false;
 			   this->uiTextBox3->PlaceHolder = L"e-mail";

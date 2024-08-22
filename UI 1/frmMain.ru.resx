@@ -117,18 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnContact.Text" xml:space="preserve">
-    <value>Контакты</value>
-  </data>
-  <data name="btnExit.Text" xml:space="preserve">
-    <value>Выход</value>
-  </data>
-  <data name="btnExamples.Text" xml:space="preserve">
-    <value>Портфолио</value>
-  </data>
-  <data name="btnHome.Text" xml:space="preserve">
-    <value>Главная</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pnlLogo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -178,15 +166,6 @@
         gg==
 </value>
   </data>
-  <data name="btnSMServices.Text" xml:space="preserve">
-    <value>Услуги</value>
-  </data>
-  <data name="btnSMHistory.Text" xml:space="preserve">
-    <value>История</value>
-  </data>
-  <data name="btnSMAbout.Text" xml:space="preserve">
-    <value>О нас</value>
-  </data>
   <data name="btnLMin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
@@ -212,54 +191,6 @@
         y2oQ9JrI3tFiWQ2ifl73ymoosCdnr4xQYlfOb3+3/2RE/VbA3tFiKYJeLzLzarIUUH4scCcSlALIxV+H
         Ef1gQ+AVWIRyPDMpPS+sERDA244wAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 18</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Номер тоглбокса</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 18</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Метки лэйбл</value>
-  </data>
-  <data name="uiButton1.Text" xml:space="preserve">
-    <value>Отмена</value>
-  </data>
-  <data name="uiButton2.Text" xml:space="preserve">
-    <value>Принять</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 18</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Пример</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 18</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Работает холдер</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 18</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Имя пользователя</value>
-  </data>
-  <data name="uiButton3.Text" xml:space="preserve">
-    <value>Праильно</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 18</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Отправка</value>
-  </data>
-  <data name="uiButton4.Text" xml:space="preserve">
-    <value>отправить</value>
   </data>
   <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -287,8 +218,5 @@
         QnCikF9eF6vBFkh6iBgxYguMjwqBiRSRFQLpPLUFITg5ZwtOzduGJmOCP9Zndg3oyVj5xkiUwJUFPw5A
         HmvJTCNH9owc/KXB3xzW4u6FGM9W7up/i6j5BcHCINmPcFlwAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="uiButton5.Text" xml:space="preserve">
-    <value>Ляснуть</value>
   </data>
 </root>
