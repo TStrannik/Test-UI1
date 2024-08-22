@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>	//?
 
-
 const int CS_LEAVE = 0x00;
 const int CS_ENTER = 0x01;
 const int CS_HOVER = 0x02;
@@ -112,6 +111,8 @@ namespace ClassLibraryUI {
 			this->btnEye->UseVisualStyleBackColor = true;
 			this->btnEye->Click += gcnew System::EventHandler(this, &uiTextBox::btnEye_Click);
 			this->btnEye->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &uiTextBox::btnEye_Paint);
+			this->btnEye->MouseEnter += gcnew System::EventHandler(this, &uiTextBox::btnEye_MouseEnter);
+			this->btnEye->MouseLeave += gcnew System::EventHandler(this, &uiTextBox::btnEye_MouseLeave);
 			// 
 			// uiTextBox
 			// 
@@ -192,21 +193,19 @@ namespace ClassLibraryUI {
 			}
 		}
 		
-
-		System::Void btnEye_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-			//Graphics^ g = e->Graphics;
-			//g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias;
-			//int w = btnEye->Width - 1, h = btnEye->Height - 1;
-			//Pen^	 bdPen = gcnew Pen(Color::Black); // Pen(Color::LightGray);
-			//Brush^ bkBrush = gcnew SolidBrush(BackColor);
-			//Brush^ txBrush = gcnew SolidBrush(BackColor);
-
-			/*g->DrawImage(Image::FromFile(CurrentDir + "\\..\\Sources\\UI\\eye1.png"), 0, 0, 30, 20);*/
-		}
 		System::Void btnEye_Click(System::Object^ sender, System::EventArgs^ e) {
 			//// set *******
 		}
-
+		System::Void btnEye_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+			//
+		}
+		System::Void btnEye_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+			btnEye->BackgroundImage = Image::FromFile(getUIDir() + "\\eye1b.png");
+		}
+		System::Void btnEye_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+			btnEye->BackgroundImage = Image::FromFile(getUIDir() + "\\eye1.png");
+		}
+		
 		System::Void txtBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 			RemoveText(sender, e);
 		}
@@ -219,8 +218,19 @@ namespace ClassLibraryUI {
 		{ lblPH->Visible = txtBox->Text->Length == 0; }
 		void AddText(System::Object^ sender, System::EventArgs^ e)
 		{ lblPH->Visible = String::IsNullOrWhiteSpace(txtBox->Text); }
+		String^ getUIDir() {
+			String^ stepDir = CurrentDir;
+			int c = CurrentDir->Length - 1;
+			while (stepDir[c] != '\\') { stepDir = stepDir->Remove(c); c--; }
+			stepDir = stepDir->Remove(c);
+			System::IO::Directory::SetCurrentDirectory(stepDir);
+			String^ dir = stepDir + "\\ClassLibraryUI\\Sources\\UI\\";
+			return dir;
+		}
 
 		#pragma endregion Voids
 
+	
+	
 	};
 }
