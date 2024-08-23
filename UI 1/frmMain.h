@@ -66,6 +66,14 @@ namespace UI1 {
 	private: ClassLibraryUI::uiButton^ uiButton5;
 	private: ClassLibraryUI::uiTextBox^ uiTextBox4;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::Panel^ pnlMenuHor;
+	private: System::Windows::Forms::Panel^ pnlMHB;
+	private: System::Windows::Forms::Button^ btnHM1;
+	private: System::Windows::Forms::Button^ btnHM2;
+	private: System::Windows::Forms::Button^ button1;
+
+
+
 
 
 
@@ -136,6 +144,7 @@ namespace UI1 {
 			   this->uiButton2 = (gcnew ClassLibraryUI::uiButton());
 			   this->panel1 = (gcnew System::Windows::Forms::Panel());
 			   this->panel2 = (gcnew System::Windows::Forms::Panel());
+			   this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			   this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			   this->uiTextBox2 = (gcnew ClassLibraryUI::uiTextBox());
 			   this->uiTextBox1 = (gcnew ClassLibraryUI::uiTextBox());
@@ -146,15 +155,22 @@ namespace UI1 {
 			   this->uiButton4 = (gcnew ClassLibraryUI::uiButton());
 			   this->uiButton5 = (gcnew ClassLibraryUI::uiButton());
 			   this->uiTextBox4 = (gcnew ClassLibraryUI::uiTextBox());
-			   this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			   this->btnHM1 = (gcnew System::Windows::Forms::Button());
+			   this->pnlMenuHor = (gcnew System::Windows::Forms::Panel());
+			   this->pnlMHB = (gcnew System::Windows::Forms::Panel());
+			   this->btnHM2 = (gcnew System::Windows::Forms::Button());
+			   this->button1 = (gcnew System::Windows::Forms::Button());
 			   this->pnlMenu->SuspendLayout();
 			   this->pnlMenuSM->SuspendLayout();
 			   this->pnlLine->SuspendLayout();
+			   this->pnlHeader->SuspendLayout();
 			   this->pnlColorSample->SuspendLayout();
 			   this->panel1->SuspendLayout();
 			   this->panel2->SuspendLayout();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			   this->pnlMenuHor->SuspendLayout();
+			   this->pnlMHB->SuspendLayout();
 			   this->SuspendLayout();
 			   // 
 			   // pnlMenu
@@ -318,6 +334,7 @@ namespace UI1 {
 			   // 
 			   this->pnlHeader->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(48)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			   this->pnlHeader->Controls->Add(this->pnlMenuHor);
 			   resources->ApplyResources(this->pnlHeader, L"pnlHeader");
 			   this->pnlHeader->Name = L"pnlHeader";
 			   // 
@@ -462,6 +479,12 @@ namespace UI1 {
 			   this->panel2->Controls->Add(this->uiButton3);
 			   resources->ApplyResources(this->panel2, L"panel2");
 			   this->panel2->Name = L"panel2";
+			   // 
+			   // pictureBox2
+			   // 
+			   resources->ApplyResources(this->pictureBox2, L"pictureBox2");
+			   this->pictureBox2->Name = L"pictureBox2";
+			   this->pictureBox2->TabStop = false;
 			   // 
 			   // pictureBox1
 			   // 
@@ -614,11 +637,44 @@ namespace UI1 {
 			   this->uiTextBox4->PlaceHolder = L"Текстопример";
 			   this->uiTextBox4->ShowPassword = false;
 			   // 
-			   // pictureBox2
+			   // btnHM1
 			   // 
-			   resources->ApplyResources(this->pictureBox2, L"pictureBox2");
-			   this->pictureBox2->Name = L"pictureBox2";
-			   this->pictureBox2->TabStop = false;
+			   resources->ApplyResources(this->btnHM1, L"btnHM1");
+			   this->btnHM1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			   this->btnHM1->Name = L"btnHM1";
+			   this->btnHM1->UseVisualStyleBackColor = true;
+			   // 
+			   // pnlMenuHor
+			   // 
+			   resources->ApplyResources(this->pnlMenuHor, L"pnlMenuHor");
+			   this->pnlMenuHor->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(47)), static_cast<System::Int32>(static_cast<System::Byte>(58)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(79)));
+			   this->pnlMenuHor->Controls->Add(this->pnlMHB);
+			   this->pnlMenuHor->Name = L"pnlMenuHor";
+			   // 
+			   // pnlMHB
+			   // 
+			   this->pnlMHB->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(99)));
+			   this->pnlMHB->Controls->Add(this->button1);
+			   this->pnlMHB->Controls->Add(this->btnHM2);
+			   this->pnlMHB->Controls->Add(this->btnHM1);
+			   resources->ApplyResources(this->pnlMHB, L"pnlMHB");
+			   this->pnlMHB->Name = L"pnlMHB";
+			   // 
+			   // btnHM2
+			   // 
+			   resources->ApplyResources(this->btnHM2, L"btnHM2");
+			   this->btnHM2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			   this->btnHM2->Name = L"btnHM2";
+			   this->btnHM2->UseVisualStyleBackColor = true;
+			   // 
+			   // button1
+			   // 
+			   resources->ApplyResources(this->button1, L"button1");
+			   this->button1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			   this->button1->Name = L"button1";
+			   this->button1->UseVisualStyleBackColor = true;
 			   // 
 			   // frmMain
 			   // 
@@ -649,13 +705,16 @@ namespace UI1 {
 			   this->pnlMenu->ResumeLayout(false);
 			   this->pnlMenuSM->ResumeLayout(false);
 			   this->pnlLine->ResumeLayout(false);
+			   this->pnlHeader->ResumeLayout(false);
 			   this->pnlColorSample->ResumeLayout(false);
 			   this->panel1->ResumeLayout(false);
 			   this->panel1->PerformLayout();
 			   this->panel2->ResumeLayout(false);
 			   this->panel2->PerformLayout();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			   this->pnlMenuHor->ResumeLayout(false);
+			   this->pnlMHB->ResumeLayout(false);
 			   this->ResumeLayout(false);
 			   this->PerformLayout();
 

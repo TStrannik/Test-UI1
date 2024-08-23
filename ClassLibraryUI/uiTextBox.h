@@ -80,9 +80,11 @@ namespace ClassLibraryUI {
 			// 
 			this->txtBox->BackColor = System::Drawing::Color::White;
 			this->txtBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->txtBox->Font = (gcnew System::Drawing::Font(L"Montserrat SemiBold", 9.749999F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->txtBox->Location = System::Drawing::Point(62, 9);
 			this->txtBox->Name = L"txtBox";
-			this->txtBox->Size = System::Drawing::Size(20, 13);
+			this->txtBox->Size = System::Drawing::Size(20, 16);
 			this->txtBox->TabIndex = 0;
 			this->txtBox->TextChanged += gcnew System::EventHandler(this, &uiTextBox::txtBox_TextChanged);
 			this->txtBox->GotFocus += gcnew System::EventHandler(this, &uiTextBox::RemoveText);
@@ -125,10 +127,12 @@ namespace ClassLibraryUI {
 			// mtbBox
 			// 
 			this->mtbBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->mtbBox->Font = (gcnew System::Drawing::Font(L"Montserrat SemiBold", 9.749999F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->mtbBox->Location = System::Drawing::Point(88, 9);
 			this->mtbBox->Name = L"mtbBox";
 			this->mtbBox->PasswordChar = '*';
-			this->mtbBox->Size = System::Drawing::Size(20, 13);
+			this->mtbBox->Size = System::Drawing::Size(20, 16);
 			this->mtbBox->TabIndex = 0;
 			this->mtbBox->TextChanged += gcnew System::EventHandler(this, &uiTextBox::mtbBox_TextChanged);
 			// 

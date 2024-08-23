@@ -228,7 +228,7 @@
   <data name="btnContact.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
-        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAB3SURBVDhP1dPRCYAwDATQjuAo
+        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACxEAAAsRAX9kX5EAAAB3SURBVDhP1dPRCYAwDATQjuAo
         bqAb6Qa6mW4W77C0KPnK5aeBZ+GgRwu1mFkqN1S4oeL9YLCusETVjnZClqnDjlY4wQ5nEPeyo185YwYq
         hBkuETs+hbeoF2bNQIXAR7nBEcS9/WFD7q9Xj8sg7H/lNG6ocMM4Kw+gg64/BFSQtgAAAABJRU5ErkJg
         gg==
@@ -318,7 +318,7 @@
   <data name="btnExamples.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
-        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADeSURBVDhP7dRBDsFAFAbghgRL
+        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACxEAAAsRAX9kX5EAAADeSURBVDhP7dRBDsFAFAbghgRL
         W4kFN6ibsHEdcSMOgBIirLuXuABroeP/J2/apx2b6kLEn3ypmTfvqYUJjDGV8m5+IvuA4NmDCaxyFnCA
         PayVKfShOBBCuIAvN+ELewZQGDiDK4T2dSVS64gW1KEBNeAg9szBnnUNxEIkc9Ko+jsRsNeudYEpO5Cx
         a11g/gOlniT6XN6vDWS+ZiALJ2jLnDRSb96PMf9uuqcL7Nm5PV0cAsMD+qbZAG8ZPpewBe7ztjkDM4bX
@@ -846,6 +846,150 @@
   <data name="&gt;&gt;btnLCls.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="pnlMenuHor.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="button1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 0</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Полушка</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>pnlMHB</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnHM2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnHM2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnHM2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnHM2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 0</value>
+  </data>
+  <data name="btnHM2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="btnHM2.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="btnHM2.Text" xml:space="preserve">
+    <value>Целковый</value>
+  </data>
+  <data name="&gt;&gt;btnHM2.Name" xml:space="preserve">
+    <value>btnHM2</value>
+  </data>
+  <data name="&gt;&gt;btnHM2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnHM2.Parent" xml:space="preserve">
+    <value>pnlMHB</value>
+  </data>
+  <data name="&gt;&gt;btnHM2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnHM1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnHM1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnHM1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnHM1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="btnHM1.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="btnHM1.Text" xml:space="preserve">
+    <value>Ноль</value>
+  </data>
+  <data name="&gt;&gt;btnHM1.Name" xml:space="preserve">
+    <value>btnHM1</value>
+  </data>
+  <data name="&gt;&gt;btnHM1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnHM1.Parent" xml:space="preserve">
+    <value>pnlMHB</value>
+  </data>
+  <data name="&gt;&gt;btnHM1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlMHB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="pnlMHB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="pnlMHB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 30</value>
+  </data>
+  <data name="pnlMHB.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pnlMHB.Name" xml:space="preserve">
+    <value>pnlMHB</value>
+  </data>
+  <data name="&gt;&gt;pnlMHB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMHB.Parent" xml:space="preserve">
+    <value>pnlMenuHor</value>
+  </data>
+  <data name="&gt;&gt;pnlMHB.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlMenuHor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 7</value>
+  </data>
+  <data name="pnlMenuHor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 60</value>
+  </data>
+  <data name="pnlMenuHor.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuHor.Name" xml:space="preserve">
+    <value>pnlMenuHor</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuHor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuHor.Parent" xml:space="preserve">
+    <value>pnlHeader</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuHor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="pnlHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -1213,7 +1357,7 @@
     <value>uiToggleOval1</value>
   </data>
   <data name="&gt;&gt;uiToggleOval1.Type" xml:space="preserve">
-    <value>ClassLibraryUI.uiToggleOval, ClassLibraryUI, Version=1.0.9000.26555, Culture=neutral, PublicKeyToken=null</value>
+    <value>ClassLibraryUI.uiToggleOval, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uiToggleOval1.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -1240,7 +1384,7 @@
     <value>uiToggleOval2</value>
   </data>
   <data name="&gt;&gt;uiToggleOval2.Type" xml:space="preserve">
-    <value>ClassLibraryUI.uiToggleOval, ClassLibraryUI, Version=1.0.9000.26555, Culture=neutral, PublicKeyToken=null</value>
+    <value>ClassLibraryUI.uiToggleOval, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uiToggleOval2.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -1270,7 +1414,7 @@
     <value>uiButton1</value>
   </data>
   <data name="&gt;&gt;uiButton1.Type" xml:space="preserve">
-    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.26555, Culture=neutral, PublicKeyToken=null</value>
+    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uiButton1.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -1300,7 +1444,7 @@
     <value>uiButton2</value>
   </data>
   <data name="&gt;&gt;uiButton2.Type" xml:space="preserve">
-    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.26555, Culture=neutral, PublicKeyToken=null</value>
+    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uiButton2.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -1332,6 +1476,114 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox2.Name" xml:space="preserve">
+    <value>uiTextBox2</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox2.Type" xml:space="preserve">
+    <value>ClassLibraryUI.uiTextBox, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox2.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox1.Name" xml:space="preserve">
+    <value>uiTextBox1</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox1.Type" xml:space="preserve">
+    <value>ClassLibraryUI.uiTextBox, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox1.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;uiTextBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;uiButton3.Name" xml:space="preserve">
+    <value>uiButton3</value>
+  </data>
+  <data name="&gt;&gt;uiButton3.Type" xml:space="preserve">
+    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;uiButton3.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;uiButton3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 316</value>
+  </data>
+  <data name="panel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>15, 0, 15, 0</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 214</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="pictureBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGeYUxB9wAAACBjSFJNAACH
@@ -1340,8 +1592,8 @@
         RF/WBZnFQBrgSi4oKgHSf4DYKCW1OJmBgdEAyM4uLykAijPOAbJFkrLB7A0gdlFIkDOQfQTI5kuHsK+A
         2EkQ9hMQuwjoCSD7C0h9OpjNxAE2B8KWAbFLUitA9jI45xdUFmWmZ5QoGFpaWio4puQnpSoEVxaXpOYW
         K3jmJecXFeQXJZakpgDVQtwHBoIQhaAQ0wBqtNBkoDIAxQOE9TkQHL6MYmcQYgiQXFpUBmUyMhkT5iPM
-        mCPBwOC/lIGB5Q9CzKSXgWGBDgMD/1SEmJohA4OAPgPDvjkAwMZP/eeaqagAAAAJcEhZcwAACxIAAAsS
-        AdLdfvwAAAdLSURBVEhLxdYLTFvXGQfwkyUNSVPWLNNGSZMBbqC8QrKEQMMrlKQkKVCgIVATwG/j9+v6
+        mCPBwOC/lIGB5Q9CzKSXgWGBDgMD/1SEmJohA4OAPgPDvjkAwMZP/eeaqagAAAAJcEhZcwAACxEAAAsR
+        AX9kX5EAAAdLSURBVEhLxdYLTFvXGQfwkyUNSVPWLNNGSZMBbqC8QrKEQMMrlKQkKVCgIVATwG/j9+v6
         2tc2GDD4FRswDg4YmwXzmgHbpF2isCZtsmyaWqnTpGmZlGhrqmqqtqVRJ7ZVSQucnUtKxs3cknUvpL/Q
         vb46v3t8zvf5AAjh/yWgoqIiaiorK8Ghwnxw8rV6gHe6gczko+G2UY+6y/s7lXn4vsYZhNruKYg7JlF+
         CBXWcTj5xjX4y/fe9ZsHwtvsgzOgbzgEXP5/5OvA+2SmoZ8+wKahwjICxW2DS9KOoSW1bXz5BTSOIMSs
@@ -1466,7 +1718,7 @@
     <value>uiTextBox2</value>
   </data>
   <data name="&gt;&gt;uiTextBox2.Type" xml:space="preserve">
-    <value>ClassLibraryUI.uiTextBox, ClassLibraryUI, Version=1.0.9000.26555, Culture=neutral, PublicKeyToken=null</value>
+    <value>ClassLibraryUI.uiTextBox, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uiTextBox2.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -1487,7 +1739,7 @@
     <value>uiTextBox1</value>
   </data>
   <data name="&gt;&gt;uiTextBox1.Type" xml:space="preserve">
-    <value>ClassLibraryUI.uiTextBox, ClassLibraryUI, Version=1.0.9000.26555, Culture=neutral, PublicKeyToken=null</value>
+    <value>ClassLibraryUI.uiTextBox, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uiTextBox1.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -1571,37 +1823,13 @@
     <value>uiButton3</value>
   </data>
   <data name="&gt;&gt;uiButton3.Type" xml:space="preserve">
-    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.26555, Culture=neutral, PublicKeyToken=null</value>
+    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uiButton3.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;uiButton3.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 316</value>
-  </data>
-  <data name="panel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>15, 0, 15, 0</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 214</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="uiTextBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>542, 140</value>
@@ -1616,7 +1844,7 @@
     <value>uiTextBox3</value>
   </data>
   <data name="&gt;&gt;uiTextBox3.Type" xml:space="preserve">
-    <value>ClassLibraryUI.uiTextBox, ClassLibraryUI, Version=1.0.9000.28565, Culture=neutral, PublicKeyToken=null</value>
+    <value>ClassLibraryUI.uiTextBox, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uiTextBox3.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1646,7 +1874,7 @@
     <value>uiButton4</value>
   </data>
   <data name="&gt;&gt;uiButton4.Type" xml:space="preserve">
-    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.28565, Culture=neutral, PublicKeyToken=null</value>
+    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uiButton4.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1679,7 +1907,7 @@
     <value>uiButton5</value>
   </data>
   <data name="&gt;&gt;uiButton5.Type" xml:space="preserve">
-    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.28565, Culture=neutral, PublicKeyToken=null</value>
+    <value>ClassLibraryUI.uiButton, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uiButton5.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1700,7 +1928,7 @@
     <value>uiTextBox4</value>
   </data>
   <data name="&gt;&gt;uiTextBox4.Type" xml:space="preserve">
-    <value>ClassLibraryUI.uiTextBox, ClassLibraryUI, Version=1.0.9000.28565, Culture=neutral, PublicKeyToken=null</value>
+    <value>ClassLibraryUI.uiTextBox, ClassLibraryUI, Version=1.0.9000.29210, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;uiTextBox4.Parent" xml:space="preserve">
     <value>$this</value>

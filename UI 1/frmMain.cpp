@@ -47,9 +47,10 @@ int main(array<String^>^ args) {
 // ( ) FormResize
 // ( ) Form Win+left etc...
 // (+) Component checkbox UI-on\off Android-style
+// ( ) Shtorka Curtain
 // 
 // -------------------
-// ( ) Shtorka Curtain
+// ( ) MenuLine
 // -------------------
 // 
 // ( ) AUTHORISZTION form
