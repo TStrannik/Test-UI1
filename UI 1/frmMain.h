@@ -516,33 +516,39 @@ namespace UI1 {
 			   // 
 			   // button1
 			   // 
+			   this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(48)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(69)));
 			   resources->ApplyResources(this->button1, L"button1");
 			   this->button1->FlatAppearance->BorderSize = 0;
 			   this->button1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			   this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			   this->button1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			   this->button1->Name = L"button1";
-			   this->button1->UseVisualStyleBackColor = true;
+			   this->button1->UseVisualStyleBackColor = false;
 			   // 
 			   // btnHM2
 			   // 
+			   this->btnHM2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(48)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(69)));
 			   resources->ApplyResources(this->btnHM2, L"btnHM2");
 			   this->btnHM2->FlatAppearance->BorderSize = 0;
 			   this->btnHM2->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			   this->btnHM2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			   this->btnHM2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			   this->btnHM2->Name = L"btnHM2";
-			   this->btnHM2->UseVisualStyleBackColor = true;
+			   this->btnHM2->UseVisualStyleBackColor = false;
 			   // 
 			   // btnHM1
 			   // 
+			   this->btnHM1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(48)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(69)));
 			   resources->ApplyResources(this->btnHM1, L"btnHM1");
 			   this->btnHM1->FlatAppearance->BorderSize = 0;
 			   this->btnHM1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			   this->btnHM1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			   this->btnHM1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			   this->btnHM1->Name = L"btnHM1";
-			   this->btnHM1->UseVisualStyleBackColor = true;
+			   this->btnHM1->UseVisualStyleBackColor = false;
 			   // 
 			   // pnlFooter
 			   // 
@@ -1086,16 +1092,29 @@ namespace UI1 {
 			btnL1->BackColor = Color::Red;
 			btnL2->BackColor = Color::Transparent;
 			btnL3->BackColor = Color::Transparent;
+
+			btn1->BackColor = Color::FromArgb(255, 45, 70, 99);
+			btn2->BackColor = Color::FromArgb(255, 65, 90, 119);
+			btn3->BackColor = Color::FromArgb(255, 65, 90, 119);
+
 		}
 		System::Void btn2_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 			btnL1->BackColor = Color::Transparent;
 			btnL2->BackColor = Color::Red;
 			btnL3->BackColor = Color::Transparent;
+
+			btn1->BackColor = Color::FromArgb(255, 65, 90, 119);
+			btn2->BackColor = Color::FromArgb(255, 45, 70, 99);
+			btn3->BackColor = Color::FromArgb(255, 65, 90, 119);
 		}
 		System::Void btn3_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 			btnL1->BackColor = Color::Transparent;
 			btnL2->BackColor = Color::Transparent;
 			btnL3->BackColor = Color::Red;
+
+			btn1->BackColor = Color::FromArgb(255, 65, 90, 119);
+			btn2->BackColor = Color::FromArgb(255, 65, 90, 119);
+			btn3->BackColor = Color::FromArgb(255, 45, 70, 99);
 		}
 
 		System::Void btnContact_Click(System::Object^ sender, System::EventArgs^ e) {
