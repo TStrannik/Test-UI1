@@ -72,6 +72,26 @@ namespace UI1 {
 	private: System::Windows::Forms::Button^ btnHM2;
 	private: System::Windows::Forms::Button^ button1;
 	private: ClassLibraryUI::uiMenuLine^ uiMenuLine1;
+	private: System::Windows::Forms::Button^ btnL1;
+	private: System::Windows::Forms::Panel^ pnlLDOCK;
+
+
+
+	private: System::Windows::Forms::Button^ btn1;
+	private: System::Windows::Forms::Panel^ pnlL2;
+
+
+	private: System::Windows::Forms::Button^ btn2;
+	private: System::Windows::Forms::Button^ btnL2;
+	private: System::Windows::Forms::Button^ btn3;
+	private: System::Windows::Forms::Button^ btnL3;
+	private: System::Windows::Forms::Panel^ pnlLL3;
+	private: System::Windows::Forms::Panel^ pnlL4;
+
+
+	private: System::Windows::Forms::Panel^ pnlLL1;
+
+
 
 
 
@@ -116,6 +136,17 @@ namespace UI1 {
 		   {
 			   System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(frmMain::typeid));
 			   this->pnlMenu = (gcnew System::Windows::Forms::Panel());
+			   this->pnlLDOCK = (gcnew System::Windows::Forms::Panel());
+			   this->pnlL4 = (gcnew System::Windows::Forms::Panel());
+			   this->btn3 = (gcnew System::Windows::Forms::Button());
+			   this->btn2 = (gcnew System::Windows::Forms::Button());
+			   this->btn1 = (gcnew System::Windows::Forms::Button());
+			   this->pnlLL3 = (gcnew System::Windows::Forms::Panel());
+			   this->pnlL2 = (gcnew System::Windows::Forms::Panel());
+			   this->btnL3 = (gcnew System::Windows::Forms::Button());
+			   this->btnL2 = (gcnew System::Windows::Forms::Button());
+			   this->btnL1 = (gcnew System::Windows::Forms::Button());
+			   this->pnlLL1 = (gcnew System::Windows::Forms::Panel());
 			   this->btnContact = (gcnew System::Windows::Forms::Button());
 			   this->btnExit = (gcnew System::Windows::Forms::Button());
 			   this->btnExamples = (gcnew System::Windows::Forms::Button());
@@ -131,6 +162,7 @@ namespace UI1 {
 			   this->btnLCls = (gcnew System::Windows::Forms::Button());
 			   this->pnlHeader = (gcnew System::Windows::Forms::Panel());
 			   this->pnlMenuHor = (gcnew System::Windows::Forms::Panel());
+			   this->uiMenuLine1 = (gcnew ClassLibraryUI::uiMenuLine());
 			   this->pnlMHB = (gcnew System::Windows::Forms::Panel());
 			   this->button1 = (gcnew System::Windows::Forms::Button());
 			   this->btnHM2 = (gcnew System::Windows::Forms::Button());
@@ -162,8 +194,10 @@ namespace UI1 {
 			   this->uiButton4 = (gcnew ClassLibraryUI::uiButton());
 			   this->uiButton5 = (gcnew ClassLibraryUI::uiButton());
 			   this->uiTextBox4 = (gcnew ClassLibraryUI::uiTextBox());
-			   this->uiMenuLine1 = (gcnew ClassLibraryUI::uiMenuLine());
 			   this->pnlMenu->SuspendLayout();
+			   this->pnlLDOCK->SuspendLayout();
+			   this->pnlL4->SuspendLayout();
+			   this->pnlL2->SuspendLayout();
 			   this->pnlMenuSM->SuspendLayout();
 			   this->pnlLine->SuspendLayout();
 			   this->pnlHeader->SuspendLayout();
@@ -180,6 +214,7 @@ namespace UI1 {
 			   // 
 			   this->pnlMenu->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(27)), static_cast<System::Int32>(static_cast<System::Byte>(38)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(59)));
+			   this->pnlMenu->Controls->Add(this->pnlLDOCK);
 			   this->pnlMenu->Controls->Add(this->btnContact);
 			   this->pnlMenu->Controls->Add(this->btnExit);
 			   this->pnlMenu->Controls->Add(this->btnExamples);
@@ -189,6 +224,115 @@ namespace UI1 {
 			   resources->ApplyResources(this->pnlMenu, L"pnlMenu");
 			   this->pnlMenu->Name = L"pnlMenu";
 			   // 
+			   // pnlLDOCK
+			   // 
+			   this->pnlLDOCK->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			   this->pnlLDOCK->Controls->Add(this->pnlL4);
+			   this->pnlLDOCK->Controls->Add(this->pnlLL3);
+			   this->pnlLDOCK->Controls->Add(this->pnlL2);
+			   this->pnlLDOCK->Controls->Add(this->pnlLL1);
+			   resources->ApplyResources(this->pnlLDOCK, L"pnlLDOCK");
+			   this->pnlLDOCK->Name = L"pnlLDOCK";
+			   // 
+			   // pnlL4
+			   // 
+			   this->pnlL4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			   this->pnlL4->Controls->Add(this->btn3);
+			   this->pnlL4->Controls->Add(this->btn2);
+			   this->pnlL4->Controls->Add(this->btn1);
+			   resources->ApplyResources(this->pnlL4, L"pnlL4");
+			   this->pnlL4->Name = L"pnlL4";
+			   // 
+			   // btn3
+			   // 
+			   this->btn3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			   resources->ApplyResources(this->btn3, L"btn3");
+			   this->btn3->FlatAppearance->BorderSize = 0;
+			   this->btn3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(221)));
+			   this->btn3->Name = L"btn3";
+			   this->btn3->UseVisualStyleBackColor = false;
+			   this->btn3->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::btn3_MouseDown);
+			   // 
+			   // btn2
+			   // 
+			   this->btn2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			   resources->ApplyResources(this->btn2, L"btn2");
+			   this->btn2->FlatAppearance->BorderSize = 0;
+			   this->btn2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(221)));
+			   this->btn2->Name = L"btn2";
+			   this->btn2->UseVisualStyleBackColor = false;
+			   this->btn2->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::btn2_MouseDown);
+			   // 
+			   // btn1
+			   // 
+			   this->btn1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			   resources->ApplyResources(this->btn1, L"btn1");
+			   this->btn1->FlatAppearance->BorderSize = 0;
+			   this->btn1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(225)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(221)));
+			   this->btn1->Name = L"btn1";
+			   this->btn1->UseVisualStyleBackColor = false;
+			   this->btn1->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::btn1_MouseDown);
+			   // 
+			   // pnlLL3
+			   // 
+			   this->pnlLL3->BackColor = System::Drawing::Color::Red;
+			   resources->ApplyResources(this->pnlLL3, L"pnlLL3");
+			   this->pnlLL3->Name = L"pnlLL3";
+			   // 
+			   // pnlL2
+			   // 
+			   this->pnlL2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			   this->pnlL2->Controls->Add(this->btnL3);
+			   this->pnlL2->Controls->Add(this->btnL2);
+			   this->pnlL2->Controls->Add(this->btnL1);
+			   resources->ApplyResources(this->pnlL2, L"pnlL2");
+			   this->pnlL2->Name = L"pnlL2";
+			   // 
+			   // btnL3
+			   // 
+			   this->btnL3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			   resources->ApplyResources(this->btnL3, L"btnL3");
+			   this->btnL3->FlatAppearance->BorderSize = 0;
+			   this->btnL3->Name = L"btnL3";
+			   this->btnL3->TabStop = false;
+			   this->btnL3->UseVisualStyleBackColor = false;
+			   // 
+			   // btnL2
+			   // 
+			   this->btnL2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			   resources->ApplyResources(this->btnL2, L"btnL2");
+			   this->btnL2->FlatAppearance->BorderSize = 0;
+			   this->btnL2->Name = L"btnL2";
+			   this->btnL2->TabStop = false;
+			   this->btnL2->UseVisualStyleBackColor = false;
+			   // 
+			   // btnL1
+			   // 
+			   this->btnL1->BackColor = System::Drawing::Color::Red;
+			   resources->ApplyResources(this->btnL1, L"btnL1");
+			   this->btnL1->FlatAppearance->BorderSize = 0;
+			   this->btnL1->Name = L"btnL1";
+			   this->btnL1->TabStop = false;
+			   this->btnL1->UseVisualStyleBackColor = false;
+			   // 
+			   // pnlLL1
+			   // 
+			   this->pnlLL1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(90)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(119)));
+			   resources->ApplyResources(this->pnlLL1, L"pnlLL1");
+			   this->pnlLL1->Name = L"pnlLL1";
+			   // 
 			   // btnContact
 			   // 
 			   resources->ApplyResources(this->btnContact, L"btnContact");
@@ -197,6 +341,7 @@ namespace UI1 {
 				   static_cast<System::Int32>(static_cast<System::Byte>(221)));
 			   this->btnContact->Name = L"btnContact";
 			   this->btnContact->UseVisualStyleBackColor = true;
+			   this->btnContact->Click += gcnew System::EventHandler(this, &frmMain::btnContact_Click);
 			   // 
 			   // btnExit
 			   // 
@@ -350,6 +495,15 @@ namespace UI1 {
 			   this->pnlMenuHor->Controls->Add(this->pnlMHB);
 			   this->pnlMenuHor->Name = L"pnlMenuHor";
 			   // 
+			   // uiMenuLine1
+			   // 
+			   this->uiMenuLine1->ColorLeaveBack = System::Drawing::Color::Transparent;
+			   this->uiMenuLine1->ColorLeaveBord = System::Drawing::Color::White;
+			   this->uiMenuLine1->ColorLine = System::Drawing::Color::White;
+			   this->uiMenuLine1->ColorSelect = System::Drawing::Color::Red;
+			   resources->ApplyResources(this->uiMenuLine1, L"uiMenuLine1");
+			   this->uiMenuLine1->Name = L"uiMenuLine1";
+			   // 
 			   // pnlMHB
 			   // 
 			   this->pnlMHB->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
@@ -363,6 +517,9 @@ namespace UI1 {
 			   // button1
 			   // 
 			   resources->ApplyResources(this->button1, L"button1");
+			   this->button1->FlatAppearance->BorderSize = 0;
+			   this->button1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
+			   this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			   this->button1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			   this->button1->Name = L"button1";
 			   this->button1->UseVisualStyleBackColor = true;
@@ -370,6 +527,9 @@ namespace UI1 {
 			   // btnHM2
 			   // 
 			   resources->ApplyResources(this->btnHM2, L"btnHM2");
+			   this->btnHM2->FlatAppearance->BorderSize = 0;
+			   this->btnHM2->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
+			   this->btnHM2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			   this->btnHM2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			   this->btnHM2->Name = L"btnHM2";
 			   this->btnHM2->UseVisualStyleBackColor = true;
@@ -377,6 +537,9 @@ namespace UI1 {
 			   // btnHM1
 			   // 
 			   resources->ApplyResources(this->btnHM1, L"btnHM1");
+			   this->btnHM1->FlatAppearance->BorderSize = 0;
+			   this->btnHM1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
+			   this->btnHM1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			   this->btnHM1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			   this->btnHM1->Name = L"btnHM1";
 			   this->btnHM1->UseVisualStyleBackColor = true;
@@ -680,15 +843,6 @@ namespace UI1 {
 			   this->uiTextBox4->PlaceHolder = L"Текстопример";
 			   this->uiTextBox4->ShowPassword = false;
 			   // 
-			   // uiMenuLine1
-			   // 
-			   this->uiMenuLine1->ColorLeaveBack = System::Drawing::Color::Transparent;
-			   this->uiMenuLine1->ColorLeaveBord = System::Drawing::Color::White;
-			   this->uiMenuLine1->ColorLine = System::Drawing::Color::White;
-			   this->uiMenuLine1->ColorSelect = System::Drawing::Color::Red;
-			   resources->ApplyResources(this->uiMenuLine1, L"uiMenuLine1");
-			   this->uiMenuLine1->Name = L"uiMenuLine1";
-			   // 
 			   // frmMain
 			   // 
 			   resources->ApplyResources(this, L"$this");
@@ -716,6 +870,9 @@ namespace UI1 {
 			   this->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::frmMain_MouseMove);
 			   this->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &frmMain::frmMain_MouseUp);
 			   this->pnlMenu->ResumeLayout(false);
+			   this->pnlLDOCK->ResumeLayout(false);
+			   this->pnlL4->ResumeLayout(false);
+			   this->pnlL2->ResumeLayout(false);
 			   this->pnlMenuSM->ResumeLayout(false);
 			   this->pnlLine->ResumeLayout(false);
 			   this->pnlHeader->ResumeLayout(false);
@@ -821,6 +978,8 @@ namespace UI1 {
 		System::Void frmMain_Load(System::Object^ sender, System::EventArgs^ e) {
 			//
 			switchColorScheme(); switchColorScheme();
+
+			pnlLDOCK->Visible = false;
 		}
 		System::Void frmMain_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 			if (this->FormBorderStyle == System::Windows::Forms::FormBorderStyle::None) {
@@ -854,6 +1013,7 @@ namespace UI1 {
 				path->CloseFigure();
 
 				this->Region = gcnew Drawing::Region(path);
+
 			}
 		}
 		System::Void frmMain_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) { formDrugMD(sender, e); }
@@ -921,7 +1081,31 @@ namespace UI1 {
 			switchColorScheme();
 		}
 
+
+		System::Void btn1_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+			btnL1->BackColor = Color::Red;
+			btnL2->BackColor = Color::Transparent;
+			btnL3->BackColor = Color::Transparent;
+		}
+		System::Void btn2_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+			btnL1->BackColor = Color::Transparent;
+			btnL2->BackColor = Color::Red;
+			btnL3->BackColor = Color::Transparent;
+		}
+		System::Void btn3_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+			btnL1->BackColor = Color::Transparent;
+			btnL2->BackColor = Color::Transparent;
+			btnL3->BackColor = Color::Red;
+		}
+
+		System::Void btnContact_Click(System::Object^ sender, System::EventArgs^ e) {
+			pnlLDOCK->Visible = !pnlLDOCK->Visible;
+		}
+
+
 #pragma endregion VOIDs
+
+
 
 	};
 }
